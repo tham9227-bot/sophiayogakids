@@ -330,3 +330,4 @@ section { padding: 90px 0; }
   .gallery-grid { grid-template-columns: 1fr; }
   .g-tall { grid-row: auto; grid-column: auto; aspect-ratio: 3/4; }
 }
+.footer-addr { display: block; margin: 8px 0; }
