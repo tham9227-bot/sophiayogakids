@@ -247,7 +247,7 @@ section { padding: 90px 0; }
   background: radial-gradient(circle at 20px -10px, transparent 26px, var(--dark) 27px) repeat-x;
   background-size: 40px 30px;
 }
-.footer-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 40px; }
+.footer-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 40px; margin-bottom: 50px; }
 .footer-logo .logo-text { color: #fff; }
 .site-footer h4 { color: #fff; font-size: 1.4rem; position: relative; padding-bottom: 8px; }
 .site-footer h4::after { content: ""; position: absolute; left: 0; bottom: 0; width: 40px; height: 4px; border-radius: 4px; background: var(--yellow); }
@@ -260,7 +260,7 @@ section { padding: 90px 0; }
   background: rgba(255,255,255,.1); color: #fff; font-weight: 800;
 }
 .socials a:hover { background: var(--pink); color: #fff !important; }
-.copyright { text-align: center; border-top: 1px solid rgba(255,255,255,.1); margin: 50px auto 0; padding-top: 20px; font-size: .9rem; width: min(1160px, 100% - 32px); }
+.copyright { text-align: center; border-top: 1px solid rgba(255,255,255,.1); margin: 0 auto; padding-top: 20px; font-size: .9rem; width: min(1160px, 100% - 32px); }
 
 .to-top {
   position: fixed; right: 20px; bottom: 20px; z-index: 40;
