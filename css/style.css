@@ -404,3 +404,32 @@ section { padding: 90px 0; }
   .about-banner { height: 220px; margin-bottom: 48px; }
   .about-photo-small { right: -8px; bottom: -18px; }
 }
+
+/* ---------- Khóa học & học phí ---------- */
+.bg-blue { background: #b9dcff; }
+.bg-green { background: #c8ecb0; }
+.bg-orange { background: #ffd0a8; }
+.courses { background: linear-gradient(160deg, #ffe3ef 0%, #ffd0e4 55%, #ffc2dc 100%); }
+.course-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+.course-card {
+  position: relative; background: #fff; border-radius: var(--radius);
+  padding: 28px 22px; text-align: center; box-shadow: var(--shadow);
+  display: flex; flex-direction: column; align-items: center;
+}
+.course-card.featured { box-shadow: 0 0 0 4px var(--pink), var(--shadow); }
+.course-wide { grid-column: span 2; }
+.course-icon { width: 68px; height: 68px; border-radius: 50%; display: grid; place-items: center; font-size: 2rem; margin-bottom: 12px; }
+.course-card h3 { font-size: 1.45rem; margin: 0 0 6px; }
+.course-desc { color: var(--muted); margin: 0 0 14px; flex: 1; }
+.course-price { font-family: "Baloo 2", sans-serif; font-size: 1.7rem; font-weight: 800; color: var(--pink); margin: 0 0 16px; }
+.course-price small { font-size: 1rem; color: var(--muted); font-weight: 600; }
+.course-price.course-ask { font-size: 1.15rem; color: var(--purple); }
+.btn-zalo { background: #0068ff; color: #fff; }
+.courses .note a { color: #0068ff; }
+@media (max-width: 960px) {
+  .course-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 560px) {
+  .course-grid { grid-template-columns: 1fr; }
+  .course-wide { grid-column: auto; }
+}
