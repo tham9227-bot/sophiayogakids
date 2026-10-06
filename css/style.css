@@ -433,3 +433,6 @@ section { padding: 90px 0; }
   .course-grid { grid-template-columns: 1fr; }
   .course-wide { grid-column: auto; }
 }
+
+/* Logo mới trên nền tối của chân trang */
+.footer-logo img { background: #fff; border-radius: 50%; padding: 3px; }
