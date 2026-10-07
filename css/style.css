@@ -355,12 +355,12 @@ section { padding: 90px 0; }
 /* ---------- Về Sophia ---------- */
 .about { padding-top: 0; }
 .about-banner {
-  height: 320px; margin-bottom: 70px;
-  background: linear-gradient(90deg, rgba(44,58,38,.55), rgba(44,58,38,0) 60%), url("../images/sophia-tu-the-vu-cong.jpg") center 35% / cover;
-  display: flex; align-items: flex-end;
+  height: clamp(240px, 44vw, 620px); margin-bottom: 70px;
+  background: linear-gradient(270deg, rgba(31,81,52,.6), rgba(31,81,52,0) 55%), url("../images/sophia-chinh-tu-the-be-goc-cay.jpg") center 75% / cover;
+  display: flex; align-items: flex-start;
 }
 .about-banner p {
-  width: min(1160px, 100% - 32px); margin: 0 auto 36px;
+  width: min(1160px, 100% - 32px); margin: 40px auto 0; text-align: right; padding-left: 45%;
   color: #fff; font-family: "Quicksand", sans-serif; font-weight: 700;
   font-size: clamp(1.3rem, 3vw, 2rem); max-width: 1160px; text-shadow: 0 2px 10px rgba(0,0,0,.35);
 }
@@ -403,7 +403,8 @@ section { padding: 90px 0; }
   .hero-inner .hero-sub { margin-left: auto; }
   .hero-inner .hero-buttons { justify-content: center; }
   .hero-photo { max-width: 360px; margin: 0 auto; }
-  .about-banner { height: 220px; margin-bottom: 48px; }
+  .about-banner { margin-bottom: 48px; }
+  .about-banner p { padding-left: 35%; margin-top: 20px; }
   .about-photo-small { left: -8px; top: -18px; }
 }
 
