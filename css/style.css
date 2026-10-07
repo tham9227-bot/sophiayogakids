@@ -559,3 +559,17 @@ section { padding: 90px 0; }
   .card-label { font-size: .82rem; padding: 8px 10px; }
 }
 .nowrap { white-space: nowrap; }
+
+/* ---------- Đào tạo online + feedback học viên ---------- */
+.sub-title { text-align: center; font-size: 1.5rem; margin: 56px 0 8px; color: var(--dark); }
+.sub-text { text-align: center; color: var(--muted); max-width: 640px; margin: 0 auto 24px; }
+.online-photos { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; align-items: start; }
+.online-photos figure { margin: 0; }
+.online-photos img { width: 100%; aspect-ratio: 16/10; object-fit: cover; border-radius: 18px; border: 5px solid #fff; box-shadow: var(--shadow); }
+.online-photos figcaption { text-align: center; font-size: .95rem; color: var(--muted); margin-top: 8px; }
+.feedback-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+.feedback-card { margin: 0; background: #fff; border-radius: var(--radius); padding: 24px 22px; box-shadow: var(--shadow); border-top: 5px solid var(--yellow); }
+.feedback-card p { font-size: 1.05rem; margin: 0 0 12px; }
+.feedback-card cite { font-style: normal; font-weight: 700; color: var(--pink); font-size: .95rem; }
+.feedback-note { text-align: center; color: var(--muted); font-size: .9rem; margin-top: 14px; }
+@media (max-width: 760px) { .online-photos, .feedback-grid { grid-template-columns: 1fr; } }
