@@ -582,3 +582,4 @@ section { padding: 90px 0; }
 .school-price .demo { margin: 14px 0 18px; }
 @media (max-width: 960px) { .activity-grid { grid-template-columns: 1fr 1fr; } .school-box { grid-template-columns: 1fr; } }
 @media (max-width: 480px) { .activity-grid { gap: 12px; } .activity { padding: 16px 14px; } .school-box { padding: 22px; } }
+.cert-row .cert:last-child:nth-child(odd) { grid-column: 1 / -1; max-width: calc(50% - 8px); justify-self: center; }
