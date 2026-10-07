@@ -523,3 +523,39 @@ section { padding: 90px 0; }
 @media (max-width: 760px) {
   .blob-teal { opacity: .45; }
 }
+
+/* ---------- Vì sao chọn Sophia ---------- */
+.why-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+.why-item { background: #fff; border-radius: var(--radius); padding: 26px 18px; text-align: center; box-shadow: var(--shadow); }
+.why-item span { font-size: 2.4rem; display: block; }
+.why-item b { display: block; font-family: "Quicksand", sans-serif; font-size: 1.3rem; color: var(--pink); margin: 8px 0 4px; }
+.why-item p { margin: 0; font-size: .95rem; }
+@media (max-width: 960px) { .why-grid { grid-template-columns: 1fr 1fr; } }
+
+/* ---------- Câu hỏi thường gặp ---------- */
+.faq-list { max-width: 820px; margin: 0 auto; }
+.faq-list details { background: #fff; border-radius: 18px; box-shadow: var(--shadow); margin-bottom: 14px; padding: 0 24px; border-left: 6px solid var(--yellow); }
+.faq-list summary { cursor: pointer; list-style: none; padding: 20px 30px 20px 0; position: relative; font-family: "Quicksand", sans-serif; font-weight: 700; font-size: 1.12rem; }
+.faq-list summary::-webkit-details-marker { display: none; }
+.faq-list summary::after { content: "+"; position: absolute; right: 0; top: 50%; transform: translateY(-50%); font-size: 1.6rem; color: var(--pink); }
+.faq-list details[open] summary::after { content: "−"; }
+.faq-list details p { margin: 0 0 20px; }
+.section-sub.light { color: rgba(255,255,255,.92); }
+
+/* ---------- Nút Zalo nổi ---------- */
+.zalo-float {
+  position: fixed; left: 18px; bottom: 20px; z-index: 40;
+  display: flex; align-items: center; gap: 6px; padding: 12px 18px; border-radius: 999px;
+  background: #0068ff; color: #fff; text-decoration: none; font-weight: 700;
+  box-shadow: 0 8px 24px rgba(0,104,255,.35);
+}
+.zalo-float:hover { transform: translateY(-2px); }
+.socials a[aria-label="Zalo"] { width: auto; padding: 0 16px; border-radius: 999px; }
+
+/* ---------- Sửa hiển thị điện thoại ---------- */
+@media (max-width: 480px) {
+  .hero h1 { font-size: 2rem; }
+  .card-emoji { font-size: 2.4rem; margin-bottom: 34px; }
+  .card-label { font-size: .82rem; padding: 8px 10px; }
+}
+.nowrap { white-space: nowrap; }
