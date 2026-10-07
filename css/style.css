@@ -568,10 +568,3 @@ section { padding: 90px 0; }
 .cert-thumb span { display: block; font-size: .7rem; font-weight: 700; color: var(--dark); margin-top: 3px; line-height: 1.2; }
 .cert-note { text-align: center; font-size: .82rem; color: #7a7a7a; margin: 8px 0 0; }
 .about-quote { font-style: italic; font-weight: 600; color: var(--pink); border-left: 4px solid var(--yellow); padding-left: 14px; }
-.article-photos { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 24px 0; }
-.article-photos img { width: 100%; aspect-ratio: 3/4; object-fit: cover; border-radius: var(--radius); box-shadow: var(--shadow); }
-.article ul { padding-left: 0; }
-.article ul li { margin-bottom: 8px; list-style: none; }
-.post-featured { grid-column: 1 / -1; }
-.post-featured .post-photo { height: 300px; object-position: center 60%; }
-@media (max-width: 760px) { .post-featured .post-photo { height: 200px; } }
