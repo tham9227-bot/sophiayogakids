@@ -1,21 +1,21 @@
 /* =========================================================
    Sophia Yoga – giao diện chính
    Muốn đổi màu cả trang: sửa các biến trong :root bên dưới.
-   Bảng màu theo logo: xanh lá cây, nâu thân cây, vàng nắng.
-   (Giữ tên biến cũ: --pink = xanh lá chính, --blue = cam mật ong, --purple = nâu đậm.)
+   Bảng màu vàng kim và nâu (theo mệnh của chị Sophia).
+   (Giữ tên biến cũ: --pink = vàng kim chính, --blue = cam mật ong, --purple = nâu đậm.)
    ========================================================= */
 :root {
-  --pink: #1faa4f;
+  --pink: #a87a12;
   --blue: #e07b10;
-  --teal: #4cc9a0;
+  --teal: #e5c46b;
   --yellow: #ffd60a;
-  --green: #7ccc3a;
+  --green: #d9a62e;
   --orange: #ff9f1c;
-  --purple: #7a5410;
+  --purple: #6b4423;
   --ink: #2f3424;
   --muted: #696a57;
   --cream: #fffdf2;
-  --dark: #1f5134;
+  --dark: #4a2f17;
   --radius: 24px;
   --shadow: 0 10px 30px rgba(47, 52, 36, 0.12);
 }
@@ -90,7 +90,7 @@ h1, h2, h3, h4 { font-family: "Quicksand", "Nunito", sans-serif; font-weight: 70
 }
 .hero h1 { font-size: clamp(2.2rem, 5.5vw, 4.2rem); font-weight: 700; }
 .rainbow {
-  background: linear-gradient(90deg, var(--pink), var(--green), #d99a0b, var(--blue));
+  background: linear-gradient(90deg, #a87a12, #d4a017, #b8860b, #8b5a2b);
   -webkit-background-clip: text; background-clip: text; color: transparent;
 }
 .hero-sub { max-width: 640px; margin: 0 auto 2rem; font-size: 1.15rem; color: var(--muted); }
@@ -122,7 +122,7 @@ h1, h2, h3, h4 { font-family: "Quicksand", "Nunito", sans-serif; font-weight: 70
   font-family: "Quicksand", sans-serif; font-weight: 700; font-size: 1.15rem; text-transform: uppercase;
 }
 .c-purple { background: linear-gradient(135deg, #b794ff, #7b5cff); }
-.c-green  { background: linear-gradient(135deg, #a3e06b, #4caf50); }
+.c-green  { background: linear-gradient(135deg, #f0c75e, #b8860b); }
 .c-orange { background: linear-gradient(135deg, #ffb36b, #ff7043); }
 .c-blue   { background: linear-gradient(135deg, #6fd3f7, #1e88e5); }
 .c-pink   { background: linear-gradient(135deg, #ff9ac6, #ff4f9a); }
@@ -135,11 +135,11 @@ section { padding: 90px 0; }
 .section-sub { text-align: center; color: var(--muted); font-size: 1.1rem; max-width: 620px; margin: 0 auto 2.5rem; }
 .hl-pink { color: var(--pink); }
 .hl-blue { color: var(--blue); }
-.hl-green { color: var(--green); }
+.hl-green { color: var(--pink); }
 .hl-yellow { color: var(--yellow); }
 .bg-yellow { background: var(--yellow); }
 .bg-teal { background: var(--teal); }
-.bg-pink { background: #c9f2c5; }
+.bg-pink { background: #f7e6b5; }
 .bg-purple { background: #ffe1ad; }
 
 /* ---------- Lợi ích ---------- */
@@ -154,7 +154,7 @@ section { padding: 90px 0; }
 .benefit p { color: var(--muted); margin: 0; }
 
 /* ---------- Lớp học / bảng giá ---------- */
-.classes { background: #ecfadf; }
+.classes { background: #fbf3dc; }
 .price-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; align-items: center; }
 .price-card {
   position: relative; background: #fff; border-radius: var(--radius);
@@ -177,7 +177,7 @@ section { padding: 90px 0; }
 .note { text-align: center; color: var(--muted); font-size: .9rem; margin-top: 30px; }
 
 /* ---------- Cảm nhận ---------- */
-.testimonial { background: linear-gradient(135deg, #8cc96a, #4fae6a); }
+.testimonial { background: linear-gradient(135deg, #c99a2e, #8b5a2b); }
 .quote-card {
   max-width: 820px; margin: 0 auto; background: #fff; border-radius: var(--radius);
   padding: 44px; text-align: center; box-shadow: var(--shadow);
@@ -212,15 +212,15 @@ section { padding: 90px 0; }
 .post.hide { display: none; }
 .post-img { height: 170px; display: grid; place-items: center; font-size: 4.5rem; }
 .post-body { padding: 22px 24px 26px; }
-.tag { display: inline-block; font-size: .8rem; font-weight: 700; color: var(--green); text-transform: uppercase; letter-spacing: .05em; margin-bottom: 6px; }
+.tag { display: inline-block; font-size: .8rem; font-weight: 700; color: var(--pink); text-transform: uppercase; letter-spacing: .05em; margin-bottom: 6px; }
 .post h3 { font-size: 1.3rem; }
 .post h3 a { text-decoration: none; }
 .post h3 a:hover { color: var(--pink); }
 .post p { color: var(--muted); margin: 0; }
 
 /* ---------- Tài liệu ---------- */
-.downloads { background: var(--purple); background: linear-gradient(135deg, #1faa4f, #8bd346); }
-.dl-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; margin-top: 40px; }
+.downloads { background: var(--purple); background: linear-gradient(135deg, #a87a12, #d9a62e); }
+.dl-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; margin-top: 40px; }
 .dl-card {
   background: rgba(255,255,255,.12); border: 2px dashed rgba(255,255,255,.5);
   border-radius: var(--radius); padding: 34px 26px; text-align: center; color: #fff;
@@ -244,7 +244,7 @@ section { padding: 90px 0; }
   border: 2px solid #e4e0c8; border-radius: 14px; background: #fffdf4;
 }
 .contact-form input:focus, .contact-form select:focus, .contact-form textarea:focus { outline: none; border-color: var(--teal); }
-.form-msg { text-align: center; font-weight: 700; color: var(--green); margin: 14px 0 0; }
+.form-msg { text-align: center; font-weight: 700; color: var(--pink); margin: 14px 0 0; }
 
 /* ---------- Footer ---------- */
 .site-footer { position: relative; background: var(--dark); color: #d6dcc8; padding: 70px 0 24px; margin-top: 40px; }
@@ -360,7 +360,7 @@ section { padding: 90px 0; }
 .about { padding-top: 0; }
 .about-banner {
   height: clamp(240px, 44vw, 620px); margin-bottom: 70px;
-  background: linear-gradient(270deg, rgba(31,81,52,.6), rgba(31,81,52,0) 55%), url("../images/sophia-chinh-tu-the-be-goc-cay.jpg") center 75% / cover;
+  background: linear-gradient(270deg, rgba(74,47,23,.6), rgba(74,47,23,0) 55%), url("../images/sophia-chinh-tu-the-be-goc-cay.jpg") center 75% / cover;
   display: flex; align-items: flex-start;
 }
 .about-banner p {
@@ -414,7 +414,7 @@ section { padding: 90px 0; }
 
 /* ---------- Khóa học & học phí ---------- */
 .bg-blue { background: #cdeeff; }
-.bg-green { background: #c8ecb0; }
+.bg-green { background: #f3dfa8; }
 .bg-orange { background: #ffd0a8; }
 .courses { background: linear-gradient(160deg, #fffbe3 0%, #fff4b8 55%, #ffec8a 100%); }
 .course-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
@@ -467,7 +467,7 @@ section { padding: 90px 0; }
 .service-price { display: inline-block; font-weight: 700; color: var(--pink); }
 
 
-.english { padding-top: 0; background: #f2f9ec; }
+.english { padding-top: 0; background: #fbf5e6; }
 .english-card {
   display: flex; gap: 22px; align-items: center; background: #fff; border-radius: var(--radius);
   padding: 24px 28px; box-shadow: var(--shadow); border: 3px dashed var(--yellow);
@@ -504,7 +504,7 @@ section { padding: 90px 0; }
 }
 
 /* ---------- Yoga trẻ em, Tiếng Anh, Sách & dụng cụ ---------- */
-.adult.kids { background: #ecfadf; }
+.adult.kids { background: #fbf3dc; }
 .adult.kids .adult-photo img { aspect-ratio: 4/5; object-fit: cover; }
 .english.english-solo { padding: 0 0 80px; background: #fff; }
 .shop { background: #fff; }
@@ -586,3 +586,11 @@ section { padding: 90px 0; }
 .feedback-card cite { font-style: normal; font-weight: 700; color: var(--pink); font-size: .95rem; }
 .feedback-note { text-align: center; color: var(--muted); font-size: .9rem; margin-top: 14px; }
 @media (max-width: 760px) { .online-photos, .feedback-grid { grid-template-columns: 1fr; } }
+
+/* ---------- Thẻ tài liệu mới ---------- */
+.dl-card { position: relative; }
+.dl-badge { position: absolute; top: 14px; right: 14px; background: var(--yellow); color: var(--dark); font-weight: 700; font-size: .8rem; padding: 3px 10px; border-radius: 99px; }
+.dl-new { background: rgba(255,255,255,.22); border: 2px solid #fff; }
+.dl-card { display: flex; flex-direction: column; align-items: center; }
+.dl-card p { flex: 1; }
+.dl-card .btn { white-space: nowrap; padding: 12px 22px; font-size: .95rem; }
