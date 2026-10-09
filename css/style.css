@@ -757,3 +757,14 @@ section { padding: 90px 0; }
 .course-price small { display: block; font-size: .8rem; color: var(--muted); font-weight: 600; text-shadow: none; }
 .course-price-2 { margin-top: -6px; }
 @media (max-width: 420px) { .price-opts li { padding: 9px 12px; } .price-opts span { font-size: .9rem; } .price-opts b { font-size: 1.1rem; } }
+
+/* Dải ảnh "Yoga là món quà": ảnh cô Sophia kể chuyện chú chim đỏ */
+.about-banner {
+  background: linear-gradient(270deg, rgba(74,47,23,.72), rgba(74,47,23,.25) 40%, rgba(74,47,23,0) 60%), url("../images/sophia-ke-chuyen.jpg") center 30% / cover;
+  align-items: flex-end;
+}
+.about-banner p { margin: 0 auto 44px; padding-left: 58%; }
+@media (max-width: 760px) {
+  .about-banner { height: clamp(300px, 86vw, 460px); background: url("../images/sophia-ke-chuyen.jpg") 40% 20% / cover; }
+  .about-banner p { width: 100%; margin: 0; padding: 14px 18px; text-align: center; font-size: 1.08rem; background: linear-gradient(0deg, rgba(74,47,23,.82), rgba(74,47,23,.55)); }
+}
