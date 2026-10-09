@@ -768,3 +768,9 @@ section { padding: 90px 0; }
   .about-banner { height: clamp(300px, 86vw, 460px); background: url("../images/sophia-ke-chuyen.jpg") 40% 20% / cover; }
   .about-banner p { width: 100%; margin: 0; padding: 14px 18px; text-align: center; font-size: 1.08rem; background: linear-gradient(0deg, rgba(74,47,23,.82), rgba(74,47,23,.55)); }
 }
+
+/* Ba khóa đào tạo: 30 giờ, 100 giờ, Song ngữ */
+.level-grid { grid-template-columns: repeat(3, 1fr); }
+@media (max-width: 1100px) { .level-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 760px) { .level-grid { grid-template-columns: 1fr; } }
+@media (min-width: 1181px) { .course-grid { grid-template-columns: repeat(3, 1fr); } }
