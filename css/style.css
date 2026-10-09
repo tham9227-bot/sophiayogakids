@@ -5,10 +5,10 @@
    (Giữ tên biến cũ: --pink = vàng kim chính, --blue = cam mật ong, --purple = nâu đậm.)
    ========================================================= */
 :root {
-  --pink: #f2b800;
-  --gold-text: linear-gradient(100deg, #f0b000 0%, #ffd60a 40%, #ffe766 52%, #ffd60a 64%, #f2b800 100%);
+  --pink: #f5c400;
+  --gold-text: linear-gradient(100deg, #f5c400 0%, #ffd60a 45%, #ffe14d 55%, #ffd60a 70%, #f5c400 100%);
   --gold-bg: linear-gradient(135deg, #ffe14d 0%, #ffd60a 50%, #f5c400 100%);
-  --blue: #f2b800;
+  --blue: #f5c400;
   --teal: #e5c46b;
   --yellow: #ffd60a;
   --green: #d9a62e;
@@ -487,7 +487,7 @@ section { padding: 90px 0; }
   .main-nav a { font-size: .95rem; }
   .header-inner .logo-text { font-size: 1.3rem; }
 }
-@media (max-width: 1320px) {
+@media (max-width: 860px) {
   .menu-toggle { display: block; }
   .main-nav {
     position: absolute; top: 76px; left: 0; right: 0;
@@ -636,7 +636,7 @@ section { padding: 90px 0; }
 .lang-switch a.active { background: #ffd60a; }
 .lang-switch a:not(.active):hover { background: #fff6c2; }
 .menu-toggle { order: 3; }
-@media (max-width: 1320px) { .lang-switch { margin-left: auto; margin-right: 10px; } }
+@media (max-width: 860px) { .lang-switch { margin-left: auto; margin-right: 10px; } }
 .en-cards { max-width: 900px; margin: 0 auto; }
 
 /* ---------- Logo chữ Sophia mềm mại ---------- */
@@ -649,7 +649,7 @@ section { padding: 90px 0; }
 .main-nav a.nav-star { font-size: 1.22rem; color: var(--brown); text-shadow: none; background: #fff6c2; border: 2px solid #ffd60a; padding: 6px 16px; border-radius: 999px; }
 .main-nav a.nav-star:hover { background: #ffd60a; color: var(--brown); }
 @media (max-width: 9999px) { .main-nav a.nav-star { font-size: 1.08rem; padding: 5px 12px; } }
-@media (max-width: 1320px) { .main-nav a.nav-star { order: -1; font-size: 1.25rem; } }
+@media (max-width: 860px) { .main-nav a.nav-star { order: -1; font-size: 1.25rem; } }
 
 /* ---------- Hai cấp độ đào tạo 30h & 100h ---------- */
 .levels { margin-top: 48px; }
@@ -667,5 +667,37 @@ section { padding: 90px 0; }
 /* Bảng khóa học 4 cột trên màn hình rộng */
 @media (min-width: 1181px) { .course-grid { grid-template-columns: repeat(4, 1fr); gap: 20px; } .course-card h3 { font-size: 1.3rem; } }
 .logo { flex-shrink: 0; }
-@media (min-width: 1321px) { .main-nav { gap: 14px; } .main-nav a { font-size: .92rem; } .header-inner { gap: 12px; } .lang-switch { margin-left: 4px; } }
+@media (min-width: 861px) { .main-nav { gap: 14px; } .main-nav a { font-size: .92rem; } .header-inner { gap: 12px; } .lang-switch { margin-left: 4px; } }
 .site-header .container { width: min(1400px, 100% - 32px); }
+
+/* ---------- Header 2 hàng: logo to ở trên, menu trải đều ở dưới (máy tính) ---------- */
+@media (min-width: 861px) {
+  .site-header .container { width: min(1240px, 100% - 40px); }
+  .header-inner {
+    display: grid; height: auto; padding: 10px 0 12px; row-gap: 8px; column-gap: 16px;
+    grid-template-columns: auto 1fr auto; grid-template-areas: "logo . lang" "nav nav nav";
+  }
+  .header-inner > .logo { grid-area: logo; }
+  .header-inner > .lang-switch { grid-area: lang; margin: 0; align-self: center; }
+  .header-inner > .main-nav { grid-area: nav; margin: 0; justify-content: space-between; gap: 8px; border-top: 1px solid #f6ecc4; padding-top: 10px; }
+  .header-inner .logo img { height: 64px; width: auto; }
+  .header-inner .logo-text { font-size: 1.9rem; gap: 10px; }
+  .header-inner .logo-text b { font-size: 3.4rem; }
+  .main-nav a { font-size: 1rem; }
+  .main-nav a.nav-star { font-size: 1.15rem; padding: 6px 18px; }
+  html { scroll-padding-top: 150px; }
+}
+@media (min-width: 861px) and (max-width: 1100px) {
+  .main-nav a { font-size: .9rem; }
+  .main-nav a.nav-star { font-size: 1rem; padding: 5px 12px; }
+  .main-nav .btn { padding: .4em 1em; }
+}
+/* Chữ và nút vàng dùng đúng màu vàng của nút "Gửi đăng ký" */
+.main-nav a:not(.btn):not(.nav-star) { color: transparent; background: var(--gold-text); -webkit-background-clip: text; background-clip: text; text-shadow: none; filter: drop-shadow(0 1px 0 rgba(120,80,0,.35)); }
+.main-nav a.nav-star { background: var(--gold-bg); border-color: #f5c400; color: var(--brown); box-shadow: 0 4px 0 rgba(0,0,0,.08); }
+.main-nav a.nav-star:hover { background: var(--gold-bg); filter: brightness(1.04); }
+.lang-switch { border-color: #f5c400; }
+.lang-switch a.active { background: var(--gold-bg); }
+.level-card { border-top-color: #f5c400; }
+@media (max-width: 1100px) { .dl-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 480px) { .header-inner .logo-text b { font-size: 2.3rem; } .header-inner .logo-text { font-size: 1.2rem; } }
