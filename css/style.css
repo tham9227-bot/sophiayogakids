@@ -360,7 +360,7 @@ section { padding: 90px 0; }
 .about { padding-top: 0; }
 .about-banner {
   height: clamp(240px, 44vw, 620px); margin-bottom: 70px;
-  background: linear-gradient(270deg, rgba(74,47,23,.6), rgba(74,47,23,0) 55%), url("../images/sophia-chinh-tu-the-be-goc-cay.jpg") center 75% / cover;
+  background: linear-gradient(270deg, rgba(74,47,23,.6), rgba(74,47,23,0) 55%), url("../images/sophia-tu-the-vu-cong.jpg") center 88% / cover;
   display: flex; align-items: flex-start;
 }
 .about-banner p {
