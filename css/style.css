@@ -736,7 +736,7 @@ section { padding: 90px 0; }
 .hero-inner .hero-sub { margin-left: auto; }
 .hero-inner .hero-buttons { justify-content: center; }
 .hero-photo-round { order: -1; max-width: 400px; padding-top: 10px; }
-.hero-portrait img { object-position: 50% 30%; }
+.hero-portrait img { object-position: 50% 50%; }
 .hero-name { font-style: italic; }
 @media (max-width: 760px) {
   .hero-photo-round { max-width: 300px; }
