@@ -624,3 +624,6 @@ section { padding: 90px 0; }
 .section-title.light { color: #fff; }
 .main-nav a:not(.btn) { color: #b8860b; }
 .main-nav a:not(.btn):hover, .main-nav a.nav-main { color: #d9a91f; }
+.course-grid > .course-card:last-child:nth-child(3n+1) { grid-column: 2; }
+@media (max-width: 960px) { .course-grid > .course-card:last-child:nth-child(3n+1) { grid-column: auto; } .course-grid > .course-card:last-child:nth-child(odd) { grid-column: 1 / -1; justify-self: center; width: calc(50% - 12px); } }
+@media (max-width: 560px) { .course-grid > .course-card:last-child:nth-child(odd) { grid-column: auto; width: auto; justify-self: stretch; } }
