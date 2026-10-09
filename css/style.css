@@ -631,3 +631,13 @@ section { padding: 90px 0; }
 /* Chữ vàng (giống viền ảnh) có bóng nhẹ cho dễ đọc trên nền sáng */
 .hl-pink, .hl-blue, .hl-green, .section-title span, .rainbow, .logo-text b { filter: drop-shadow(0 1px 0 rgba(120,80,0,.35)); }
 .course-price, .price, .service-price, .hero-price b, .training-price b { text-shadow: 0 1px 0 rgba(120,80,0,.25); }
+
+/* ---------- Nút chọn ngôn ngữ VI | EN ---------- */
+.main-nav { margin-left: auto; }
+.lang-switch { display: flex; flex: none; margin-left: 14px; border: 2px solid #ffd60a; border-radius: 999px; overflow: hidden; background: #fff; }
+.lang-switch a { font-family: "Quicksand", sans-serif; font-weight: 700; font-size: .85rem; padding: 5px 11px; text-decoration: none; color: var(--brown); line-height: 1.2; }
+.lang-switch a.active { background: #ffd60a; }
+.lang-switch a:not(.active):hover { background: #fff6c2; }
+.menu-toggle { order: 3; }
+@media (max-width: 1180px) { .lang-switch { margin-left: auto; margin-right: 10px; } }
+.en-cards { max-width: 900px; margin: 0 auto; }
