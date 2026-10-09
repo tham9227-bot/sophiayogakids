@@ -699,5 +699,5 @@ section { padding: 90px 0; }
 .lang-switch { border-color: #f5c400; }
 .lang-switch a.active { background: var(--gold-bg); }
 .level-card { border-top-color: #f5c400; }
-@media (max-width: 1100px) { .dl-grid { grid-template-columns: 1fr 1fr; } }
-@media (max-width: 480px) { .header-inner .logo-text b { font-size: 2.3rem; } .header-inner .logo-text { font-size: 1.2rem; } }
+@media (min-width: 561px) and (max-width: 1100px) { .dl-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 480px) { .header-inner .logo-text b { font-size: 2.15rem; } .header-inner .logo-text { font-size: 1.15rem; gap: 4px; } .header-inner { gap: 8px; } .header-inner .logo img { width: 46px; height: 46px; } .lang-switch { margin-right: 4px; } .lang-switch a { padding: 4px 9px; } }
