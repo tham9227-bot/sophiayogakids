@@ -5,15 +5,15 @@
    (Giữ tên biến cũ: --pink = vàng kim chính, --blue = cam mật ong, --purple = nâu đậm.)
    ========================================================= */
 :root {
-  --pink: #c99a1e;
-  --gold-text: linear-gradient(100deg, #b8860b 0%, #e2b227 30%, #f6d873 50%, #d9a91f 68%, #b07f0e 100%);
-  --gold-bg: linear-gradient(135deg, #f3cf5f 0%, #d9a91f 45%, #c08b12 75%, #e9bf45 100%);
-  --blue: #c08b12;
+  --pink: #f2b800;
+  --gold-text: linear-gradient(100deg, #f0b000 0%, #ffd60a 40%, #ffe766 52%, #ffd60a 64%, #f2b800 100%);
+  --gold-bg: linear-gradient(135deg, #ffe14d 0%, #ffd60a 50%, #f5c400 100%);
+  --blue: #f2b800;
   --teal: #e5c46b;
   --yellow: #ffd60a;
   --green: #d9a62e;
   --orange: #ff9f1c;
-  --purple: #b8860b;
+  --purple: #e0a800;
   --ink: #2f3424;
   --muted: #696a57;
   --cream: #fffdf2;
@@ -54,11 +54,11 @@ h1, h2, h3, h4 { font-family: "Quicksand", "Nunito", sans-serif; font-weight: 70
 }
 .btn:hover { transform: translateY(-3px); box-shadow: 0 8px 0 rgba(0,0,0,.15); }
 .btn:active { transform: translateY(2px); box-shadow: 0 2px 0 rgba(0,0,0,.15); }
-.btn-blue { background: var(--gold-bg); color: #fff; text-shadow: 0 1px 2px rgba(90,60,0,.45); }
-.btn-pink { background: var(--gold-bg); color: #fff; text-shadow: 0 1px 2px rgba(90,60,0,.45); }
+.btn-blue { background: var(--gold-bg); color: var(--brown); }
+.btn-pink { background: var(--gold-bg); color: var(--brown); }
 .btn-light { background: #fff; color: var(--blue); border-color: var(--yellow); }
 .btn-yellow { background: var(--yellow); color: var(--ink); }
-.btn-outline { background: #fff; border-color: var(--blue); color: var(--blue); }
+.btn-outline { background: #fff; border-color: #ffd60a; color: var(--brown); }
 .btn-small { font-size: 1rem; padding: .45em 1.2em; }
 .btn-full { width: 100%; }
 
@@ -434,7 +434,7 @@ section { padding: 90px 0; }
 .course-price { font-family: "Quicksand", sans-serif; font-size: 1.7rem; font-weight: 700; color: var(--pink); margin: 0 0 16px; }
 .course-price small { font-size: 1rem; color: var(--muted); font-weight: 600; }
 .course-price.course-ask { font-size: 1.15rem; color: var(--purple); }
-.btn-zalo { background: var(--pink); color: #fff; }
+.btn-zalo { background: var(--gold-bg); color: var(--brown); }
 .courses .note a { color: var(--pink); }
 @media (max-width: 960px) {
   .course-grid { grid-template-columns: repeat(2, 1fr); }
@@ -622,8 +622,12 @@ section { padding: 90px 0; }
 /* ---------- Tiêu đề: một phần nâu, một phần vàng ánh kim ---------- */
 .hero h1, .section-title, .about-text h2, .contact-text h2 { color: var(--brown); }
 .section-title.light { color: #fff; }
-.main-nav a:not(.btn) { color: #b8860b; }
-.main-nav a:not(.btn):hover, .main-nav a.nav-main { color: #d9a91f; }
+.main-nav a:not(.btn) { color: #e8ad00; text-shadow: 0 1px 0 rgba(120,80,0,.18); }
+.main-nav a:not(.btn):hover, .main-nav a.nav-main { color: #f5c400; }
 .course-grid > .course-card:last-child:nth-child(3n+1) { grid-column: 2; }
 @media (max-width: 960px) { .course-grid > .course-card:last-child:nth-child(3n+1) { grid-column: auto; } .course-grid > .course-card:last-child:nth-child(odd) { grid-column: 1 / -1; justify-self: center; width: calc(50% - 12px); } }
 @media (max-width: 560px) { .course-grid > .course-card:last-child:nth-child(odd) { grid-column: auto; width: auto; justify-self: stretch; } }
+
+/* Chữ vàng (giống viền ảnh) có bóng nhẹ cho dễ đọc trên nền sáng */
+.hl-pink, .hl-blue, .hl-green, .section-title span, .rainbow, .logo-text b { filter: drop-shadow(0 1px 0 rgba(120,80,0,.35)); }
+.course-price, .price, .service-price, .hero-price b, .training-price b { text-shadow: 0 1px 0 rgba(120,80,0,.25); }
