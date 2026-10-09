@@ -701,3 +701,17 @@ section { padding: 90px 0; }
 .level-card { border-top-color: #f5c400; }
 @media (min-width: 561px) and (max-width: 1100px) { .dl-grid { grid-template-columns: 1fr 1fr; } }
 @media (max-width: 480px) { .header-inner .logo-text b { font-size: 2.15rem; } .header-inner .logo-text { font-size: 1.15rem; gap: 4px; } .header-inner { gap: 8px; } .header-inner .logo img { width: 46px; height: 46px; } .lang-switch { margin-right: 4px; } .lang-switch a { padding: 4px 9px; } }
+
+/* ---------- Nút liên hệ nổi: Gọi điện, Zalo (Messenger sau) ---------- */
+.contact-float { position: fixed; left: 18px; bottom: 20px; z-index: 40; display: flex; flex-direction: column; gap: 10px; }
+.cf-btn { display: flex; align-items: center; gap: 8px; padding: 8px 18px 8px 8px; border-radius: 999px; text-decoration: none; font-family: "Quicksand", sans-serif; font-weight: 700; font-size: 1rem; box-shadow: 0 6px 18px rgba(0,0,0,.18); transition: transform .2s; }
+.cf-btn:hover { transform: translateY(-2px); }
+.cf-ic { width: 38px; height: 38px; border-radius: 50%; display: grid; place-items: center; background: #fff; font-size: 1.15rem; flex: none; }
+.cf-call { background: var(--gold-bg); color: var(--brown); }
+.cf-call .cf-ic { animation: cf-ring 2.4s infinite; }
+.cf-zalo { background: #0068ff; color: #fff; }
+.cf-zalo-ic { color: #0068ff; font-size: .72rem; font-weight: 800; }
+.cf-mess { background: linear-gradient(135deg, #00b2ff, #7a3cff); color: #fff; }
+@keyframes cf-ring { 0%, 70%, 100% { transform: rotate(0); } 75% { transform: rotate(-14deg); } 80% { transform: rotate(14deg); } 85% { transform: rotate(-10deg); } 90% { transform: rotate(10deg); } }
+@media (max-width: 560px) { .contact-float { left: 12px; bottom: 14px; gap: 8px; } .cf-btn { padding: 6px; } .cf-tx { display: none; } .cf-ic { width: 44px; height: 44px; } }
+@media (prefers-reduced-motion: reduce) { .cf-call .cf-ic { animation: none; } }
