@@ -730,3 +730,15 @@ section { padding: 90px 0; }
   .hero-photo-round { order: -1; max-width: 300px; padding-top: 10px; }
   .hero-name { font-size: .95rem; padding: .6em 1.2em; }
 }
+
+/* Đầu trang 1 cột như mẫu: ảnh thiền tròn ở trên, chữ ở dưới, căn giữa */
+.hero-inner { grid-template-columns: 1fr; gap: 26px; text-align: center; justify-items: center; }
+.hero-inner .hero-sub { margin-left: auto; }
+.hero-inner .hero-buttons { justify-content: center; }
+.hero-photo-round { order: -1; max-width: 400px; padding-top: 10px; }
+.hero-portrait img { object-position: 50% 30%; }
+.hero-name { font-style: italic; }
+@media (max-width: 760px) {
+  .hero-photo-round { max-width: 300px; }
+  .hero-name { font-size: clamp(.74rem, 3.6vw, .9rem); padding: .65em 1.1em; gap: 8px; }
+}
