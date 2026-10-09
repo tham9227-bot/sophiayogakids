@@ -742,3 +742,18 @@ section { padding: 90px 0; }
   .hero-photo-round { max-width: 300px; }
   .hero-name { font-size: clamp(.74rem, 3.6vw, .9rem); padding: .65em 1.1em; gap: 8px; }
 }
+
+/* ---------- Học phí 2 lựa chọn: video quay sẵn / Zoom trực tiếp ---------- */
+.hero-price-box { margin: -.6rem auto 1.6rem; max-width: 460px; }
+.po-title { font-family: "Quicksand", sans-serif; font-weight: 700; color: var(--brown); margin: 0 0 8px; }
+.price-opts { list-style: none; padding: 0; margin: 0 auto 1.4rem; max-width: 460px; display: grid; gap: 8px; }
+.price-opts li { display: flex; justify-content: space-between; align-items: center; gap: 12px; background: #fff; border: 2px solid #ffe58a; border-radius: 16px; padding: 10px 16px; text-align: left; }
+.price-opts span { color: var(--ink); font-weight: 600; }
+.price-opts b { font-family: "Quicksand", sans-serif; font-size: 1.3rem; color: var(--pink); text-shadow: 0 1px 0 rgba(120,80,0,.25); white-space: nowrap; }
+.hero-price-box .price-opts { margin-bottom: 0; }
+.price-opts.po-left { margin-left: 0; }
+.price-opts.po-small b { font-size: 1.15rem; }
+.price-opts.po-small span { font-size: .95rem; }
+.course-price small { display: block; font-size: .8rem; color: var(--muted); font-weight: 600; text-shadow: none; }
+.course-price-2 { margin-top: -6px; }
+@media (max-width: 420px) { .price-opts li { padding: 9px 12px; } .price-opts span { font-size: .9rem; } .price-opts b { font-size: 1.1rem; } }
