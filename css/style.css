@@ -216,7 +216,7 @@ section { padding: 90px 0; }
 
 /* ---------- Tài liệu ---------- */
 .downloads { background: var(--purple); background: linear-gradient(135deg, #a87a12, #d9a62e); }
-.dl-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; margin-top: 40px; }
+.dl-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; margin-top: 40px; }
 .dl-card {
   background: rgba(255,255,255,.12); border: 2px dashed rgba(255,255,255,.5);
   border-radius: var(--radius); padding: 34px 26px; text-align: center; color: #fff;
@@ -573,3 +573,11 @@ section { padding: 90px 0; }
 .feedback-card cite { font-style: normal; font-weight: 700; color: var(--pink); font-size: .95rem; }
 .feedback-note { text-align: center; color: var(--muted); font-size: .9rem; margin-top: 14px; }
 @media (max-width: 760px) { .online-photos, .feedback-grid { grid-template-columns: 1fr; } }
+
+/* ---------- Thẻ tài liệu mới ---------- */
+.dl-card { position: relative; }
+.dl-badge { position: absolute; top: 14px; right: 14px; background: var(--yellow); color: var(--dark); font-weight: 700; font-size: .8rem; padding: 3px 10px; border-radius: 99px; }
+.dl-new { background: rgba(255,255,255,.22); border: 2px solid #fff; }
+.dl-card { display: flex; flex-direction: column; align-items: center; }
+.dl-card p { flex: 1; }
+.dl-card .btn { white-space: nowrap; padding: 12px 22px; font-size: .95rem; }
