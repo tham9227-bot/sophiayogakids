@@ -191,6 +191,10 @@ section { padding: 90px 0; }
 .about-photo img { border-radius: 36px; box-shadow: var(--shadow); border: 8px solid var(--yellow); }
 .about-text h2 { font-size: clamp(2rem, 4vw, 2.8rem); font-weight: 700; }
 .about-text p { color: var(--muted); font-size: 1.08rem; }
+.about-benefits { list-style: none; padding: 0; margin: 0 0 1rem; display: grid; gap: 10px; }
+.about-benefits li { position: relative; padding: 10px 14px 10px 40px; background: #fbf3dc; border-radius: 14px; color: var(--muted); font-size: 1.02rem; line-height: 1.55; }
+.about-benefits li::before { content: "🌱"; position: absolute; left: 12px; top: 10px; }
+.about-benefits b { color: var(--dark); }
 
 /* ---------- Blog ---------- */
 .blog { background: var(--cream); }
@@ -559,6 +563,15 @@ section { padding: 90px 0; }
   .card-label { font-size: .82rem; padding: 8px 10px; }
 }
 .nowrap { white-space: nowrap; }
+
+/* ---------- Bằng cấp của Sophia (ảnh nhỏ dưới ảnh chính) ---------- */
+.cert-thumbs { display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; margin-top: 16px; }
+.cert-thumb { display: block; background: #fff; border-radius: 10px; padding: 4px; box-shadow: var(--shadow); text-decoration: none; text-align: center; transition: transform .2s; }
+.cert-thumb:hover { transform: translateY(-3px); }
+.about-photo .cert-thumb img { width: 100%; height: 64px; object-fit: contain; border: 0; border-radius: 6px; box-shadow: none; display: block; }
+.cert-thumb span { display: block; font-size: .7rem; font-weight: 700; color: var(--dark); margin-top: 3px; line-height: 1.2; }
+.cert-note { text-align: center; font-size: .82rem; color: #7a7a7a; margin: 8px 0 0; }
+.about-quote { font-style: italic; font-weight: 600; color: var(--pink); border-left: 4px solid var(--yellow); padding-left: 14px; }
 
 /* ---------- Đào tạo online + feedback học viên ---------- */
 .sub-title { text-align: center; font-size: 1.5rem; margin: 56px 0 8px; color: var(--dark); }
