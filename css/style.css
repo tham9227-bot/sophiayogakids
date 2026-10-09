@@ -5,13 +5,15 @@
    (Giữ tên biến cũ: --pink = vàng kim chính, --blue = cam mật ong, --purple = nâu đậm.)
    ========================================================= */
 :root {
-  --pink: #a87a12;
-  --blue: #e07b10;
+  --pink: #c99a1e;
+  --gold-text: linear-gradient(100deg, #b8860b 0%, #e2b227 30%, #f6d873 50%, #d9a91f 68%, #b07f0e 100%);
+  --gold-bg: linear-gradient(135deg, #f3cf5f 0%, #d9a91f 45%, #c08b12 75%, #e9bf45 100%);
+  --blue: #c08b12;
   --teal: #e5c46b;
   --yellow: #ffd60a;
   --green: #d9a62e;
   --orange: #ff9f1c;
-  --purple: #6b4423;
+  --purple: #b8860b;
   --ink: #2f3424;
   --muted: #696a57;
   --cream: #fffdf2;
@@ -51,8 +53,8 @@ h1, h2, h3, h4 { font-family: "Quicksand", "Nunito", sans-serif; font-weight: 70
 }
 .btn:hover { transform: translateY(-3px); box-shadow: 0 8px 0 rgba(0,0,0,.15); }
 .btn:active { transform: translateY(2px); box-shadow: 0 2px 0 rgba(0,0,0,.15); }
-.btn-blue { background: var(--blue); color: #fff; }
-.btn-pink { background: var(--pink); color: #fff; }
+.btn-blue { background: var(--gold-bg); color: #fff; text-shadow: 0 1px 2px rgba(90,60,0,.45); }
+.btn-pink { background: var(--gold-bg); color: #fff; text-shadow: 0 1px 2px rgba(90,60,0,.45); }
 .btn-light { background: #fff; color: var(--blue); border-color: var(--yellow); }
 .btn-yellow { background: var(--yellow); color: var(--ink); }
 .btn-outline { background: #fff; border-color: var(--blue); color: var(--blue); }
@@ -69,7 +71,7 @@ h1, h2, h3, h4 { font-family: "Quicksand", "Nunito", sans-serif; font-weight: 70
 .header-inner { display: flex; align-items: center; justify-content: space-between; gap: 20px; height: 76px; }
 .logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
 .logo-text { font-family: "Quicksand", sans-serif; font-size: 1.45rem; font-weight: 700; color: var(--purple); }
-.logo-text b { color: var(--pink); }
+.logo-text b { background: var(--gold-text); -webkit-background-clip: text; background-clip: text; color: transparent; }
 .main-nav { display: flex; align-items: center; gap: 26px; }
 .main-nav a { font-family: "Quicksand", sans-serif; font-weight: 700; font-size: 1.05rem; text-decoration: none; }
 .main-nav a:not(.btn):hover { color: var(--pink); }
@@ -90,7 +92,7 @@ h1, h2, h3, h4 { font-family: "Quicksand", "Nunito", sans-serif; font-weight: 70
 }
 .hero h1 { font-size: clamp(2.2rem, 5.5vw, 4.2rem); font-weight: 700; }
 .rainbow {
-  background: linear-gradient(90deg, #a87a12, #d4a017, #b8860b, #8b5a2b);
+  background: var(--gold-text);
   -webkit-background-clip: text; background-clip: text; color: transparent;
 }
 .hero-sub { max-width: 640px; margin: 0 auto 2rem; font-size: 1.15rem; color: var(--muted); }
@@ -610,3 +612,8 @@ section { padding: 90px 0; }
 .school-price .demo { margin: 14px 0 18px; }
 @media (max-width: 960px) { .activity-grid { grid-template-columns: 1fr 1fr; } .school-box { grid-template-columns: 1fr; } }
 @media (max-width: 480px) { .activity-grid { gap: 12px; } .activity { padding: 16px 14px; } .school-box { padding: 22px; } }
+
+/* ---------- Chữ vàng ánh kim ---------- */
+.hl-pink, .hl-blue, .hl-green, .section-title span {
+  background: var(--gold-text); -webkit-background-clip: text; background-clip: text; color: transparent;
+}
