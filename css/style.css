@@ -774,3 +774,22 @@ section { padding: 90px 0; }
 @media (max-width: 1100px) { .level-grid { grid-template-columns: 1fr 1fr; } }
 @media (max-width: 760px) { .level-grid { grid-template-columns: 1fr; } }
 @media (min-width: 1181px) { .course-grid { grid-template-columns: repeat(3, 1fr); } }
+
+/* ---------- Tài liệu kín cho trường mầm non ---------- */
+.school-pack {
+  margin-top: 48px; display: grid; grid-template-columns: 1fr 1.15fr; gap: 32px; align-items: center;
+  background: #4a2f17; color: #fff; border: 2px solid #ffd60a; border-radius: var(--radius); padding: 34px;
+}
+.school-lock { display: inline-block; background: #ffd60a; color: #4a2f17; font-weight: 700; font-size: .85rem; padding: 4px 14px; border-radius: 99px; }
+.school-pack h3 { color: #ffd60a; font-size: 1.6rem; margin: 14px 0 8px; }
+.school-pack-title { margin: 0 0 10px; }
+.school-pack ul { margin: 0 0 14px; padding-left: 20px; opacity: .92; }
+.school-pack li { margin-bottom: 6px; }
+.school-note { font-size: .92rem; opacity: .85; margin: 0 0 18px; }
+.school-pack .btn { white-space: normal; text-align: center; }
+.school-pack-preview { position: relative; }
+.school-pack-preview img { display: block; width: 100%; height: auto; border-radius: 12px; border: 3px solid #ffd60a; }
+@media (max-width: 900px) {
+  .school-pack { grid-template-columns: 1fr; padding: 24px 18px; }
+  .school-pack-preview { order: -1; }
+}
