@@ -809,26 +809,3 @@ section { padding: 90px 0; }
   .school-pack { grid-template-columns: 1fr; padding: 24px 18px; }
   .school-pack-preview { order: -1; }
 }
-
-/* ---------- Logo mới: hoa sen nét mảnh + chữ viết tay Allura + dòng "Yoga for a brighter life" ---------- */
-.logo-words { display: flex; flex-direction: column; align-items: center; line-height: 1; }
-.logo .logo-text, .header-inner .logo-text { font-family: "Allura", cursive; font-weight: 400; letter-spacing: 0; align-items: baseline; }
-.logo-text b { font-family: "Allura", cursive; font-weight: 400; letter-spacing: 0; }
-.logo .logo-text { font-size: 2.2rem; gap: .22em; }
-.logo .logo-text b { font-size: 1em; }
-.logo-tag { font-family: "Josefin Sans", "Nunito", sans-serif; font-weight: 600; font-size: .62rem; letter-spacing: .22em; text-transform: uppercase; color: var(--brown); margin-top: 2px; white-space: nowrap; }
-.header-inner .logo img { width: auto; height: 46px; }
-@media (min-width: 861px) {
-  .header-inner .logo img { height: 66px; }
-  .header-inner .logo-text { font-size: 3.6rem; }
-  .header-inner .logo-text b { font-size: 1em; }
-  .header-inner .logo-tag { font-size: .8rem; margin-top: 4px; }
-}
-@media (max-width: 480px) {
-  .header-inner .logo img { height: 38px; }
-  .header-inner .logo-text { font-size: 2.05rem; }
-  .header-inner .logo-text b { font-size: 1em; }
-  .header-inner .logo-tag { font-size: .5rem; letter-spacing: .16em; }
-}
-.footer-logo img { width: auto; height: 46px; background: none; border-radius: 0; padding: 0; filter: brightness(1.25); }
-.footer-logo .logo-tag { color: #fff; opacity: .85; }
