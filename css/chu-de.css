@@ -80,3 +80,6 @@
 .cd-cue { display: inline-block; margin-left: 4px; padding: 2px 10px; border-radius: 999px; background: #fff7d6; color: #8b5a2b; font-weight: 700; font-size: .95rem; font-family: "Quicksand", sans-serif; }
 .cd-end { font-weight: 700; color: #8b5a2b; margin-bottom: 0 !important; }
 @media (max-width: 760px) { .cd-story { padding: 18px 16px; } }
+.cd-noimg { grid-template-rows: 1fr auto; padding-bottom: 8px; }
+.cd-noimg span { align-self: center; justify-self: center; }
+.cd-noimg small { font-size: .8rem; color: #fff; background: rgba(0,0,0,.22); padding: 2px 10px; border-radius: 999px; justify-self: center; font-family: "Quicksand", sans-serif; font-weight: 700; }
