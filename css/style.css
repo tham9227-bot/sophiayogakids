@@ -205,14 +205,32 @@ section { padding: 90px 0; }
 
 /* ---------- Blog ---------- */
 .blog { background: var(--cream); }
-.filters { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-bottom: 36px; }
-.filter {
-  font-family: "Quicksand", sans-serif; font-weight: 700; font-size: 1rem;
-  border: 2px solid #e4e0c8; background: #fff; color: var(--ink);
-  padding: .4em 1.1em; border-radius: 999px; cursor: pointer;
+.filters {
+  display: flex; flex-wrap: nowrap; gap: 8px; margin-bottom: 36px;
+  overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; padding: 4px 2px;
 }
-.filter:hover { border-color: var(--green); }
-.filter.active { background: var(--green); border-color: var(--green); color: #fff; }
+.filters::-webkit-scrollbar { display: none; }
+.filter:first-child { margin-left: auto; }
+.filter:last-child { margin-right: auto; }
+.filter {
+  --c: #8b5a2b; --bg: #f6ece2;
+  flex: 0 0 auto; white-space: nowrap;
+  font-family: "Quicksand", sans-serif; font-weight: 700; font-size: .88rem;
+  border: 2px solid var(--c); background: var(--bg); color: var(--c);
+  padding: .32em .85em; border-radius: 999px; cursor: pointer;
+  transition: background .2s, color .2s, transform .2s;
+}
+.filters .filter:nth-child(1) { --c: #d0563f; --bg: #fdebe6; } /* Câu chuyện: đỏ san hô */
+.filters .filter:nth-child(2) { --c: #e07812; --bg: #fff0dd; } /* Chủ đề: cam */
+.filters .filter:nth-child(3) { --c: #b88a00; --bg: #fff7d6; } /* Tư thế: vàng */
+.filters .filter:nth-child(4) { --c: #5f8a1e; --bg: #eef5e0; } /* Bài hát: xanh lá */
+.filters .filter:nth-child(5) { --c: #1f8a80; --bg: #e0f3f1; } /* Trò chơi: xanh ngọc */
+.filters .filter:nth-child(6) { --c: #c2508a; --bg: #fbe8f2; } /* Chánh niệm: hồng */
+.filters .filter:nth-child(7) { --c: #7b55b0; --bg: #f0e9fa; } /* Bài dạy demo: tím */
+.filters .filter:nth-child(8) { --c: #8b5a2b; --bg: #f6ece2; } /* Flashcard: nâu */
+.filter:hover { transform: translateY(-1px); }
+.filter.active { background: var(--c); border-color: var(--c); color: #fff; }
+@media (max-width: 600px) { .filter { font-size: .82rem; padding: .3em .75em; } .filters { gap: 6px; } }
 .post-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
 .post { background: #fff; border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); transition: transform .2s; }
 .post:hover { transform: translateY(-5px); }
