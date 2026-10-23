@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<title>Tiếng Anh cho HLV Yoga · Sophia Yoga</title>
+<link rel="icon" href="../images/favicon.png?v=3" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Quicksand:wght@500;600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fffaf0;--soft:#fff3cf;--ink:#3b2a1a;--brown:#5a3a1e;--muted:#6f5a45;--gold:#e8b400;--gold2:#c98f00;--btn:#ffd60a;--btn2:#ffe14d;--line:#efe1bd;color-scheme:light}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Nunito,"Segoe UI",system-ui,sans-serif;line-height:1.6}
+.wrap{max-width:1100px;margin:0 auto;padding:0 20px}
+header{background:#fff;border-bottom:1px solid var(--line)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-block:10px}
+.logo{display:flex;align-items:center;gap:8px;text-decoration:none}
+.logo img{width:52px;height:auto}
+.logo b{font-family:"Dancing Script",cursive;font-size:2.2rem;color:var(--gold);line-height:1}
+.logo span{font-family:Quicksand,sans-serif;font-weight:700;font-size:1.4rem;color:var(--brown)}
+.tag{font-family:Quicksand,sans-serif;font-weight:700;color:var(--gold2);background:var(--soft);border-radius:999px;padding:4px 14px;font-size:.9rem}
+h1,h2{font-family:Quicksand,sans-serif;color:var(--brown);line-height:1.2;margin:0}
+h1{font-size:clamp(1.8rem,4.5vw,2.6rem);margin:36px 0 8px}
+h1 em{font-style:normal;color:var(--gold)}
+h2{font-size:1.35rem;margin:36px 0 14px;padding-left:12px;border-left:5px solid var(--btn)}
+h2 small{font-size:.85rem;color:var(--muted);font-weight:600;margin-left:6px}
+.count{color:var(--muted);margin:0 0 4px}
+.lock{max-width:420px;margin:48px auto 80px;background:#fff;border:1px solid var(--line);border-radius:24px;padding:30px 26px;text-align:center;box-shadow:0 10px 30px rgba(120,80,20,.1)}
+.lock .ic{font-size:2.4rem}
+.lock p{color:var(--muted);margin:6px 0 18px}
+.lock input{width:100%;font:600 1.05rem Nunito,sans-serif;padding:12px 16px;border:2px solid var(--line);border-radius:14px;outline:none}
+.lock input:focus{border-color:var(--gold)}
+.btn{display:inline-flex;justify-content:center;align-items:center;border:0;border-radius:999px;padding:12px 26px;font:700 1rem Quicksand,sans-serif;cursor:pointer;background:linear-gradient(180deg,var(--btn2),var(--btn));color:var(--ink);box-shadow:0 6px 18px rgba(224,168,0,.35);margin-top:14px;width:100%;text-decoration:none}
+.btn:focus-visible,.play:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.err{color:#b3261e;min-height:1.4em;margin:10px 0 0;font-weight:600}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.vid{margin:0;background:#fff;border:1px solid var(--line);border-radius:18px;overflow:hidden}
+.play{all:unset;display:block;position:relative;width:100%;aspect-ratio:16/9;cursor:pointer;background:#2b1d10}
+.play img{width:100%;height:100%;object-fit:cover;display:block}
+.pbtn{position:absolute;inset:0;margin:auto;width:62px;height:62px;border-radius:50%;background:rgba(255,214,10,.95);display:grid;place-items:center;font-size:1.5rem;color:var(--ink);box-shadow:0 6px 18px rgba(0,0,0,.3)}
+.pl{background:#fff;border:1px solid var(--line);border-radius:18px;overflow:hidden;margin-top:18px}.pl iframe{display:block;width:100%;aspect-ratio:16/9;border:0}.vid iframe{display:block;width:100%;aspect-ratio:16/9;border:0}
+.vid figcaption{padding:10px 14px 14px;font-weight:700;color:var(--brown);font-size:.98rem}
+.note{background:var(--soft);border-radius:16px;padding:14px 18px;color:var(--muted);margin:40px 0 0;font-size:.92rem}
+footer{color:var(--muted);text-align:center;font-size:.9rem;padding:36px 0 50px}
+footer a{color:var(--gold2);font-weight:700}
+#out[hidden],#lock[hidden]{display:none}
+@media (max-width:860px){.grid{grid-template-columns:1fr 1fr}}
+@media (max-width:540px){.grid{grid-template-columns:1fr}.tag{display:none}}
+</style>
+</head>
+<body>
+<header><div class="wrap"><a class="logo" href="../"><img src="../images/logo.png?v=3" alt="" width="52" height="45"><b>Sophia</b><span>Yoga</span></a><span class="tag">Tiếng Anh cho HLV</span></div></header>
+<main class="wrap">
+  <h1>Tiếng Anh cho <em>HLV Yoga</em></h1>
+  <form class="lock" id="lock" autocomplete="off">
+    <div class="ic" aria-hidden="true">🔒</div>
+    <p>Khóa học dành riêng cho học viên. Nhập mật khẩu Sophia đã gửi để vào học.</p>
+    <label for="pw" style="position:absolute;left:-9999px">Mật khẩu</label>
+    <input id="pw" type="password" placeholder="Mật khẩu" required autofocus>
+    <button class="btn" type="submit" id="go">Vào học</button>
+    <p class="err" id="err" role="status"></p>
+  </form>
+  <div id="out" hidden></div>
+  <p class="note" id="note" hidden>Khóa học chỉ dành cho học viên. Vui lòng không chia sẻ link hoặc mật khẩu ra ngoài.</p>
+</main>
+<footer>© Sophia Yoga · <a href="../">Về trang chủ</a> · Zalo 0349 270 304</footer>
+<script>
+(function(){
+  var S="FdZKQ6/CXilpBWOtOtCxpw==",IV="0flb4B1EvPQ+IJod",IT=250000,D="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";
+  var b=function(s){return Uint8Array.from(atob(s),function(c){return c.charCodeAt(0)})};
+  var form=document.getElementById('lock'),err=document.getElementById('err'),out=document.getElementById('out');
+  async function open(pw){
+    var k=await crypto.subtle.importKey('raw',new TextEncoder().encode(pw),'PBKDF2',false,['deriveKey']);
+    var key=await crypto.subtle.deriveKey({name:'PBKDF2',salt:b(S),iterations:IT,hash:'SHA-256'},k,{name:'AES-GCM',length:256},false,['decrypt']);
+    var pt=await crypto.subtle.decrypt({name:'AES-GCM',iv:b(IV)},key,b(D));
+    return new TextDecoder().decode(pt);
+  }
+  function show(html){
+    out.innerHTML=html;out.hidden=false;form.hidden=true;document.getElementById('note').hidden=false;
+    out.addEventListener('click',function(e){
+      var p=e.target.closest('.play');if(!p)return;
+      var f=document.createElement('iframe');
+      f.src='https://www.youtube-nocookie.com/embed/'+p.dataset.id+'?autoplay=1&rel=0';
+      f.title=p.getAttribute('aria-label');
+      f.allow='autoplay; encrypted-media; picture-in-picture; fullscreen';f.allowFullscreen=true;
+      p.replaceWith(f);
+    });
+  }
+  try{var saved=sessionStorage.getItem('tah');if(saved)open(saved).then(show).catch(function(){});}catch(e){}
+  form.addEventListener('submit',function(e){
+    e.preventDefault();err.textContent='Đang mở…';
+    var pw=document.getElementById('pw').value.trim();
+    open(pw).then(function(h){try{sessionStorage.setItem('tah',pw)}catch(x){}show(h);})
+      .catch(function(){err.textContent='Mật khẩu chưa đúng, chị/anh thử lại nhé.';});
+  });
+})();
+</script>
+</body>
+</html>

@@ -809,3 +809,7 @@ section { padding: 90px 0; }
   .school-pack { grid-template-columns: 1fr; padding: 24px 18px; }
   .school-pack-preview { order: -1; }
 }
+
+.qr-box { margin-top: 12px; }
+.qr-box summary { cursor: pointer; font-weight: 700; color: var(--brown, #6b4a2b); }
+.qr-box img { display: block; width: 100%; max-width: 286px; height: auto; margin: 10px auto 0; border-radius: 16px; }

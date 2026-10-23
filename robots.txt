@@ -1,3 +1,6 @@
 User-agent: *
+Disallow: /khu-hoc-vien/
+Disallow: /tieng-anh-hlv/
+Disallow: /giao-trinh-hlv/
 Allow: /
 Sitemap: https://sophiayogakids.com/sitemap.xml

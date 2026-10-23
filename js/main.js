@@ -10,13 +10,17 @@ if (toggle && nav) {
 }
 
 // Lọc bài viết theo chủ đề
-document.querySelectorAll('.filter').forEach(btn => {
+document.querySelectorAll('.filter[data-cat]').forEach(btn => {
   btn.addEventListener('click', () => {
-    document.querySelectorAll('.filter').forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-    const cat = btn.dataset.cat;
+    // Bấm lại nút đang chọn thì bỏ lọc, hiện lại tất cả bài
+    const wasActive = btn.classList.contains('active');
+    document.querySelectorAll('.filter[data-cat]').forEach(b => b.classList.remove('active'));
+    if (!wasActive) btn.classList.add('active');
+    const cat = wasActive ? 'all' : btn.dataset.cat;
     document.querySelectorAll('.post').forEach(post => {
-      post.classList.toggle('hide', cat !== 'all' && post.dataset.cat !== cat);
+      // Bài có data-only-filter chỉ hiện khi bấm đúng mục của nó
+      const hide = cat === 'all' ? post.hasAttribute('data-only-filter') : post.dataset.cat !== cat;
+      post.classList.toggle('hide', hide);
     });
   });
 });
