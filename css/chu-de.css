@@ -1,0 +1,74 @@
+/* ---------- Yoga chủ đề: ảnh bìa thẻ và trang truyện ---------- */
+.c-red  { background: linear-gradient(135deg, #ff8a80, #e53935); }
+.c-teal { background: linear-gradient(135deg, #7be3d3, #12a594); }
+
+.cd-cover { position: relative; overflow: hidden; display: grid; place-items: center; }
+.cd-cover::before, .cd-cover::after {
+  content: ""; position: absolute; border-radius: 50%; background: rgba(255,255,255,.22);
+}
+.cd-cover::before { width: 190px; height: 190px; left: -50px; bottom: -80px; }
+.cd-cover::after  { width: 120px; height: 120px; right: -30px; top: -40px; background: rgba(255,255,255,.18); }
+.cd-main { position: relative; z-index: 2; font-size: 4.6rem; line-height: 1; filter: drop-shadow(0 6px 10px rgba(0,0,0,.2)); }
+.cd-d { position: absolute; z-index: 1; font-size: 1.9rem; line-height: 1; filter: drop-shadow(0 3px 5px rgba(0,0,0,.15)); }
+.cd-d1 { left: 14%; top: 26%; transform: rotate(-14deg); }
+.cd-d2 { right: 14%; top: 22%; transform: rotate(12deg); font-size: 1.6rem; }
+.cd-d3 { right: 22%; bottom: 14%; transform: rotate(-6deg); font-size: 1.7rem; }
+.cd-badge, .cd-time {
+  position: absolute; z-index: 3; top: 12px; font-family: "Quicksand", sans-serif; font-weight: 700;
+  font-size: .78rem; color: #fff; background: rgba(0,0,0,.22); padding: 3px 10px; border-radius: 999px;
+}
+.cd-badge { left: 12px; }
+.cd-time { right: 12px; }
+.cd-big { height: 260px; border-radius: var(--radius); margin: 24px 0; }
+.cd-big .cd-main { font-size: 7rem; }
+.cd-big .cd-d { font-size: 3rem; }
+.cd-big .cd-d2 { font-size: 2.6rem; }
+
+/* Trang danh sách */
+.cd-hub { padding: 50px 0 80px; }
+.cd-hub .section-sub { max-width: 760px; margin-left: auto; margin-right: auto; }
+.cd-group { font-size: 1.6rem; margin: 48px 0 20px; color: var(--blue); }
+.cd-group small { font-size: 1rem; color: var(--muted); font-weight: 600; }
+.cd-hub-values { max-width: 760px; margin: 28px auto 0; }
+.cd-hub-values ul { margin: 6px 0 0; padding-left: 1.2em; columns: 2; column-gap: 28px; }
+.cd-hub-values li { margin-bottom: 4px; }
+
+/* Trang truyện */
+.cd-facts { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin: 0 0 20px; }
+.cd-facts div { background: #fff; border-radius: 14px; padding: 12px 14px; box-shadow: var(--shadow); font-size: .98rem; }
+.cd-facts b { display: block; font-family: "Quicksand", sans-serif; color: var(--blue); margin-bottom: 2px; }
+.cd-value { background: #fff7d6; border: 2px dashed #e0b84a; border-radius: 16px; padding: 16px 20px; }
+.cd-value p { margin: 6px 0; }
+.cd-value-title { font-family: "Quicksand", sans-serif; font-weight: 700; font-size: 1.15rem; color: #8b5a2b; }
+.cd-article h2 small { font-size: 1rem; color: var(--muted); font-weight: 600; }
+.cd-intro { font-size: 1.15rem; font-style: italic; background: #fff; border-left: 5px solid #f0c75e; padding: 12px 16px; border-radius: 10px; }
+.cd-steps { list-style: none; padding: 0; margin: 20px 0; display: grid; gap: 18px; }
+.cd-step { display: grid; grid-template-columns: 220px 1fr; gap: 18px; background: #fff; border-radius: 18px; padding: 14px; box-shadow: var(--shadow); margin: 0 !important; }
+.cd-step-img { position: relative; }
+.cd-step-img img, .cd-noimg { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 12px; display: block; }
+.cd-noimg { display: grid; place-items: center; font-size: 3.6rem; }
+.cd-step-no {
+  position: absolute; top: 8px; left: 8px; width: 34px; height: 34px; border-radius: 50%;
+  background: #a87a12; color: #fff; display: grid; place-items: center; font-weight: 700; font-family: "Quicksand", sans-serif;
+}
+.cd-step h3 { font-size: 1.25rem; margin: 2px 0 4px; }
+.cd-step p { margin: 4px 0; font-size: 1.02rem !important; }
+.cd-pose { color: #8b5a2b; font-weight: 700; }
+.cd-pose span { font-weight: 600; color: var(--muted); }
+.cd-say { font-size: 1.08rem !important; }
+.cd-how { color: var(--muted); }
+.cd-lesson { font-weight: 600; }
+.cd-safe { margin-top: 28px; background: #e0f3f1; border-radius: 14px; padding: 12px 18px; }
+.cd-safe p { margin: 0; font-size: 1rem !important; }
+.cd-nav { display: flex; justify-content: space-between; align-items: center; gap: 10px; margin-top: 34px; flex-wrap: wrap; }
+.cd-nav a { text-decoration: none; font-weight: 700; color: #a87a12; }
+.cd-nav .cd-all { background: #ffd60a; color: #4a2f17; padding: 8px 16px; border-radius: 999px; }
+
+@media (max-width: 760px) {
+  .cd-facts { grid-template-columns: 1fr 1fr; }
+  .cd-step { grid-template-columns: 1fr; }
+  .cd-hub-values ul { columns: 1; }
+  .cd-big { height: 200px; }
+  .cd-big .cd-main { font-size: 5.4rem; }
+  .cd-nav { justify-content: center; text-align: center; }
+}
