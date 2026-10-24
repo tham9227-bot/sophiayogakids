@@ -85,3 +85,24 @@
 .cd-noimg small { font-size: .8rem; color: #fff; background: rgba(0,0,0,.22); padding: 2px 10px; border-radius: 999px; justify-self: center; font-family: "Quicksand", sans-serif; font-weight: 700; }
 /* Tên tư thế in đậm trong câu chuyện */
 .cd-story strong.cd-b { color: #8b5a2b; font-weight: 800; }
+
+/* ---------- Yoga đôi ---------- */
+.yd-list { padding-left: 0; list-style: none; }
+.yd-list li { background: #fff; border-radius: 12px; padding: 10px 14px; margin-bottom: 8px; box-shadow: var(--shadow); }
+.yd-roles { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 14px 0; }
+.yd-role { background: #fff7d6; border: 2px dashed #e0b84a; border-radius: 16px; padding: 14px 18px; }
+.yd-role p { margin: 4px 0; }
+.yd-role-title { font-family: "Quicksand", sans-serif; font-weight: 700; font-size: 1.15rem; color: #8b5a2b; }
+.yd-safe ol { margin: 0; padding-left: 1.3em; }
+.yd-safe li { margin: 6px 0; }
+.yd-time { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 12px 0 18px; }
+.yd-time div { background: #fff; border-radius: 14px; padding: 12px 14px; box-shadow: var(--shadow); }
+.yd-time b { display: block; font-family: "Quicksand", sans-serif; color: var(--blue); margin-bottom: 2px; }
+.yd-flow li { margin-bottom: 6px; }
+.yd-noimg { background: linear-gradient(135deg, #7be3d3, #12a594); }
+.yd-who { color: #1f8a80; font-weight: 700; font-size: .95rem !important; }
+.yd-tip { background: #e0f3f1; border-radius: 10px; padding: 6px 10px; }
+.yd-page .cd-value { margin-top: 28px; }
+@media (max-width: 760px) {
+  .yd-roles, .yd-time { grid-template-columns: 1fr; }
+}
