@@ -106,3 +106,10 @@
 @media (max-width: 760px) {
   .yd-roles, .yd-time { grid-template-columns: 1fr; }
 }
+
+/* ---------- Yoga dance ---------- */
+.c-pink { background: linear-gradient(135deg, #ff9ecf, #d6337f); }
+.ydc-noimg { background: linear-gradient(135deg, #ff9ecf, #d6337f); }
+.ydc-music { color: #c2508a; font-weight: 700; font-size: .95rem !important; }
+.ydc-tip { background: #fbe8f2; }
+.ydc-page .yd-time b { color: #c2508a; }
