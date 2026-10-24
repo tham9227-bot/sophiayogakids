@@ -747,7 +747,20 @@ section { padding: 90px 0; }
 .cf-zalo-ic { color: #0068ff; font-size: .72rem; font-weight: 800; }
 .cf-mess { background: linear-gradient(135deg, #00b2ff, #7a3cff); color: #fff; }
 @keyframes cf-ring { 0%, 70%, 100% { transform: rotate(0); } 75% { transform: rotate(-14deg); } 80% { transform: rotate(14deg); } 85% { transform: rotate(-10deg); } 90% { transform: rotate(10deg); } }
-@media (max-width: 560px) { .contact-float { left: 12px; bottom: 14px; gap: 8px; } .cf-btn { padding: 6px; } .cf-tx { display: none; } .cf-ic { width: 44px; height: 44px; } }
+/* Điện thoại: gom 3 nút thành 1 thanh mảnh dưới đáy màn hình, không đè lên chữ */
+@media (max-width: 560px) {
+  body { padding-bottom: calc(58px + env(safe-area-inset-bottom)); }
+  .contact-float { left: 0; right: 0; bottom: 0; flex-direction: row; gap: 0; padding: 6px 6px calc(6px + env(safe-area-inset-bottom)); background: rgba(255,255,255,.96); box-shadow: 0 -4px 16px rgba(0,0,0,.1); }
+  .cf-btn { flex: 1; justify-content: center; gap: 6px; margin: 0 3px; padding: 5px 6px; font-size: .9rem; box-shadow: none; white-space: nowrap; }
+  .cf-btn:hover { transform: none; }
+  .cf-ic { width: 30px; height: 30px; font-size: .95rem; }
+  .cf-zalo-ic { font-size: .6rem; }
+  .cf-zalo .cf-tx, .cf-mess .cf-tx { font-size: 0; }
+  .cf-zalo .cf-tx::after { content: "Zalo"; font-size: .9rem; }
+  .cf-mess .cf-tx::after { content: "Messenger"; font-size: .9rem; }
+  .to-top { right: 14px; bottom: calc(70px + env(safe-area-inset-bottom)); width: 44px; height: 44px; font-size: 1.3rem; }
+}
+@media (max-width: 380px) { .cf-btn { flex: 1 1 0; min-width: 0; margin: 0 2px; min-height: 40px; } .cf-ic { display: none; } }
 @media (prefers-reduced-motion: reduce) { .cf-call .cf-ic { animation: none; } }
 
 /* ---------- Ảnh chân dung Sophia tròn ở đầu trang ---------- */
