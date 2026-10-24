@@ -748,7 +748,15 @@ section { padding: 90px 0; }
 .cf-zalo-ic { color: #0068ff; font-size: .72rem; font-weight: 800; }
 .cf-mess { background: linear-gradient(135deg, #00b2ff, #7a3cff); color: #fff; }
 @keyframes cf-ring { 0%, 70%, 100% { transform: rotate(0); } 75% { transform: rotate(-14deg); } 80% { transform: rotate(14deg); } 85% { transform: rotate(-10deg); } 90% { transform: rotate(10deg); } }
-@media (max-width: 560px) { .contact-float { left: 12px; bottom: 14px; gap: 8px; } .cf-btn { padding: 6px; } .cf-tx { display: none; } .cf-ic { width: 44px; height: 44px; } }
+/* Điện thoại: 3 nút tròn nhỏ, sát mép trái, không đè lên chữ */
+@media (max-width: 560px) {
+  .contact-float { left: 2px; bottom: 12px; gap: 6px; }
+  .cf-btn { padding: 2px; box-shadow: 0 3px 10px rgba(0,0,0,.2); }
+  .cf-tx { display: none; }
+  .cf-ic { width: 25px; height: 25px; font-size: .78rem; }
+  .cf-zalo-ic { font-size: .45rem; }
+  .to-top { right: 10px; bottom: 12px; width: 40px; height: 40px; font-size: 1.2rem; }
+}
 @media (prefers-reduced-motion: reduce) { .cf-call .cf-ic { animation: none; } }
 
 /* ---------- Ảnh chân dung Sophia tròn ở đầu trang ---------- */
