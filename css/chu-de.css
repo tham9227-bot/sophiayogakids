@@ -45,7 +45,7 @@
 .cd-steps { list-style: none; padding: 0; margin: 20px 0; display: grid; gap: 18px; }
 .cd-step { display: grid; grid-template-columns: 220px 1fr; gap: 18px; background: #fff; border-radius: 18px; padding: 14px; box-shadow: var(--shadow); margin: 0 !important; }
 .cd-step-img { position: relative; }
-.cd-step-img img, .cd-noimg { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 12px; display: block; }
+.cd-step-img img, .cd-noimg { width: 100%; aspect-ratio: 4 / 3; object-fit: contain; background: #f3ece2; border-radius: 12px; display: block; }
 .cd-noimg { display: grid; place-items: center; font-size: 3.6rem; }
 .cd-step-no {
   position: absolute; top: 8px; left: 8px; width: 34px; height: 34px; border-radius: 50%;
