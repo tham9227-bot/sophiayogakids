@@ -1,6 +1,6 @@
 /* Flashcards: deck list, deck viewer, buy buttons, lightbox */
 .fc-page { max-width: 1100px; }
-.fc-page img { -webkit-user-select: none; user-select: none; -webkit-touch-callout: none; }
+.fc-page img, .fc-page canvas { -webkit-user-select: none; user-select: none; -webkit-touch-callout: none; }
 .fc-decks { display: grid; gap: 24px; margin: 24px 0; }
 .fc-deck { display: grid; grid-template-columns: 1.1fr 1fr; background: #fff; border-radius: var(--radius); box-shadow: var(--shadow); overflow: hidden; }
 .fc-deck-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
@@ -27,8 +27,8 @@
 .fc-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; margin: 14px 0 22px; }
 .fc-card { display: block; padding: 0; border: 0; background: #fff; border-radius: 16px; box-shadow: var(--shadow); overflow: hidden; cursor: zoom-in; text-align: center; font: inherit; }
 .fc-faces { display: block; aspect-ratio: 600/851; overflow: hidden; }
-.fc-faces img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .2s; }
-.fc-card:hover .fc-faces img { transform: scale(1.03); }
+.fc-faces img, .fc-faces canvas { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .2s; background: #f6efe0; }
+.fc-card:hover .fc-faces canvas { transform: scale(1.03); }
 .fc-grid[data-side="front"] .fc-b, .fc-grid[data-side="back"] .fc-f { display: none; }
 .fc-cap { display: block; padding: 8px 8px 10px; line-height: 1.3; }
 .fc-cap .c-no { display: inline-block; min-width: 26px; padding: 1px 6px; border-radius: 13px; background: #ffd60a; color: #4a2f17; font-weight: 700; font-size: .85rem; margin-bottom: 3px; }
@@ -43,8 +43,8 @@
 .fc-lb-sides { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; overflow: auto; min-height: 0; flex: 1; }
 .fc-lb-sides figure { margin: 0; text-align: center; overflow: auto; }
 .fc-lb-sides figcaption { font-weight: 700; color: #a87a12; font-size: .9rem; margin-bottom: 4px; }
-.fc-lb-sides img { width: 100%; max-height: 68vh; object-fit: contain; cursor: zoom-in; border-radius: 10px; }
-.fc-lb-sides img.zoom { width: 190%; max-width: none; max-height: none; cursor: zoom-out; }
+.fc-lb-sides canvas { width: 100%; max-height: 68vh; object-fit: contain; cursor: zoom-in; border-radius: 10px; }
+.fc-lb-sides canvas.zoom { width: 190%; max-width: none; max-height: none; cursor: zoom-out; }
 .fc-lb-nav { display: flex; justify-content: space-between; align-items: center; gap: 8px; }
 .fc-lb-nav button { border: 2px solid #ffd60a; background: #fff; color: #6b4423; border-radius: 20px; padding: 6px 14px; font: inherit; font-weight: 700; cursor: pointer; }
 .fc-lb-tip { color: var(--muted); font-size: .85rem; text-align: center; }
@@ -57,7 +57,9 @@
   .fc-lb { padding: 6px; }
   .fc-lb-sides { display: block; }
   .fc-lb-sides figure { overflow: visible; margin-bottom: 12px; }
-  .fc-lb-sides img.zoom { width: 100%; }
-  .fc-lb-sides img { max-height: none; }
+  .fc-lb-sides canvas.zoom { width: 100%; }
+  .fc-lb-sides canvas { max-height: none; }
   .fc-lb-tip { display: none; }
 }
+.fc-lb-sides canvas { display: block; margin: 0 auto; object-fit: contain; aspect-ratio: 600/851; height: auto; }
+@media print { .fc-page canvas { visibility: hidden; } }
