@@ -1,10 +1,12 @@
 /* Flashcards: deck list, deck viewer, buy buttons, lightbox */
 .fc-page { max-width: 1100px; }
 .fc-page img, .fc-page canvas { -webkit-user-select: none; user-select: none; -webkit-touch-callout: none; }
-.fc-decks { display: grid; gap: 24px; margin: 24px 0; }
-.fc-deck { display: grid; grid-template-columns: 1.1fr 1fr; background: #fff; border-radius: var(--radius); box-shadow: var(--shadow); overflow: hidden; }
-.fc-deck-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
-.fc-deck-body { padding: 22px 24px; }
+.fc-decks { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 24px; margin: 24px 0; }
+.fc-deck { display: flex; flex-direction: column; background: #fff; border-radius: var(--radius); box-shadow: var(--shadow); overflow: hidden; }
+.fc-deck-img img { width: 100%; height: auto; aspect-ratio: 2/1; object-fit: cover; display: block; }
+.fc-deck-body { padding: 18px 20px 20px; display: flex; flex-direction: column; flex: 1; }
+.fc-deck-body .fc-buy { margin-top: auto; }
+.fc-deck-body .fc-view { align-self: flex-start; }
 .fc-deck-body h2 { margin: 0 0 8px; font-size: 1.35rem; }
 .fc-deck-body h2 a { color: var(--brown); text-decoration: none; }
 .fc-count { color: #a87a12; font-weight: 700; }
@@ -50,7 +52,7 @@
 .fc-lb-tip { color: var(--muted); font-size: .85rem; text-align: center; }
 .fc-lb .fc-btn { padding: 6px 10px; flex-direction: row; justify-content: center; gap: 8px; }
 .fc-lb .fc-btn b { font-size: 1rem; }
-@media (max-width: 860px) { .fc-grid { grid-template-columns: repeat(3, 1fr); } .fc-deck { grid-template-columns: 1fr; } }
+@media (max-width: 860px) { .fc-grid { grid-template-columns: repeat(3, 1fr); } }
 @media (max-width: 560px) {
   .fc-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
   .fc-cap b { font-size: .92rem; }
