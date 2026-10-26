@@ -22,9 +22,15 @@
     .pose-intro { background:#fff8e1; border-radius:var(--radius); padding:16px 20px; }
     .card50-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:18px; margin:22px 0; }
     .card50 { margin:0; background:#fff; border-radius:16px; box-shadow:var(--shadow); overflow:hidden; text-align:center; }
-    .card50 a { display:block; }
-    .card50 img { width:100%; height:auto; aspect-ratio:640/909; display:block; transition:transform .2s; }
-    .card50 a:hover img { transform:scale(1.03); }
+    .c-open { display:block; width:100%; padding:0; border:0; background:none; cursor:zoom-in; overflow:hidden; }
+    .card50 img, .c-box img { -webkit-user-drag:none; -webkit-touch-callout:none; user-select:none; -webkit-user-select:none; pointer-events:none; }
+    .card50 img { width:100%; height:auto; aspect-ratio:560/795; display:block; transition:transform .2s; }
+    .c-open:hover img { transform:scale(1.03); }
+    .c-box { position:fixed; inset:0; z-index:200; background:rgba(40,25,10,.85); display:none; align-items:center; justify-content:center; padding:16px; cursor:zoom-out; }
+    .c-box.show { display:flex; }
+    .c-box img { max-width:min(92vw,560px); max-height:88vh; width:auto; height:auto; border-radius:16px; box-shadow:0 10px 40px rgba(0,0,0,.4); }
+    .c-close { position:absolute; top:12px; right:16px; width:44px; height:44px; border-radius:50%; border:0; background:#ffd60a; color:#4a2f17; font-size:1.4rem; font-weight:700; cursor:pointer; }
+    .c-note { font-size:.9rem; color:#8a6d3b; text-align:center; }
     .card50 figcaption { padding:8px 8px 10px; line-height:1.3; }
     .card50 .c-no { display:inline-block; min-width:26px; padding:1px 6px; border-radius:13px; background:#ffd60a; color:#4a2f17; font-weight:700; font-size:.85rem; margin-bottom:3px; }
     .card50 b { display:block; color:#6b4423; font-size:1rem; }
@@ -63,209 +69,224 @@
     <h1>50 tư thế phổ biến dành cho trẻ em</h1>
     <img class="article-photo" src="images/bai-50-tu-the-pho-bien.jpg" alt="Năm thẻ tư thế yoga minh họa: ngôi sao, cái cây, hoa sen, em bé, chiến binh" width="1200" height="600">
     <p>Đây là bộ thẻ 50 tư thế yoga phổ biến nhất cô Sophia dùng khi dạy trẻ em. Mỗi thẻ có hình minh họa bé tập, tên tư thế bằng tiếng Việt và tiếng Anh, giúp bé nhớ tư thế qua hình ảnh con vật, cây cối và đồ vật quen thuộc.</p>
-    <p class="pose-intro">💡 <b>Cách dùng:</b> cho bé rút một thẻ rồi cả lớp cùng làm tư thế đó. Bấm vào thẻ để xem ảnh to. Thầy cô có thể đọc tên tiếng Anh để dạy song ngữ.</p>
+    <p class="pose-intro">💡 <b>Cách dùng:</b> cho bé rút một thẻ rồi cả lớp cùng làm tư thế đó. Bấm vào thẻ để xem to. Thầy cô có thể đọc tên tiếng Anh để dạy song ngữ.</p>
     <div class="card50-grid">
       <figure class="card50">
-        <a href="images/the-50-tu-the/01-ngon-nui.jpg" target="_blank" rel="noopener"><img src="images/the-50-tu-the/01-ngon-nui.jpg" alt="Thẻ 1: Tư thế ngọn núi (Mountain Pose)" loading="lazy" width="640" height="909"></a>
+        <button type="button" class="c-open" aria-label="Xem to thẻ Tư thế ngọn núi"><img src="images/the-50-tu-the/01-ngon-nui.jpg?v=2" alt="Thẻ 1: Tư thế ngọn núi (Mountain Pose)" loading="lazy" width="560" height="795" draggable="false"></button>
         <figcaption><span class="c-no">1</span><b>Tư thế ngọn núi</b><i>Mountain Pose</i></figcaption>
       </figure>
       <figure class="card50">
-        <a href="images/the-50-tu-the/02-cai-cay.jpg" target="_blank" rel="noopener"><img src="images/the-50-tu-the/02-cai-cay.jpg" alt="Thẻ 2: Tư thế cái cây (Tree Pose)" loading="lazy" width="640" height="909"></a>
+        <button type="button" class="c-open" aria-label="Xem to thẻ Tư thế cái cây"><img src="images/the-50-tu-the/02-cai-cay.jpg?v=2" alt="Thẻ 2: Tư thế cái cây (Tree Pose)" loading="lazy" width="560" height="795" draggable="false"></button>
         <figcaption><span class="c-no">2</span><b>Tư thế cái cây</b><i>Tree Pose</i></figcaption>
       </figure>
       <figure class="card50">
-        <a href="images/the-50-tu-the/03-ngoi-sao.jpg" target="_blank" rel="noopener"><img src="images/the-50-tu-the/03-ngoi-sao.jpg" alt="Thẻ 3: Tư thế ngôi sao (Star Pose)" loading="lazy" width="640" height="909"></a>
+        <button type="button" class="c-open" aria-label="Xem to thẻ Tư thế ngôi sao"><img src="images/the-50-tu-the/03-ngoi-sao.jpg?v=2" alt="Thẻ 3: Tư thế ngôi sao (Star Pose)" loading="lazy" width="560" height="795" draggable="false"></button>
         <figcaption><span class="c-no">3</span><b>Tư thế ngôi sao</b><i>Star Pose</i></figcaption>
       </figure>
       <figure class="card50">
-        <a href="images/the-50-tu-the/04-con-buom.jpg" target="_blank" rel="noopener"><img src="images/the-50-tu-the/04-con-buom.jpg" alt="Thẻ 4: Tư thế con bướm (Butterfly Pose)" loading="lazy" width="640" height="909"></a>
+        <button type="button" class="c-open" aria-label="Xem to thẻ Tư thế con bướm"><img src="images/the-50-tu-the/04-con-buom.jpg?v=2" alt="Thẻ 4: Tư thế con bướm (Butterfly Pose)" loading="lazy" width="560" height="795" draggable="false"></button>
         <figcaption><span class="c-no">4</span><b>Tư thế con bướm</b><i>Butterfly Pose</i></figcaption>
       </figure>
       <figure class="card50">
-        <a href="images/the-50-tu-the/05-con-ech.jpg" target="_blank" rel="noopener"><img src="images/the-50-tu-the/05-con-ech.jpg" alt="Thẻ 5: Tư thế con ếch (Frog Pose)" loading="lazy" width="640" height="909"></a>
+        <button type="button" class="c-open" aria-label="Xem to thẻ Tư thế con ếch"><img src="images/the-50-tu-the/05-con-ech.jpg?v=2" alt="Thẻ 5: Tư thế con ếch (Frog Pose)" loading="lazy" width="560" height="795" draggable="false"></button>
         <figcaption><span class="c-no">5</span><b>Tư thế con ếch</b><i>Frog Pose</i></figcaption>
       </figure>
       <figure class="card50">
-        <a href="images/the-50-tu-the/06-con-meo.jpg" target="_blank" rel="noopener"><img src="images/the-50-tu-the/06-con-meo.jpg" alt="Thẻ 6: Tư thế con mèo (Cat Pose)" loading="lazy" width="640" height="909"></a>
+        <button type="button" class="c-open" aria-label="Xem to thẻ Tư thế con mèo"><img src="images/the-50-tu-the/06-con-meo.jpg?v=2" alt="Thẻ 6: Tư thế con mèo (Cat Pose)" loading="lazy" width="560" height="795" draggable="false"></button>
         <figcaption><span class="c-no">6</span><b>Tư thế con mèo</b><i>Cat Pose</i></figcaption>
       </figure>
       <figure class="card50">
-        <a href="images/the-50-tu-the/07-con-bo.jpg" target="_blank" rel="noopener"><img src="images/the-50-tu-the/07-con-bo.jpg" alt="Thẻ 7: Tư thế con bò (Cow Pose)" loading="lazy" width="640" height="909"></a>
+        <button type="button" class="c-open" aria-label="Xem to thẻ Tư thế con bò"><img src="images/the-50-tu-the/07-con-bo.jpg?v=2" alt="Thẻ 7: Tư thế con bò (Cow Pose)" loading="lazy" width="560" height="795" draggable="false"></button>
         <figcaption><span class="c-no">7</span><b>Tư thế con bò</b><i>Cow Pose</i></figcaption>
       </figure>
       <figure class="card50">
-        <a href="images/the-50-tu-the/08-cho-up-mat.jpg" target="_blank" rel="noopener"><img src="images/the-50-tu-the/08-cho-up-mat.jpg" alt="Thẻ 8: Tư thế chó úp mặt (Downward Dog Pose)" loading="lazy" width="640" height="909"></a>
+        <button type="button" class="c-open" aria-label="Xem to thẻ Tư thế chó úp mặt"><img src="images/the-50-tu-the/08-cho-up-mat.jpg?v=2" alt="Thẻ 8: Tư thế chó úp mặt (Downward Dog Pose)" loading="lazy" width="560" height="795" draggable="false"></button>
         <figcaption><span class="c-no">8</span><b>Tư thế chó úp mặt</b><i>Downward Dog Pose</i></figcaption>
       </figure>
       <figure class="card50">
-        <a href="images/the-50-tu-the/09-ran-ho-mang.jpg" target="_blank" rel="noopener"><img src="images/the-50-tu-the/09-ran-ho-mang.jpg" alt="Thẻ 9: Tư thế rắn hổ mang (Cobra Pose)" loading="lazy" width="640" height="909"></a>
+        <button type="button" class="c-open" aria-label="Xem to thẻ Tư thế rắn hổ mang"><img src="images/the-50-tu-the/09-ran-ho-mang.jpg?v=2" alt="Thẻ 9: Tư thế rắn hổ mang (Cobra Pose)" loading="lazy" width="560" height="795" draggable="false"></button>
         <figcaption><span class="c-no">9</span><b>Tư thế rắn hổ mang</b><i>Cobra Pose</i></figcaption>
       </figure>
       <figure class="card50">
-        <a href="images/the-50-tu-the/10-em-be.jpg" target="_blank" rel="noopener"><img src="images/the-50-tu-the/10-em-be.jpg" alt="Thẻ 10: Tư thế em bé (Child's Pose)" loading="lazy" width="640" height="909"></a>
+        <button type="button" class="c-open" aria-label="Xem to thẻ Tư thế em bé"><img src="images/the-50-tu-the/10-em-be.jpg?v=2" alt="Thẻ 10: Tư thế em bé (Child's Pose)" loading="lazy" width="560" height="795" draggable="false"></button>
         <figcaption><span class="c-no">10</span><b>Tư thế em bé</b><i>Child's Pose</i></figcaption>
       </figure>
       <figure class="card50">
-        <a href="images/the-50-tu-the/11-su-tu.jpg" target="_blank" rel="noopener"><img src="images/the-50-tu-the/11-su-tu.jpg" alt="Thẻ 11: Tư thế sư tử (Lion Pose)" loading="lazy" width="640" height="909"></a>
+        <button type="button" class="c-open" aria-label="Xem to thẻ Tư thế sư tử"><img src="images/the-50-tu-the/11-su-tu.jpg?v=2" alt="Thẻ 11: Tư thế sư tử (Lion Pose)" loading="lazy" width="560" height="795" draggable="false"></button>
         <figcaption><span class="c-no">11</span><b>Tư thế sư tử</b><i>Lion Pose</i></figcaption>
       </figure>
       <figure class="card50">
-        <a href="images/the-50-tu-the/12-con-tho.jpg" target="_blank" rel="noopener"><img src="images/the-50-tu-the/12-con-tho.jpg" alt="Thẻ 12: Tư thế con thỏ (Rabbit Pose)" loading="lazy" width="640" height="909"></a>
+        <button type="button" class="c-open" aria-label="Xem to thẻ Tư thế con thỏ"><img src="images/the-50-tu-the/12-con-tho.jpg?v=2" alt="Thẻ 12: Tư thế con thỏ (Rabbit Pose)" loading="lazy" width="560" height="795" draggable="false"></button>
         <figcaption><span class="c-no">12</span><b>Tư thế con thỏ</b><i>Rabbit Pose</i></figcaption>
       </figure>
       <figure class="card50">
-        <a href="images/the-50-tu-the/13-con-rua.jpg" target="_blank" rel="noopener"><img src="images/the-50-tu-the/13-con-rua.jpg" alt="Thẻ 13: Tư thế con rùa (Turtle Pose)" loading="lazy" width="640" height="909"></a>
+        <button type="button" class="c-open" aria-label="Xem to thẻ Tư thế con rùa"><img src="images/the-50-tu-the/13-con-rua.jpg?v=2" alt="Thẻ 13: Tư thế con rùa (Turtle Pose)" loading="lazy" width="560" height="795" draggable="false"></button>
         <figcaption><span class="c-no">13</span><b>Tư thế con rùa</b><i>Turtle Pose</i></figcaption>
       </figure>
       <figure class="card50">
-        <a href="images/the-50-tu-the/14-con-ca.jpg" target="_blank" rel="noopener"><img src="images/the-50-tu-the/14-con-ca.jpg" alt="Thẻ 14: Tư thế con cá (Fish Pose)" loading="lazy" width="640" height="909"></a>
+        <button type="button" class="c-open" aria-label="Xem to thẻ Tư thế con cá"><img src="images/the-50-tu-the/14-con-ca.jpg?v=2" alt="Thẻ 14: Tư thế con cá (Fish Pose)" loading="lazy" width="560" height="795" draggable="false"></button>
         <figcaption><span class="c-no">14</span><b>Tư thế con cá</b><i>Fish Pose</i></figcaption>
       </figure>
       <figure class="card50">
-        <a href="images/the-50-tu-the/15-ca-heo.jpg" target="_blank" rel="noopener"><img src="images/the-50-tu-the/15-ca-heo.jpg" alt="Thẻ 15: Tư thế cá heo (Dolphin Pose)" loading="lazy" width="640" height="909"></a>
+        <button type="button" class="c-open" aria-label="Xem to thẻ Tư thế cá heo"><img src="images/the-50-tu-the/15-ca-heo.jpg?v=2" alt="Thẻ 15: Tư thế cá heo (Dolphin Pose)" loading="lazy" width="560" height="795" draggable="false"></button>
         <figcaption><span class="c-no">15</span><b>Tư thế cá heo</b><i>Dolphin Pose</i></figcaption>
       </figure>
       <figure class="card50">
-        <a href="images/the-50-tu-the/16-dai-bang.jpg" target="_blank" rel="noopener"><img src="images/the-50-tu-the/16-dai-bang.jpg" alt="Thẻ 16: Tư thế đại bàng (Eagle Pose)" loading="lazy" width="640" height="909"></a>
+        <button type="button" class="c-open" aria-label="Xem to thẻ Tư thế đại bàng"><img src="images/the-50-tu-the/16-dai-bang.jpg?v=2" alt="Thẻ 16: Tư thế đại bàng (Eagle Pose)" loading="lazy" width="560" height="795" draggable="false"></button>
         <figcaption><span class="c-no">16</span><b>Tư thế đại bàng</b><i>Eagle Pose</i></figcaption>
       </figure>
       <figure class="card50">
-        <a href="images/the-50-tu-the/17-chim-hong-hac.jpg" target="_blank" rel="noopener"><img src="images/the-50-tu-the/17-chim-hong-hac.jpg" alt="Thẻ 17: Tư thế chim hồng hạc (Flamingo Pose)" loading="lazy" width="640" height="909"></a>
+        <button type="button" class="c-open" aria-label="Xem to thẻ Tư thế chim hồng hạc"><img src="images/the-50-tu-the/17-chim-hong-hac.jpg?v=2" alt="Thẻ 17: Tư thế chim hồng hạc (Flamingo Pose)" loading="lazy" width="560" height="795" draggable="false"></button>
         <figcaption><span class="c-no">17</span><b>Tư thế chim hồng hạc</b><i>Flamingo Pose</i></figcaption>
       </figure>
       <figure class="card50">
-        <a href="images/the-50-tu-the/18-con-cu.jpg" target="_blank" rel="noopener"><img src="images/the-50-tu-the/18-con-cu.jpg" alt="Thẻ 18: Tư thế con cú (Owl Pose)" loading="lazy" width="640" height="909"></a>
+        <button type="button" class="c-open" aria-label="Xem to thẻ Tư thế con cú"><img src="images/the-50-tu-the/18-con-cu.jpg?v=2" alt="Thẻ 18: Tư thế con cú (Owl Pose)" loading="lazy" width="560" height="795" draggable="false"></button>
         <figcaption><span class="c-no">18</span><b>Tư thế con cú</b><i>Owl Pose</i></figcaption>
       </figure>
       <figure class="card50">
-        <a href="images/the-50-tu-the/19-chim-canh-cut.jpg" target="_blank" rel="noopener"><img src="images/the-50-tu-the/19-chim-canh-cut.jpg" alt="Thẻ 19: Tư thế chim cánh cụt (Penguin Pose)" loading="lazy" width="640" height="909"></a>
+        <button type="button" class="c-open" aria-label="Xem to thẻ Tư thế chim cánh cụt"><img src="images/the-50-tu-the/19-chim-canh-cut.jpg?v=2" alt="Thẻ 19: Tư thế chim cánh cụt (Penguin Pose)" loading="lazy" width="560" height="795" draggable="false"></button>
         <figcaption><span class="c-no">19</span><b>Tư thế chim cánh cụt</b><i>Penguin Pose</i></figcaption>
       </figure>
       <figure class="card50">
-        <a href="images/the-50-tu-the/20-con-voi.jpg" target="_blank" rel="noopener"><img src="images/the-50-tu-the/20-con-voi.jpg" alt="Thẻ 20: Tư thế con voi (Elephant Pose)" loading="lazy" width="640" height="909"></a>
+        <button type="button" class="c-open" aria-label="Xem to thẻ Tư thế con voi"><img src="images/the-50-tu-the/20-con-voi.jpg?v=2" alt="Thẻ 20: Tư thế con voi (Elephant Pose)" loading="lazy" width="560" height="795" draggable="false"></button>
         <figcaption><span class="c-no">20</span><b>Tư thế con voi</b><i>Elephant Pose</i></figcaption>
       </figure>
       <figure class="card50">
-        <a href="images/the-50-tu-the/21-huou-cao-co.jpg" target="_blank" rel="noopener"><img src="images/the-50-tu-the/21-huou-cao-co.jpg" alt="Thẻ 21: Tư thế hươu cao cổ (Giraffe Pose)" loading="lazy" width="640" height="909"></a>
+        <button type="button" class="c-open" aria-label="Xem to thẻ Tư thế hươu cao cổ"><img src="images/the-50-tu-the/21-huou-cao-co.jpg?v=2" alt="Thẻ 21: Tư thế hươu cao cổ (Giraffe Pose)" loading="lazy" width="560" height="795" draggable="false"></button>
         <figcaption><span class="c-no">21</span><b>Tư thế hươu cao cổ</b><i>Giraffe Pose</i></figcaption>
       </figure>
       <figure class="card50">
-        <a href="images/the-50-tu-the/22-con-gau.jpg" target="_blank" rel="noopener"><img src="images/the-50-tu-the/22-con-gau.jpg" alt="Thẻ 22: Tư thế con gấu (Bear Pose)" loading="lazy" width="640" height="909"></a>
+        <button type="button" class="c-open" aria-label="Xem to thẻ Tư thế con gấu"><img src="images/the-50-tu-the/22-con-gau.jpg?v=2" alt="Thẻ 22: Tư thế con gấu (Bear Pose)" loading="lazy" width="560" height="795" draggable="false"></button>
         <figcaption><span class="c-no">22</span><b>Tư thế con gấu</b><i>Bear Pose</i></figcaption>
       </figure>
       <figure class="card50">
-        <a href="images/the-50-tu-the/23-con-ho.jpg" target="_blank" rel="noopener"><img src="images/the-50-tu-the/23-con-ho.jpg" alt="Thẻ 23: Tư thế con hổ (Tiger Pose)" loading="lazy" width="640" height="909"></a>
+        <button type="button" class="c-open" aria-label="Xem to thẻ Tư thế con hổ"><img src="images/the-50-tu-the/23-con-ho.jpg?v=2" alt="Thẻ 23: Tư thế con hổ (Tiger Pose)" loading="lazy" width="560" height="795" draggable="false"></button>
         <figcaption><span class="c-no">23</span><b>Tư thế con hổ</b><i>Tiger Pose</i></figcaption>
       </figure>
       <figure class="card50">
-        <a href="images/the-50-tu-the/24-ca-sau.jpg" target="_blank" rel="noopener"><img src="images/the-50-tu-the/24-ca-sau.jpg" alt="Thẻ 24: Tư thế cá sấu (Crocodile Pose)" loading="lazy" width="640" height="909"></a>
+        <button type="button" class="c-open" aria-label="Xem to thẻ Tư thế cá sấu"><img src="images/the-50-tu-the/24-ca-sau.jpg?v=2" alt="Thẻ 24: Tư thế cá sấu (Crocodile Pose)" loading="lazy" width="560" height="795" draggable="false"></button>
         <figcaption><span class="c-no">24</span><b>Tư thế cá sấu</b><i>Crocodile Pose</i></figcaption>
       </figure>
       <figure class="card50">
-        <a href="images/the-50-tu-the/25-con-ran.jpg" target="_blank" rel="noopener"><img src="images/the-50-tu-the/25-con-ran.jpg" alt="Thẻ 25: Tư thế con rắn (Snake Pose)" loading="lazy" width="640" height="909"></a>
+        <button type="button" class="c-open" aria-label="Xem to thẻ Tư thế con rắn"><img src="images/the-50-tu-the/25-con-ran.jpg?v=2" alt="Thẻ 25: Tư thế con rắn (Snake Pose)" loading="lazy" width="560" height="795" draggable="false"></button>
         <figcaption><span class="c-no">25</span><b>Tư thế con rắn</b><i>Snake Pose</i></figcaption>
       </figure>
       <figure class="card50">
-        <a href="images/the-50-tu-the/26-con-chim.jpg" target="_blank" rel="noopener"><img src="images/the-50-tu-the/26-con-chim.jpg" alt="Thẻ 26: Tư thế con chim (Bird Pose)" loading="lazy" width="640" height="909"></a>
+        <button type="button" class="c-open" aria-label="Xem to thẻ Tư thế con chim"><img src="images/the-50-tu-the/26-con-chim.jpg?v=2" alt="Thẻ 26: Tư thế con chim (Bird Pose)" loading="lazy" width="560" height="795" draggable="false"></button>
         <figcaption><span class="c-no">26</span><b>Tư thế con chim</b><i>Bird Pose</i></figcaption>
       </figure>
       <figure class="card50">
-        <a href="images/the-50-tu-the/27-con-ong.jpg" target="_blank" rel="noopener"><img src="images/the-50-tu-the/27-con-ong.jpg" alt="Thẻ 27: Tư thế con ong (Bee Pose)" loading="lazy" width="640" height="909"></a>
+        <button type="button" class="c-open" aria-label="Xem to thẻ Tư thế con ong"><img src="images/the-50-tu-the/27-con-ong.jpg?v=2" alt="Thẻ 27: Tư thế con ong (Bee Pose)" loading="lazy" width="560" height="795" draggable="false"></button>
         <figcaption><span class="c-no">27</span><b>Tư thế con ong</b><i>Bee Pose</i></figcaption>
       </figure>
       <figure class="card50">
-        <a href="images/the-50-tu-the/28-hoa-sen.jpg" target="_blank" rel="noopener"><img src="images/the-50-tu-the/28-hoa-sen.jpg" alt="Thẻ 28: Tư thế hoa sen (Lotus Flower Pose)" loading="lazy" width="640" height="909"></a>
+        <button type="button" class="c-open" aria-label="Xem to thẻ Tư thế hoa sen"><img src="images/the-50-tu-the/28-hoa-sen.jpg?v=2" alt="Thẻ 28: Tư thế hoa sen (Lotus Flower Pose)" loading="lazy" width="560" height="795" draggable="false"></button>
         <figcaption><span class="c-no">28</span><b>Tư thế hoa sen</b><i>Lotus Flower Pose</i></figcaption>
       </figure>
       <figure class="card50">
-        <a href="images/the-50-tu-the/29-bong-hoa.jpg" target="_blank" rel="noopener"><img src="images/the-50-tu-the/29-bong-hoa.jpg" alt="Thẻ 29: Tư thế bông hoa (Flower Pose)" loading="lazy" width="640" height="909"></a>
+        <button type="button" class="c-open" aria-label="Xem to thẻ Tư thế bông hoa"><img src="images/the-50-tu-the/29-bong-hoa.jpg?v=2" alt="Thẻ 29: Tư thế bông hoa (Flower Pose)" loading="lazy" width="560" height="795" draggable="false"></button>
         <figcaption><span class="c-no">29</span><b>Tư thế bông hoa</b><i>Flower Pose</i></figcaption>
       </figure>
       <figure class="card50">
-        <a href="images/the-50-tu-the/30-hat-mam.jpg" target="_blank" rel="noopener"><img src="images/the-50-tu-the/30-hat-mam.jpg" alt="Thẻ 30: Tư thế hạt mầm (Seed Pose)" loading="lazy" width="640" height="909"></a>
+        <button type="button" class="c-open" aria-label="Xem to thẻ Tư thế hạt mầm"><img src="images/the-50-tu-the/30-hat-mam.jpg?v=2" alt="Thẻ 30: Tư thế hạt mầm (Seed Pose)" loading="lazy" width="560" height="795" draggable="false"></button>
         <figcaption><span class="c-no">30</span><b>Tư thế hạt mầm</b><i>Seed Pose</i></figcaption>
       </figure>
       <figure class="card50">
-        <a href="images/the-50-tu-the/31-cay-co.jpg" target="_blank" rel="noopener"><img src="images/the-50-tu-the/31-cay-co.jpg" alt="Thẻ 31: Tư thế cây cọ (Palm Tree Pose)" loading="lazy" width="640" height="909"></a>
+        <button type="button" class="c-open" aria-label="Xem to thẻ Tư thế cây cọ"><img src="images/the-50-tu-the/31-cay-co.jpg?v=2" alt="Thẻ 31: Tư thế cây cọ (Palm Tree Pose)" loading="lazy" width="560" height="795" draggable="false"></button>
         <figcaption><span class="c-no">31</span><b>Tư thế cây cọ</b><i>Palm Tree Pose</i></figcaption>
       </figure>
       <figure class="card50">
-        <a href="images/the-50-tu-the/32-trang-luoi-liem.jpg" target="_blank" rel="noopener"><img src="images/the-50-tu-the/32-trang-luoi-liem.jpg" alt="Thẻ 32: Tư thế trăng lưỡi liềm (Crescent Moon Pose)" loading="lazy" width="640" height="909"></a>
+        <button type="button" class="c-open" aria-label="Xem to thẻ Tư thế trăng lưỡi liềm"><img src="images/the-50-tu-the/32-trang-luoi-liem.jpg?v=2" alt="Thẻ 32: Tư thế trăng lưỡi liềm (Crescent Moon Pose)" loading="lazy" width="560" height="795" draggable="false"></button>
         <figcaption><span class="c-no">32</span><b>Tư thế trăng lưỡi liềm</b><i>Crescent Moon Pose</i></figcaption>
       </figure>
       <figure class="card50">
-        <a href="images/the-50-tu-the/33-mat-troi.jpg" target="_blank" rel="noopener"><img src="images/the-50-tu-the/33-mat-troi.jpg" alt="Thẻ 33: Tư thế mặt trời (Sun Pose)" loading="lazy" width="640" height="909"></a>
+        <button type="button" class="c-open" aria-label="Xem to thẻ Tư thế mặt trời"><img src="images/the-50-tu-the/33-mat-troi.jpg?v=2" alt="Thẻ 33: Tư thế mặt trời (Sun Pose)" loading="lazy" width="560" height="795" draggable="false"></button>
         <figcaption><span class="c-no">33</span><b>Tư thế mặt trời</b><i>Sun Pose</i></figcaption>
       </figure>
       <figure class="card50">
-        <a href="images/the-50-tu-the/34-cau-vong.jpg" target="_blank" rel="noopener"><img src="images/the-50-tu-the/34-cau-vong.jpg" alt="Thẻ 34: Tư thế cầu vồng (Rainbow Pose)" loading="lazy" width="640" height="909"></a>
+        <button type="button" class="c-open" aria-label="Xem to thẻ Tư thế cầu vồng"><img src="images/the-50-tu-the/34-cau-vong.jpg?v=2" alt="Thẻ 34: Tư thế cầu vồng (Rainbow Pose)" loading="lazy" width="560" height="795" draggable="false"></button>
         <figcaption><span class="c-no">34</span><b>Tư thế cầu vồng</b><i>Rainbow Pose</i></figcaption>
       </figure>
       <figure class="card50">
-        <a href="images/the-50-tu-the/35-tam-giac.jpg" target="_blank" rel="noopener"><img src="images/the-50-tu-the/35-tam-giac.jpg" alt="Thẻ 35: Tư thế tam giác (Triangle Pose)" loading="lazy" width="640" height="909"></a>
+        <button type="button" class="c-open" aria-label="Xem to thẻ Tư thế tam giác"><img src="images/the-50-tu-the/35-tam-giac.jpg?v=2" alt="Thẻ 35: Tư thế tam giác (Triangle Pose)" loading="lazy" width="560" height="795" draggable="false"></button>
         <figcaption><span class="c-no">35</span><b>Tư thế tam giác</b><i>Triangle Pose</i></figcaption>
       </figure>
       <figure class="card50">
-        <a href="images/the-50-tu-the/36-cai-ghe.jpg" target="_blank" rel="noopener"><img src="images/the-50-tu-the/36-cai-ghe.jpg" alt="Thẻ 36: Tư thế cái ghế (Chair Pose)" loading="lazy" width="640" height="909"></a>
+        <button type="button" class="c-open" aria-label="Xem to thẻ Tư thế cái ghế"><img src="images/the-50-tu-the/36-cai-ghe.jpg?v=2" alt="Thẻ 36: Tư thế cái ghế (Chair Pose)" loading="lazy" width="560" height="795" draggable="false"></button>
         <figcaption><span class="c-no">36</span><b>Tư thế cái ghế</b><i>Chair Pose</i></figcaption>
       </figure>
       <figure class="card50">
-        <a href="images/the-50-tu-the/37-cai-ban.jpg" target="_blank" rel="noopener"><img src="images/the-50-tu-the/37-cai-ban.jpg" alt="Thẻ 37: Tư thế cái bàn (Table Pose)" loading="lazy" width="640" height="909"></a>
+        <button type="button" class="c-open" aria-label="Xem to thẻ Tư thế cái bàn"><img src="images/the-50-tu-the/37-cai-ban.jpg?v=2" alt="Thẻ 37: Tư thế cái bàn (Table Pose)" loading="lazy" width="560" height="795" draggable="false"></button>
         <figcaption><span class="c-no">37</span><b>Tư thế cái bàn</b><i>Table Pose</i></figcaption>
       </figure>
       <figure class="card50">
-        <a href="images/the-50-tu-the/38-cai-ban-nguoc.jpg" target="_blank" rel="noopener"><img src="images/the-50-tu-the/38-cai-ban-nguoc.jpg" alt="Thẻ 38: Tư thế cái bàn ngược (Reverse Table Pose)" loading="lazy" width="640" height="909"></a>
+        <button type="button" class="c-open" aria-label="Xem to thẻ Tư thế cái bàn ngược"><img src="images/the-50-tu-the/38-cai-ban-nguoc.jpg?v=2" alt="Thẻ 38: Tư thế cái bàn ngược (Reverse Table Pose)" loading="lazy" width="560" height="795" draggable="false"></button>
         <figcaption><span class="c-no">38</span><b>Tư thế cái bàn ngược</b><i>Reverse Table Pose</i></figcaption>
       </figure>
       <figure class="card50">
-        <a href="images/the-50-tu-the/39-cay-cau.jpg" target="_blank" rel="noopener"><img src="images/the-50-tu-the/39-cay-cau.jpg" alt="Thẻ 39: Tư thế cây cầu (Bridge Pose)" loading="lazy" width="640" height="909"></a>
+        <button type="button" class="c-open" aria-label="Xem to thẻ Tư thế cây cầu"><img src="images/the-50-tu-the/39-cay-cau.jpg?v=2" alt="Thẻ 39: Tư thế cây cầu (Bridge Pose)" loading="lazy" width="560" height="795" draggable="false"></button>
         <figcaption><span class="c-no">39</span><b>Tư thế cây cầu</b><i>Bridge Pose</i></figcaption>
       </figure>
       <figure class="card50">
-        <a href="images/the-50-tu-the/40-con-thuyen.jpg" target="_blank" rel="noopener"><img src="images/the-50-tu-the/40-con-thuyen.jpg" alt="Thẻ 40: Tư thế con thuyền (Boat Pose)" loading="lazy" width="640" height="909"></a>
+        <button type="button" class="c-open" aria-label="Xem to thẻ Tư thế con thuyền"><img src="images/the-50-tu-the/40-con-thuyen.jpg?v=2" alt="Thẻ 40: Tư thế con thuyền (Boat Pose)" loading="lazy" width="560" height="795" draggable="false"></button>
         <figcaption><span class="c-no">40</span><b>Tư thế con thuyền</b><i>Boat Pose</i></figcaption>
       </figure>
       <figure class="card50">
-        <a href="images/the-50-tu-the/41-may-bay.jpg" target="_blank" rel="noopener"><img src="images/the-50-tu-the/41-may-bay.jpg" alt="Thẻ 41: Tư thế máy bay (Airplane Pose)" loading="lazy" width="640" height="909"></a>
+        <button type="button" class="c-open" aria-label="Xem to thẻ Tư thế máy bay"><img src="images/the-50-tu-the/41-may-bay.jpg?v=2" alt="Thẻ 41: Tư thế máy bay (Airplane Pose)" loading="lazy" width="560" height="795" draggable="false"></button>
         <figcaption><span class="c-no">41</span><b>Tư thế máy bay</b><i>Airplane Pose</i></figcaption>
       </figure>
       <figure class="card50">
-        <a href="images/the-50-tu-the/42-chien-binh-1.jpg" target="_blank" rel="noopener"><img src="images/the-50-tu-the/42-chien-binh-1.jpg" alt="Thẻ 42: Tư thế chiến binh I (Warrior I Pose)" loading="lazy" width="640" height="909"></a>
+        <button type="button" class="c-open" aria-label="Xem to thẻ Tư thế chiến binh I"><img src="images/the-50-tu-the/42-chien-binh-1.jpg?v=2" alt="Thẻ 42: Tư thế chiến binh I (Warrior I Pose)" loading="lazy" width="560" height="795" draggable="false"></button>
         <figcaption><span class="c-no">42</span><b>Tư thế chiến binh I</b><i>Warrior I Pose</i></figcaption>
       </figure>
       <figure class="card50">
-        <a href="images/the-50-tu-the/43-chien-binh-2.jpg" target="_blank" rel="noopener"><img src="images/the-50-tu-the/43-chien-binh-2.jpg" alt="Thẻ 43: Tư thế chiến binh II (Warrior II Pose)" loading="lazy" width="640" height="909"></a>
+        <button type="button" class="c-open" aria-label="Xem to thẻ Tư thế chiến binh II"><img src="images/the-50-tu-the/43-chien-binh-2.jpg?v=2" alt="Thẻ 43: Tư thế chiến binh II (Warrior II Pose)" loading="lazy" width="560" height="795" draggable="false"></button>
         <figcaption><span class="c-no">43</span><b>Tư thế chiến binh II</b><i>Warrior II Pose</i></figcaption>
       </figure>
       <figure class="card50">
-        <a href="images/the-50-tu-the/44-chien-binh-hoa-binh.jpg" target="_blank" rel="noopener"><img src="images/the-50-tu-the/44-chien-binh-hoa-binh.jpg" alt="Thẻ 44: Tư thế chiến binh hòa bình (Peaceful Warrior Pose)" loading="lazy" width="640" height="909"></a>
+        <button type="button" class="c-open" aria-label="Xem to thẻ Tư thế chiến binh hòa bình"><img src="images/the-50-tu-the/44-chien-binh-hoa-binh.jpg?v=2" alt="Thẻ 44: Tư thế chiến binh hòa bình (Peaceful Warrior Pose)" loading="lazy" width="560" height="795" draggable="false"></button>
         <figcaption><span class="c-no">44</span><b>Tư thế chiến binh hòa bình</b><i>Peaceful Warrior Pose</i></figcaption>
       </figure>
       <figure class="card50">
-        <a href="images/the-50-tu-the/45-vu-cong.jpg" target="_blank" rel="noopener"><img src="images/the-50-tu-the/45-vu-cong.jpg" alt="Thẻ 45: Tư thế vũ công (Dancer Pose)" loading="lazy" width="640" height="909"></a>
+        <button type="button" class="c-open" aria-label="Xem to thẻ Tư thế vũ công"><img src="images/the-50-tu-the/45-vu-cong.jpg?v=2" alt="Thẻ 45: Tư thế vũ công (Dancer Pose)" loading="lazy" width="560" height="795" draggable="false"></button>
         <figcaption><span class="c-no">45</span><b>Tư thế vũ công</b><i>Dancer Pose</i></figcaption>
       </figure>
       <figure class="card50">
-        <a href="images/the-50-tu-the/46-canh-cong.jpg" target="_blank" rel="noopener"><img src="images/the-50-tu-the/46-canh-cong.jpg" alt="Thẻ 46: Tư thế cánh cổng (Gate Pose)" loading="lazy" width="640" height="909"></a>
+        <button type="button" class="c-open" aria-label="Xem to thẻ Tư thế cánh cổng"><img src="images/the-50-tu-the/46-canh-cong.jpg?v=2" alt="Thẻ 46: Tư thế cánh cổng (Gate Pose)" loading="lazy" width="560" height="795" draggable="false"></button>
         <figcaption><span class="c-no">46</span><b>Tư thế cánh cổng</b><i>Gate Pose</i></figcaption>
       </figure>
       <figure class="card50">
-        <a href="images/the-50-tu-the/47-cho-con.jpg" target="_blank" rel="noopener"><img src="images/the-50-tu-the/47-cho-con.jpg" alt="Thẻ 47: Tư thế chó con (Puppy Pose)" loading="lazy" width="640" height="909"></a>
+        <button type="button" class="c-open" aria-label="Xem to thẻ Tư thế chó con"><img src="images/the-50-tu-the/47-cho-con.jpg?v=2" alt="Thẻ 47: Tư thế chó con (Puppy Pose)" loading="lazy" width="560" height="795" draggable="false"></button>
         <figcaption><span class="c-no">47</span><b>Tư thế chó con</b><i>Puppy Pose</i></figcaption>
       </figure>
       <figure class="card50">
-        <a href="images/the-50-tu-the/48-em-be-vui-ve.jpg" target="_blank" rel="noopener"><img src="images/the-50-tu-the/48-em-be-vui-ve.jpg" alt="Thẻ 48: Tư thế em bé vui vẻ (Happy Baby Pose)" loading="lazy" width="640" height="909"></a>
+        <button type="button" class="c-open" aria-label="Xem to thẻ Tư thế em bé vui vẻ"><img src="images/the-50-tu-the/48-em-be-vui-ve.jpg?v=2" alt="Thẻ 48: Tư thế em bé vui vẻ (Happy Baby Pose)" loading="lazy" width="560" height="795" draggable="false"></button>
         <figcaption><span class="c-no">48</span><b>Tư thế em bé vui vẻ</b><i>Happy Baby Pose</i></figcaption>
       </figure>
       <figure class="card50">
-        <a href="images/the-50-tu-the/49-tang-da.jpg" target="_blank" rel="noopener"><img src="images/the-50-tu-the/49-tang-da.jpg" alt="Thẻ 49: Tư thế tảng đá (Rock Pose)" loading="lazy" width="640" height="909"></a>
+        <button type="button" class="c-open" aria-label="Xem to thẻ Tư thế tảng đá"><img src="images/the-50-tu-the/49-tang-da.jpg?v=2" alt="Thẻ 49: Tư thế tảng đá (Rock Pose)" loading="lazy" width="560" height="795" draggable="false"></button>
         <figcaption><span class="c-no">49</span><b>Tư thế tảng đá</b><i>Rock Pose</i></figcaption>
       </figure>
       <figure class="card50">
-        <a href="images/the-50-tu-the/50-nghi-ngoi.jpg" target="_blank" rel="noopener"><img src="images/the-50-tu-the/50-nghi-ngoi.jpg" alt="Thẻ 50: Tư thế nghỉ ngơi (Resting Pose)" loading="lazy" width="640" height="909"></a>
+        <button type="button" class="c-open" aria-label="Xem to thẻ Tư thế nghỉ ngơi"><img src="images/the-50-tu-the/50-nghi-ngoi.jpg?v=2" alt="Thẻ 50: Tư thế nghỉ ngơi (Resting Pose)" loading="lazy" width="560" height="795" draggable="false"></button>
         <figcaption><span class="c-no">50</span><b>Tư thế nghỉ ngơi</b><i>Resting Pose</i></figcaption>
       </figure>
     </div>
+    <p class="c-note">© Bộ thẻ thuộc bản quyền Sophia Yoga, chỉ dùng để xem trên web.</p>
+    <div class="c-box" role="dialog" aria-modal="true" aria-label="Xem thẻ"><button type="button" class="c-close" aria-label="Đóng">✕</button><img src="" alt="" draggable="false"></div>
+    <script>
+    (function(){
+      var box=document.querySelector('.c-box'), big=box.querySelector('img');
+      document.querySelectorAll('.c-open').forEach(function(b){
+        b.addEventListener('click',function(){ var im=b.querySelector('img'); big.src=im.src; big.alt=im.alt; box.classList.add('show'); });
+      });
+      box.addEventListener('click',function(){ box.classList.remove('show'); });
+      document.addEventListener('keydown',function(e){ if(e.key==='Escape') box.classList.remove('show'); });
+      document.querySelectorAll('.card50-grid, .c-box').forEach(function(el){
+        ['contextmenu','dragstart','selectstart'].forEach(function(ev){ el.addEventListener(ev,function(e){ e.preventDefault(); }); });
+      });
+    })();
+    </script>
     <p>Muốn có hướng dẫn chi tiết từng tư thế và cách dạy cho lớp của mình? Tham gia <a href="dao-tao-hlv/">khóa Đào tạo HLV Yoga trẻ em</a> cùng cô Sophia, hoặc nhắn <a href="https://zalo.me/0349270304" target="_blank" rel="noopener">Zalo 0349 270 304</a>.</p>
   </main>
 
