@@ -41,6 +41,23 @@ if (toTop) {
   window.addEventListener('scroll', () => toTop.classList.toggle('show', window.scrollY > 600));
 }
 
+// Hàng tài liệu: nút kéo sang trái / phải
+document.querySelectorAll('.dl-slider').forEach(slider => {
+  const track = slider.querySelector('.dl-grid');
+  const prev = slider.querySelector('.dl-prev');
+  const next = slider.querySelector('.dl-next');
+  const step = () => track.querySelector('.dl-card').offsetWidth + 24;
+  const update = () => {
+    prev.disabled = track.scrollLeft < 5;
+    next.disabled = track.scrollLeft + track.clientWidth > track.scrollWidth - 5;
+  };
+  prev.addEventListener('click', () => track.scrollBy({ left: -step(), behavior: 'smooth' }));
+  next.addEventListener('click', () => track.scrollBy({ left: step(), behavior: 'smooth' }));
+  track.addEventListener('scroll', update, { passive: true });
+  window.addEventListener('resize', update);
+  update();
+});
+
 // Năm hiện tại ở chân trang
 const year = document.getElementById('year');
 if (year) year.textContent = new Date().getFullYear();
