@@ -205,13 +205,8 @@ section { padding: 90px 0; }
 
 /* ---------- Blog ---------- */
 .blog { background: var(--cream); }
-.filters {
-  display: flex; flex-wrap: nowrap; gap: 8px; margin-bottom: 36px;
-  overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; padding: 4px 2px;
-}
-.filters::-webkit-scrollbar { display: none; }
-.filter:first-child { margin-left: auto; }
-.filter:last-child { margin-right: auto; }
+/* Nút lọc xuống dòng khi hết chỗ, không nút nào bị cắt ở mép */
+.filters { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-bottom: 36px; padding: 4px 2px; }
 .filter {
   --c: #8b5a2b; --bg: #f6ece2;
   flex: 0 0 auto; white-space: nowrap;
@@ -232,7 +227,7 @@ section { padding: 90px 0; }
 .filters .filter:nth-child(10) { --c: #8b5a2b; --bg: #f6ece2; } /* Flashcard: nâu */
 .filter:hover { transform: translateY(-1px); }
 .filter.active { background: var(--c); border-color: var(--c); color: #fff; }
-@media (max-width: 600px) { .filter { font-size: .82rem; padding: .3em .75em; } .filters { gap: 6px; } }
+@media (max-width: 600px) { .filter { font-size: .82rem; padding: .3em .75em; } .filters { gap: 6px; row-gap: 8px; } }
 .post-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
 .post { background: #fff; border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); transition: transform .2s; }
 .post:hover { transform: translateY(-5px); }
