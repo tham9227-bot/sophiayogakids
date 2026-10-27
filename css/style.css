@@ -913,3 +913,6 @@ section { padding: 90px 0; }
   .dl-prev { left: -10px; }
   .dl-next { right: -10px; }
 }
+/* Ô hoạt động có ảnh bìa (Yoga với ghế) */
+.activity-photo img { display: block; width: calc(100% + 36px); max-width: none; margin: -22px -18px 10px; aspect-ratio: 4 / 3; object-fit: cover; border-radius: var(--radius) var(--radius) 0 0; }
+@media (max-width: 480px) { .activity-photo img { width: calc(100% + 28px); margin: -16px -14px 10px; } }
