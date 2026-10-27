@@ -113,3 +113,9 @@
 .ydc-music { color: #c2508a; font-weight: 700; font-size: .95rem !important; }
 .ydc-tip { background: #fbe8f2; }
 .ydc-page .yd-time b { color: #c2508a; }
+
+/* ---------- Yoga với gấu bông ---------- */
+.gb-hero { margin: 14px 0 18px; }
+.gb-hero img { width: 100%; height: auto; border-radius: 16px; display: block; box-shadow: var(--shadow); }
+.gb-hero figcaption { text-align: center; font-size: .92rem; color: #7a6a58; margin-top: 6px; }
+.gb-page .cd-step-img img { aspect-ratio: 4 / 3; object-fit: contain; }
