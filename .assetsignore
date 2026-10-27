@@ -6,3 +6,4 @@ wrangler.jsonc
 .assetsignore
 README.md
 CNAME
+worker.js
