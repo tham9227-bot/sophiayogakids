@@ -7,7 +7,28 @@
     "binding": "ASSETS"
   },
   "durable_objects": {
-    "bindings": [{ "name": "ORDERS", "class_name": "OrderCounter" }]
+    "bindings": [
+      {
+        "name": "ORDERS",
+        "class_name": "OrderCounter"
+      }
+    ]
   },
-  "migrations": [{ "tag": "v1", "new_sqlite_classes": ["OrderCounter"] }]
+  "migrations": [
+    {
+      "tag": "v1",
+      "new_sqlite_classes": [
+        "OrderCounter"
+      ]
+    }
+  ],
+  "send_email": [
+    {
+      "name": "MAIL",
+      "destination_address": "tham9227@gmail.com"
+    }
+  ],
+  "vars": {
+    "MAIL_TO": "tham9227@gmail.com"
+  }
 }
