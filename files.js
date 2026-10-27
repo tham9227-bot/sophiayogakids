@@ -122,5 +122,17 @@ export const FILES = {
   "cards": 10,
   "name": "Sophia-Yoga-flashcards-thoi-tiet.pdf",
   "title": "Bộ thẻ Yoga 10 kiểu thời tiết"
+ },
+ "yoga-doi": {
+  "parts": [
+   "/tai-ve/yoga-doi-f289e447.bin0",
+   "/tai-ve/yoga-doi-f289e447.bin1"
+  ],
+  "iv": "t0MA1NUrPGavWI1g",
+  "wiv": "tKzDqyQz5HiB0t30",
+  "wkey": "632Ce5ge8s0YjxWuiUM7Y5cNnsFIwkbVaHwwoqTQiCCZVkjuYGutDUBCzEbm2HjW",
+  "cards": 50,
+  "name": "Sophia-Yoga-flashcards-yoga-doi.pdf",
+  "title": "Bộ thẻ 50 tư thế Yoga đôi"
  }
 };
