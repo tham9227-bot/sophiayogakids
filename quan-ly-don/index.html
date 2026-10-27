@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Quản lý đơn Flashcards – Sophia Yoga</title>
+  <link rel="icon" href="../images/favicon.png?v=3" type="image/png">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root { --brown: #6b4423; --dark: #4a2f17; --gold: #a87a12; --yellow: #ffd60a; --bg: #fffdf2; --muted: #8a7560; }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--bg); color: var(--dark); font-family: Nunito, system-ui, sans-serif; font-size: 16px; }
+    .wrap { max-width: 900px; margin: 0 auto; padding: 16px; }
+    h1 { font-size: 1.4rem; color: var(--brown); margin: 4px 0 14px; display: flex; justify-content: space-between; align-items: center; gap: 8px; flex-wrap: wrap; }
+    h2 { font-size: 1.1rem; color: var(--brown); margin: 22px 0 8px; }
+    button, input { font: inherit; }
+    .btn { border: 0; border-radius: 12px; padding: 9px 14px; font-weight: 700; cursor: pointer; background: var(--yellow); color: var(--dark); }
+    .btn.g { background: #2e7d32; color: #fff; } .btn.b { background: #1565c0; color: #fff; } .btn.l { background: #fff; border: 2px solid #ecd9a6; color: var(--brown); }
+    .btn.s { padding: 6px 10px; font-size: .88rem; }
+    #login { max-width: 360px; margin: 40px auto; background: #fff; border-radius: 18px; padding: 22px; box-shadow: 0 6px 20px rgba(74,47,23,.12); }
+    #login input { width: 100%; padding: 12px; border: 2px solid #ecd9a6; border-radius: 12px; margin: 10px 0; }
+    .err { color: #b5361c; font-weight: 700; }
+    .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
+    .stat { background: #fff; border-radius: 14px; padding: 12px; box-shadow: 0 3px 10px rgba(74,47,23,.08); }
+    .stat b { display: block; font-size: 1.5rem; color: var(--gold); }
+    .stat span { font-size: .85rem; color: var(--muted); }
+    .bar { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin: 16px 0 10px; }
+    .bar input { flex: 1 1 160px; padding: 9px 12px; border: 2px solid #ecd9a6; border-radius: 12px; }
+    .tab { border: 2px solid var(--yellow); background: #fff; border-radius: 20px; padding: 6px 12px; font-weight: 700; color: var(--brown); cursor: pointer; }
+    .tab.on { background: var(--yellow); }
+    .don { background: #fff; border-radius: 14px; padding: 12px 14px; margin-bottom: 10px; box-shadow: 0 3px 10px rgba(74,47,23,.08); border-left: 6px solid #f0c040; }
+    .don.da-tra { border-left-color: #2e7d32; } .don.da-gui { border-left-color: #1565c0; } .don.huy { border-left-color: #bbb; opacity: .7; }
+    .don .top { display: flex; justify-content: space-between; gap: 8px; flex-wrap: wrap; align-items: baseline; }
+    .don .code { font-size: 1.25rem; font-weight: 800; color: var(--brown); }
+    .don .amt { font-weight: 800; color: #b5361c; }
+    .don .meta { color: var(--muted); font-size: .9rem; margin: 2px 0 6px; }
+    .don .ship { background: #fff8e1; border-radius: 10px; padding: 6px 10px; font-size: .92rem; margin: 6px 0; }
+    .don .acts { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 6px; }
+    .badge { font-size: .8rem; font-weight: 800; border-radius: 10px; padding: 2px 8px; background: #fff3cd; color: #8a6d00; }
+    .badge.da-tra { background: #e8f5e9; color: #1b5e20; } .badge.da-gui { background: #e3f2fd; color: #0d47a1; } .badge.huy { background: #eee; color: #666; }
+    table { width: 100%; border-collapse: collapse; background: #fff; border-radius: 12px; overflow: hidden; font-size: .92rem; }
+    th, td { padding: 8px; text-align: left; border-bottom: 1px solid #f1e6c8; } th { background: #fff3cd; }
+    td.n { text-align: right; }
+    .help { font-size: .9rem; color: var(--muted); background: #fff; border-radius: 12px; padding: 10px 12px; margin-top: 18px; }
+    @media (max-width: 600px) { .stats { grid-template-columns: repeat(2, 1fr); } }
+  </style>
+</head>
+<body>
+<div class="wrap">
+  <div id="login" hidden>
+    <h1>🔒 Quản lý đơn Flashcards</h1>
+    <p>Nhập mật khẩu quản lý của cô Sophia.</p>
+    <input type="password" id="pw" placeholder="Mật khẩu" autocomplete="current-password">
+    <button class="btn" id="go" style="width:100%">Đăng nhập</button>
+    <p class="err" id="lerr"></p>
+  </div>
+  <div id="app" hidden>
+    <h1>🃏 Đơn Flashcards <span><button class="btn l s" id="reload">↻ Làm mới</button> <button class="btn l s" id="csv">⬇️ Tải Excel</button></span></h1>
+    <div class="stats">
+      <div class="stat"><b id="s-click">0</b><span>Lượt bấm mua</span></div>
+      <div class="stat"><b id="s-paid">0</b><span>Đơn đã trả tiền</span></div>
+      <div class="stat"><b id="s-money">0</b><span>Tổng tiền đã nhận</span></div>
+      <div class="stat"><b id="s-wait">0</b><span>Đơn thẻ cứng chờ gửi</span></div>
+    </div>
+    <div class="bar">
+      <input id="q" type="search" placeholder="Tìm mã đơn, ví dụ SY0007 hoặc 7">
+      <button class="tab on" data-f="cho">Đang chờ</button>
+      <button class="tab" data-f="paid">Đã trả</button>
+      <button class="tab" data-f="all">Tất cả</button>
+    </div>
+    <div id="list"></div>
+    <h2>Theo từng bộ thẻ</h2>
+    <div id="decks"></div>
+    <p class="help">Khi app Techcombank báo tiền về với nội dung <b>SYxxxx</b>, chị tìm mã đơn đó và bấm <b>✅ Đã nhận tiền</b>. Đơn PDF: khách tự tải được ngay. Đơn thẻ cứng: in và gửi thẻ, rồi bấm <b>📦 Đã gửi thẻ</b>. "Lượt bấm mua" tính cả người mở cửa sổ mua nhưng chưa chuyển khoản.</p>
+  </div>
+</div>
+<script>
+(function () {
+  var S = null, data = null, filter = 'cho';
+  try { S = localStorage.getItem('qld-session'); } catch (e) {}
+  var $ = function (id) { return document.getElementById(id); };
+  function vnd(n) { return String(n || 0).replace(/\B(?=(\d{3})+(?!\d))/g, '.') + ' đ'; }
+  function code(so) { return 'SY' + ('000' + so).slice(-Math.max(4, String(so).length)); }
+  function esc(s) { return String(s == null ? '' : s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
+  function time(t) { if (!t) return ''; var d = new Date(t); return d.toLocaleString('vi-VN', { timeZone: 'Asia/Ho_Chi_Minh', hour: '2-digit', minute: '2-digit', day: '2-digit', month: '2-digit' }); }
+  var ST = { cho: 'Chờ chuyển khoản', 'da-tra': 'Đã nhận tiền', 'da-gui': 'Đã gửi thẻ', huy: 'Đã hủy' };
+  function api(path, body) {
+    return fetch('/api/quan-ly/' + path, { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify(Object.assign({ session: S }, body || {})) })
+      .then(function (r) { return r.json().then(function (j) { if (r.status === 401) { logout(); throw 0; } return j; }); });
+  }
+  function logout() { S = null; try { localStorage.removeItem('qld-session'); } catch (e) {} $('app').hidden = true; $('login').hidden = false; }
+  function login() {
+    $('lerr').textContent = '';
+    fetch('/api/quan-ly/login', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ pw: $('pw').value.trim() }) })
+      .then(function (r) { return r.json(); }).then(function (j) {
+        if (!j.session) { $('lerr').textContent = 'Sai mật khẩu, chị thử lại nhé.'; return; }
+        S = j.session; try { localStorage.setItem('qld-session', S); } catch (e) {}
+        start();
+      }).catch(function () { $('lerr').textContent = 'Chưa kết nối được, chị thử lại nhé.'; });
+  }
+  $('go').onclick = login; $('pw').onkeydown = function (e) { if (e.key === 'Enter') login(); };
+  function load() { return api('list').then(function (j) { data = j; draw(); }).catch(function () {}); }
+  function paid(o) { return o.status === 'da-tra' || o.status === 'da-gui'; }
+  function link(o) { return location.origin + '/flashcards/tai-ve/?don=' + o.so + '&t=' + o.token; }
+  function draw() {
+    var os = data.orders, p = os.filter(paid);
+    $('s-click').textContent = data.total;
+    $('s-paid').textContent = p.length;
+    $('s-money').textContent = vnd(p.reduce(function (a, o) { return a + (o.amount || 0); }, 0));
+    $('s-wait').textContent = os.filter(function (o) { return o.type === 'hard' && o.status === 'da-tra'; }).length;
+    var q = $('q').value.replace(/\D/g, '');
+    var show = os.filter(function (o) {
+      if (q) return String(o.so) === String(+q);
+      return filter === 'all' || (filter === 'paid' ? paid(o) : o.status === 'cho');
+    });
+    $('list').innerHTML = show.length ? show.map(function (o) {
+      var hard = o.type === 'hard', a = [];
+      if (o.status === 'cho') a.push('<button class="btn g s" data-set="da-tra" data-so="' + o.so + '">✅ Đã nhận tiền</button>');
+      if (hard && o.status === 'da-tra') a.push('<button class="btn b s" data-set="da-gui" data-so="' + o.so + '">📦 Đã gửi thẻ</button>');
+      if (!hard && paid(o) && o.token) a.push('<button class="btn l s" data-link="' + o.so + '">🔗 Chép link tải cho khách</button>');
+      if (o.status !== 'cho') a.push('<button class="btn l s" data-set="cho" data-so="' + o.so + '">↩︎ Về chờ</button>');
+      if (o.status === 'cho') a.push('<button class="btn l s" data-set="huy" data-so="' + o.so + '">Hủy</button>');
+      return '<div class="don ' + o.status + '"><div class="top"><span class="code">' + code(o.so) + '</span><span class="amt">' + vnd(o.amount) + '</span></div>' +
+        '<div class="meta">' + time(o.t) + ' · ' + esc(o.deck) + ' · ' + (hard ? 'Thẻ cứng × ' + (o.qty || 1) + ' bộ' : 'PDF') + ' · <span class="badge ' + o.status + '">' + ST[o.status] + '</span>' + (o.bao && o.status === 'cho' ? ' <span class="badge">🔔 Khách báo đã CK ' + time(o.bao) + '</span>' : '') + '</div>' +
+        (hard && (o.ten || o.dc) ? '<div class="ship">📮 ' + esc(o.ten) + ' · ' + esc(o.sdt) + '<br>' + esc(o.dc) + '</div>' : (hard ? '<div class="ship">Khách chưa gửi địa chỉ.</div>' : '')) +
+        '<div class="acts">' + a.join('') + '</div></div>';
+    }).join('') : '<p>Không có đơn nào' + (q ? ' mang mã ' + code(+q) : '') + '.</p>';
+    var by = {};
+    os.forEach(function (o) {
+      var k = o.deck || '(không rõ)'; by[k] = by[k] || { c: 0, pdf: 0, hard: 0, m: 0 };
+      by[k].c++; if (paid(o)) { by[k][o.type === 'hard' ? 'hard' : 'pdf']++; by[k].m += o.amount || 0; }
+    });
+    $('decks').innerHTML = '<table><tr><th>Bộ thẻ</th><th>Lượt bấm</th><th>PDF đã bán</th><th>Thẻ cứng đã bán</th><th>Tiền</th></tr>' +
+      Object.keys(by).map(function (k) { var b = by[k]; return '<tr><td>' + esc(k) + '</td><td class="n">' + b.c + '</td><td class="n">' + b.pdf + '</td><td class="n">' + b.hard + '</td><td class="n">' + vnd(b.m) + '</td></tr>'; }).join('') + '</table>';
+  }
+  document.addEventListener('click', function (e) {
+    var t = e.target.closest('.tab');
+    if (t) { filter = t.dataset.f; [].forEach.call(document.querySelectorAll('.tab'), function (x) { x.classList.toggle('on', x === t); }); $('q').value = ''; return draw(); }
+    var s = e.target.closest('[data-set]');
+    if (s) {
+      if (s.dataset.set === 'huy' && !confirm('Hủy đơn ' + code(s.dataset.so) + '?')) return;
+      s.disabled = true; api('set', { so: +s.dataset.so, status: s.dataset.set }).then(load); return;
+    }
+    var l = e.target.closest('[data-link]');
+    if (l) {
+      var o = data.orders.find(function (x) { return x.so === +l.dataset.link; });
+      var txt = 'Cảm ơn anh/chị đã mua ' + o.deck + '. Link tải file PDF: ' + link(o);
+      (navigator.clipboard ? navigator.clipboard.writeText(txt) : Promise.reject()).then(function () { l.textContent = 'Đã chép ✓ dán vào Zalo cho khách'; }, function () { prompt('Chép link này gửi khách:', txt); });
+    }
+  });
+  $('q').oninput = draw; $('reload').onclick = load;
+  $('csv').onclick = function () {
+    var rows = [['Mã đơn', 'Thời gian', 'Bộ thẻ', 'Loại', 'Số bộ', 'Số tiền', 'Trạng thái', 'Người nhận', 'SĐT', 'Địa chỉ']];
+    data.orders.forEach(function (o) { rows.push([code(o.so), time(o.t), o.deck, o.type === 'hard' ? 'Thẻ cứng' : 'PDF', o.qty || 1, o.amount || 0, ST[o.status], o.ten || '', o.sdt || '', o.dc || '']); });
+    var csv = '﻿' + rows.map(function (r) { return r.map(function (v) { return '"' + String(v).replace(/"/g, '""') + '"'; }).join(','); }).join('\r\n');
+    var a = document.createElement('a'); a.href = URL.createObjectURL(new Blob([csv], { type: 'text/csv' })); a.download = 'don-flashcards.csv'; a.click();
+  };
+  function start() { $('login').hidden = true; $('app').hidden = false; load(); setInterval(load, 30000); }
+  if (S) start(); else $('login').hidden = false;
+})();
+</script>
+</body>
+</html>

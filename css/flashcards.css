@@ -94,3 +94,15 @@
 .fco-msg a { color: #0068ff; font-weight: 700; }
 .fco-after { margin: 4px 0 0; padding: 10px 12px; background: #fff8e1; border-radius: 12px; font-size: .92rem; }
 .fco-wait { text-align: center; margin: 24px 0; font-weight: 700; color: #6b4423; }
+.fco-status[hidden] { display: none; }
+.fco-wait-dl { margin: 10px 0 6px; padding: 12px; border-radius: 12px; background: #fff3cd; color: #6b4423; font-weight: 700; text-align: center; }
+.fco-ready { margin: 10px 0 6px; padding: 14px 12px; border-radius: 14px; background: #e8f5e9; color: #1b5e20; font-weight: 700; text-align: center; }
+.fco-dl, .fco-send { display: block; width: 100%; margin-top: 10px; border: 0; border-radius: 16px; padding: 13px 14px; background: #2e7d32; color: #fff; font: inherit; font-weight: 700; font-size: 1.08rem; cursor: pointer; }
+.fco-send { background: #a87a12; }
+.fco-wait-dl .fco-send { font-size: 1rem; }
+.fco-dl:disabled { opacity: .6; }
+.fco-prog { display: block; margin-top: 6px; font-weight: 600; font-size: .9rem; }
+.fco-link { font-size: .85rem; color: var(--muted); margin: 8px 0 0; word-break: break-all; }
+.fco-link span { color: #4a2f17; }
+.fco-zalo-link { color: #0068ff; font-weight: 700; }
+.fc-tv-box { background: #fff8e1; border-radius: var(--radius); padding: 18px 20px; margin: 20px 0; max-width: 560px; }
