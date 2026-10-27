@@ -56,7 +56,7 @@
     <p class="err" id="lerr"></p>
   </div>
   <div id="app" hidden>
-    <h1>🃏 Đơn Flashcards <span><button class="btn l s" id="reload">↻ Làm mới</button> <button class="btn l s" id="csv">⬇️ Tải Excel</button></span></h1>
+    <h1>🃏 Đơn Flashcards <span><button class="btn l s" id="reload">↻ Làm mới</button> <button class="btn l s" id="csv">⬇️ Tải Excel</button> <button class="btn l s" id="setpw">🔑 Đổi mật khẩu</button></span></h1>
     <div class="stats">
       <div class="stat"><b id="s-click">0</b><span>Lượt bấm mua</span></div>
       <div class="stat"><b id="s-paid">0</b><span>Đơn đã trả tiền</span></div>
@@ -94,7 +94,7 @@
     $('lerr').textContent = '';
     fetch('/api/quan-ly/login', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ pw: $('pw').value.trim() }) })
       .then(function (r) { return r.json(); }).then(function (j) {
-        if (!j.session) { $('lerr').textContent = 'Sai mật khẩu, chị thử lại nhé.'; return; }
+        if (!j.session) { $('lerr').textContent = j.error === 'khoa' ? 'Nhập sai nhiều lần, chị đợi 15 phút rồi thử lại nhé.' : 'Sai mật khẩu, chị thử lại nhé.'; return; }
         S = j.session; try { localStorage.setItem('qld-session', S); } catch (e) {}
         start();
       }).catch(function () { $('lerr').textContent = 'Chưa kết nối được, chị thử lại nhé.'; });
@@ -149,6 +149,13 @@
       (navigator.clipboard ? navigator.clipboard.writeText(txt) : Promise.reject()).then(function () { l.textContent = 'Đã chép ✓ dán vào Zalo cho khách'; }, function () { prompt('Chép link này gửi khách:', txt); });
     }
   });
+  $('setpw').onclick = function () {
+    var a = prompt('Mật khẩu mới (ít nhất 6 ký tự, chị nhớ được là được):');
+    if (a == null) return;
+    if (a.trim().length < 6) return alert('Mật khẩu cần ít nhất 6 ký tự ạ.');
+    if (prompt('Nhập lại mật khẩu mới:') !== a) return alert('Hai lần nhập chưa giống nhau, chị thử lại nhé.');
+    api('setpw', { pw: a.trim() }).then(function (j) { alert(j.ok ? 'Đã đổi xong. Lần sau chị đăng nhập bằng mật khẩu mới.' : 'Chưa đổi được, chị thử lại nhé.'); });
+  };
   $('q').oninput = draw; $('reload').onclick = load;
   $('csv').onclick = function () {
     var rows = [['Mã đơn', 'Thời gian', 'Bộ thẻ', 'Loại', 'Số bộ', 'Số tiền', 'Trạng thái', 'Người nhận', 'SĐT', 'Địa chỉ']];
