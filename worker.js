@@ -2,7 +2,7 @@
 //   POST /api/don-hang              new order → { so, token }   (order codes SY0001, SY0002…)
 //   GET  /api/don-hang?so=&t=       buyer polls; once chị marks it paid, a PDF order also gets the file key
 //   POST /api/don-hang/info         buyer presses "Tôi đã chuyển khoản" (hard cards: with name / phone / address) → e-mail to chị
-//   POST /api/quan-ly/*             chị's admin page /quan-ly-don/ (login, list, set status)
+//   POST /api/quan-ly/*             chị's admin page /quan-ly-don/ (login, list, set status, set her own short password)
 // PDFs sit encrypted in /tai-ve/ (see files.js); keys are unwrapped at chị's login and kept in the Durable Object.
 import { PW_HASH, FILES } from './files.js';
 import { EmailMessage } from 'cloudflare:email';
@@ -58,17 +58,31 @@ export class OrderCounter {
 
     // ---- admin ----
     if (p === '/login') {
-      if (hex(await sha('sophia-pw:' + str(body.pw, 100))) !== PW_HASH) return json({ error: 'sai mật khẩu' }, 403);
-      const kek = await crypto.subtle.importKey('raw', await sha('sophia-kek:' + body.pw), 'AES-GCM', false, ['decrypt']);
-      const keys = {};
-      for (const [slug, f] of Object.entries(FILES)) {
-        keys[slug] = b64(await crypto.subtle.decrypt({ name: 'AES-GCM', iv: unb64(f.wiv) }, kek, unb64(f.wkey)));
+      // master password (hash in files.js) also unwraps the PDF keys; chị's own short password lives only in this DO
+      const now = Date.now(), pw = str(body.pw, 100);
+      const lock = (await this.s.get('lock')) || { n: 0, until: 0 };
+      const fail = async () => {
+        lock.n++; if (lock.n >= 8) { lock.until = now + 15 * 60e3; lock.n = 0; }
+        await this.s.put('lock', lock); return json({ error: 'sai mật khẩu' }, 403);
+      };
+      const put = {};
+      if (hex(await sha('sophia-pw:' + pw)) === PW_HASH) {
+        const kek = await crypto.subtle.importKey('raw', await sha('sophia-kek:' + pw), 'AES-GCM', false, ['decrypt']);
+        const keys = {};
+        for (const [slug, f] of Object.entries(FILES)) {
+          keys[slug] = b64(await crypto.subtle.decrypt({ name: 'AES-GCM', iv: unb64(f.wiv) }, kek, unb64(f.wkey)));
+        }
+        put.keys = keys;
+      } else {
+        if (lock.until > now) return json({ error: 'khoa' }, 429); // only the short password is locked out
+        const pw2 = await this.s.get('pw2');
+        if (!pw2 || hex(await sha(pw2.salt + ':' + pw)) !== pw2.hash) return fail();
       }
       const sess = (await this.s.get('sessions')) || {};
-      const now = Date.now(), id = rand();
+      const id = rand();
       for (const k in sess) if (sess[k] < now) delete sess[k];
       sess[id] = now + 90 * 864e5;
-      await this.s.put({ keys, sessions: sess });
+      await this.s.put({ ...put, sessions: sess, lock: { n: 0, until: 0 } });
       return json({ session: id });
     }
     const sess = (await this.s.get('sessions')) || {};
@@ -81,6 +95,13 @@ export class OrderCounter {
         amount: o.amount || (slugOf(o) ? FILES[slugOf(o)].cards * (o.type === 'hard' ? HARD_PER_CARD : PDF_PER_CARD) : 0) }));
       orders.sort((a, b) => b.so - a.so);
       return json({ total: n, orders });
+    }
+    if (p === '/setpw') {
+      const pw = str(body.pw, 100).trim();
+      if (pw.length < 6) return json({ error: 'ngắn quá' }, 400);
+      const salt = rand();
+      await this.s.put('pw2', { salt, hash: hex(await sha(salt + ':' + pw)) });
+      return json({ ok: true });
     }
     if (p === '/set') {
       const o = await this.order(parseInt(body.so));
@@ -123,7 +144,7 @@ async function mail(env, o) {
 }
 
 const ROUTES = { 'POST /api/don-hang': '/new', 'GET /api/don-hang': '/status', 'POST /api/don-hang/info': '/info',
-  'POST /api/quan-ly/login': '/login', 'POST /api/quan-ly/list': '/list', 'POST /api/quan-ly/set': '/set' };
+  'POST /api/quan-ly/login': '/login', 'POST /api/quan-ly/list': '/list', 'POST /api/quan-ly/set': '/set', 'POST /api/quan-ly/setpw': '/setpw' };
 
 export default {
   async fetch(req, env, ctx) {
