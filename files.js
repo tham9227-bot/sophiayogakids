@@ -111,5 +111,16 @@ export const FILES = {
   "cards": 29,
   "name": "Sophia-Yoga-flashcards-chu-cai-tieng-viet.pdf",
   "title": "Bộ thẻ Yoga 29 chữ cái tiếng Việt"
+ },
+ "thoi-tiet": {
+  "parts": [
+   "/tai-ve/thoi-tiet-7f63e05f.bin0"
+  ],
+  "iv": "KHwz9JF9B257pWZM",
+  "wiv": "CYOLnTdRnGk0qWks",
+  "wkey": "FISPBX8vYkSN3UuWzRJxOhg1WKgfXdS/auMsD071ikB5epr3ZqCE0Wdjq1SfT7XA",
+  "cards": 10,
+  "name": "Sophia-Yoga-flashcards-thoi-tiet.pdf",
+  "title": "Bộ thẻ Yoga 10 kiểu thời tiết"
  }
 };
