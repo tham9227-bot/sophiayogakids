@@ -65,3 +65,31 @@
 }
 .fc-lb-sides canvas { display: block; margin: 0 auto; object-fit: contain; aspect-ratio: 600/851; height: auto; }
 @media print { .fc-page canvas { visibility: hidden; } }
+/* order popup (js/fc-order.js) */
+.fco { position: fixed; inset: 0; z-index: 1100; background: rgba(40,28,14,.85); display: flex; align-items: flex-start; justify-content: center; padding: 16px 12px; overflow-y: auto; }
+.fco[hidden] { display: none; }
+.fco-box { background: #fffdf2; border-radius: 20px; width: min(480px, 100%); padding: 16px 18px 18px; color: #4a2f17; margin: auto 0; }
+.fco-top { display: flex; justify-content: space-between; align-items: center; gap: 10px; font-size: 1.2rem; color: #6b4423; }
+.fco-x { border: 0; background: #ffd60a; color: #4a2f17; width: 38px; height: 38px; border-radius: 50%; font-size: 1.1rem; cursor: pointer; flex: none; }
+.fco-deck { margin: 6px 0 4px; font-weight: 700; color: #a87a12; }
+.fco-qty { display: flex; align-items: center; gap: 10px; margin: 8px 0; font-weight: 700; }
+.fco-qty button { width: 34px; height: 34px; border-radius: 50%; border: 2px solid #ffd60a; background: #fff; font-size: 1.2rem; font-weight: 700; color: #6b4423; cursor: pointer; }
+.fco-qty b { min-width: 24px; text-align: center; font-size: 1.15rem; }
+.fco-total { font-size: 1.1rem; margin: 6px 0 10px; }
+.fco-total b { color: #b5361c; font-size: 1.3rem; }
+.fco-steps { margin: 0; padding-left: 22px; }
+.fco-steps li { margin-bottom: 14px; line-height: 1.45; }
+.fco-qr { width: 220px; max-width: 70vw; margin: 10px auto 8px; background: #fff; border: 3px solid #ffd60a; border-radius: 14px; padding: 6px; }
+.fco-qr svg { display: block; width: 100%; height: auto; }
+.fco-bank { width: 100%; border-collapse: collapse; font-size: .95rem; }
+.fco-bank td { padding: 4px 4px; border-bottom: 1px dashed #ecd9a6; vertical-align: middle; }
+.fco-bank td:first-child { color: var(--muted); white-space: nowrap; width: 1%; padding-right: 10px; }
+.fco-copy { border: 1px solid #f5c400; background: #fff8e1; color: #6b4423; border-radius: 12px; padding: 2px 8px; font: inherit; font-size: .8rem; cursor: pointer; margin-left: 4px; }
+.fco-form { display: grid; gap: 8px; margin-top: 8px; }
+.fco-form input, .fco-form textarea { width: 100%; box-sizing: border-box; border: 2px solid #ecd9a6; border-radius: 12px; padding: 9px 12px; font: inherit; background: #fff; }
+.fco-form input:focus, .fco-form textarea:focus { outline: none; border-color: #ffd60a; }
+.fco-zalo { display: block; width: 100%; margin-top: 10px; border: 0; border-radius: 16px; padding: 13px 14px; background: #0068ff; color: #fff; font: inherit; font-weight: 700; font-size: 1.05rem; cursor: pointer; }
+.fco-msg { margin: 8px 0 0; padding: 8px 10px; border-radius: 10px; background: #e8f5e9; color: #1b5e20; font-size: .92rem; }
+.fco-msg.err { background: #fdecea; color: #b5361c; }
+.fco-msg a { color: #0068ff; font-weight: 700; }
+.fco-after { margin: 4px 0 0; padding: 10px 12px; background: #fff8e1; border-radius: 12px; font-size: .92rem; }
