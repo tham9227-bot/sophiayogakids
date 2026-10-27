@@ -93,3 +93,4 @@
 .fco-msg.err { background: #fdecea; color: #b5361c; }
 .fco-msg a { color: #0068ff; font-weight: 700; }
 .fco-after { margin: 4px 0 0; padding: 10px 12px; background: #fff8e1; border-radius: 12px; font-size: .92rem; }
+.fco-wait { text-align: center; margin: 24px 0; font-weight: 700; color: #6b4423; }

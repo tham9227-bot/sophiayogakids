@@ -107,13 +107,27 @@
   });
   document.addEventListener('keydown', function (e) { if (!box.hidden && e.key === 'Escape') { e.stopPropagation(); close(); } }, true);
 
+  // sequential order number from the Worker (SY0001, SY0002…); random 5-digit code if it can't be reached
+  function newCode(order) {
+    var fallback = function () { return 'SY' + String(Math.floor(10000 + Math.random() * 90000)); };
+    var timer = new Promise(function (r) { setTimeout(function () { r(null); }, 5000); });
+    var req = fetch('/api/don-hang', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ deck: order.deck, type: order.type }) })
+      .then(function (r) { return r.ok ? r.json() : null; }).catch(function () { return null; });
+    return Promise.race([req, timer]).then(function (d) {
+      return d && d.so ? 'SY' + ('000' + d.so).slice(-Math.max(4, String(d.so).length)) : fallback();
+    });
+  }
   document.addEventListener('click', function (e) {
     var b = e.target.closest('a[data-order]');
     if (!b || typeof qrcode !== 'function') return; // no QR library → fall back to the Zalo link
     e.preventDefault();
-    o = { type: b.dataset.order, deck: b.dataset.deck, cards: +b.dataset.cards, price: +b.dataset.price, qty: 1,
-      code: 'SY' + String(Math.floor(10000 + Math.random() * 90000)) };
-    render(); box.hidden = false; document.body.style.overflow = 'hidden';
-    box.querySelector('.fco-x').focus();
+    o = { type: b.dataset.order, deck: b.dataset.deck, cards: +b.dataset.cards, price: +b.dataset.price, qty: 1 };
+    box.innerHTML = '<div class="fco-box"><p class="fco-wait">Đang tạo mã đơn…</p></div>';
+    box.hidden = false; document.body.style.overflow = 'hidden';
+    var mine = o;
+    newCode(o).then(function (code) {
+      if (o !== mine) return;
+      o.code = code; render(); box.querySelector('.fco-x').focus();
+    });
   });
 })();

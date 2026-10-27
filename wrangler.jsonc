@@ -1,7 +1,13 @@
 {
   "name": "ancient-moon-a52f",
+  "main": "worker.js",
   "compatibility_date": "2026-10-01",
   "assets": {
-    "directory": "./"
-  }
+    "directory": "./",
+    "binding": "ASSETS"
+  },
+  "durable_objects": {
+    "bindings": [{ "name": "ORDERS", "class_name": "OrderCounter" }]
+  },
+  "migrations": [{ "tag": "v1", "new_sqlite_classes": ["OrderCounter"] }]
 }
