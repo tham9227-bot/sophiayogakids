@@ -128,9 +128,9 @@ export const FILES = {
    "/tai-ve/yoga-doi-f289e447.bin0",
    "/tai-ve/yoga-doi-f289e447.bin1"
   ],
-  "iv": "t0MA1NUrPGavWI1g",
-  "wiv": "tKzDqyQz5HiB0t30",
-  "wkey": "632Ce5ge8s0YjxWuiUM7Y5cNnsFIwkbVaHwwoqTQiCCZVkjuYGutDUBCzEbm2HjW",
+  "iv": "2SNusxGG/pvJazON",
+  "wiv": "lWBmt7e7xUQ4GGCp",
+  "wkey": "9TcNbPzR8vv8JvZ6ECAXWENnYncW/on5HMUMTafUumFN9bh8mor9vmGC+cSxyyyG",
   "cards": 50,
   "name": "Sophia-Yoga-flashcards-yoga-doi.pdf",
   "title": "Bộ thẻ 50 tư thế Yoga đôi"
