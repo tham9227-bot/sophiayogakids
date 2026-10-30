@@ -916,3 +916,9 @@ section { padding: 90px 0; }
 /* Ô hoạt động có ảnh bìa (Yoga với ghế) */
 .activity-photo img { display: block; width: calc(100% + 36px); max-width: none; margin: -22px -18px 10px; aspect-ratio: 4 / 3; object-fit: cover; border-radius: var(--radius) var(--radius) 0 0; }
 @media (max-width: 480px) { .activity-photo img { width: calc(100% + 28px); margin: -16px -14px 10px; } }
+
+/* Bộ thẻ Yoga tiếng Anh trong mục Tiếng Anh cho HLV */
+.english-cards-title { margin: 34px 0 16px; text-align: center; }
+.english-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+.english-cards .service-card .btn { margin: 0 6px 6px 0; }
+@media (max-width: 760px) { .english-cards { grid-template-columns: 1fr; } }
