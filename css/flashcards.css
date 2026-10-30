@@ -106,3 +106,5 @@
 .fco-link span { color: #4a2f17; }
 .fco-zalo-link { color: #0068ff; font-weight: 700; }
 .fc-tv-box { background: #fff8e1; border-radius: var(--radius); padding: 18px 20px; margin: 20px 0; max-width: 560px; }
+.fc-sec { margin: 34px 0 14px; color: var(--brown, #6b4423); font-size: 1.35rem; }
+.fc-jump a { font-weight: 700; color: #a87a12; text-decoration: none; }
