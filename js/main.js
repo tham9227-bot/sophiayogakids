@@ -25,13 +25,26 @@ document.querySelectorAll('.filter[data-cat]').forEach(btn => {
   });
 });
 
-// Form đăng ký (tạm thời chỉ hiện lời cảm ơn; sau này nối với Google Form / Formspree)
+// Form đăng ký: soạn sẵn tin nhắn, chép vào bộ nhớ, mở Zalo của Sophia để khách dán và gửi.
+// FORM_ENDPOINT: khi có địa chỉ nhận (email / Google Sheet) thì điền vào đây, form sẽ gửi thêm về đó.
+const FORM_ENDPOINT = '';
 const form = document.getElementById('signup-form');
 if (form) {
   form.addEventListener('submit', e => {
     e.preventDefault();
+    const d = new FormData(form);
+    const text = 'Chào Sophia, mình đăng ký tư vấn:\n' +
+      'Họ tên: ' + d.get('ten') + '\n' +
+      'SĐT: ' + d.get('sdt') + '\n' +
+      'Quan tâm: ' + d.get('khoa') +
+      (d.get('loinhan') ? '\nLời nhắn: ' + d.get('loinhan') : '');
+    if (FORM_ENDPOINT) {
+      fetch(FORM_ENDPOINT, { method: 'POST', body: d, headers: { Accept: 'application/json' } }).catch(() => {});
+    }
+    if (navigator.clipboard) navigator.clipboard.writeText(text).catch(() => {});
+    form.querySelector('.form-copy').value = text;
     form.querySelector('.form-msg').hidden = false;
-    form.reset();
+    form.querySelector('.form-msg').scrollIntoView({ behavior: 'smooth', block: 'center' });
   });
 }
 
