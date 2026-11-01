@@ -25,26 +25,44 @@ document.querySelectorAll('.filter[data-cat]').forEach(btn => {
   });
 });
 
-// Form đăng ký: soạn sẵn tin nhắn, chép vào bộ nhớ, mở Zalo của Sophia để khách dán và gửi.
-// FORM_ENDPOINT: khi có địa chỉ nhận (email / Google Sheet) thì điền vào đây, form sẽ gửi thêm về đó.
-const FORM_ENDPOINT = '';
+// Form đăng ký: gửi thẳng về Gmail của Sophia (qua FormSubmit).
+// Nếu gửi lỗi (mất mạng, chưa kích hoạt...) thì soạn sẵn tin nhắn để khách gửi qua Zalo, không mất thông tin.
+const FORM_ENDPOINT = 'https://formsubmit.co/ajax/tham9227@gmail.com';
 const form = document.getElementById('signup-form');
 if (form) {
-  form.addEventListener('submit', e => {
+  form.addEventListener('submit', async e => {
     e.preventDefault();
     const d = new FormData(form);
+    const btn = form.querySelector('button[type=submit]');
+    const ok = form.querySelector('.form-ok');
+    const zalo = form.querySelector('.form-msg');
+    ok.hidden = true; zalo.hidden = true;
+    btn.disabled = true; btn.textContent = 'Đang gửi...';
     const text = 'Chào Sophia, mình đăng ký tư vấn:\n' +
       'Họ tên: ' + d.get('ten') + '\n' +
       'SĐT: ' + d.get('sdt') + '\n' +
       'Quan tâm: ' + d.get('khoa') +
       (d.get('loinhan') ? '\nLời nhắn: ' + d.get('loinhan') : '');
-    if (FORM_ENDPOINT) {
-      fetch(FORM_ENDPOINT, { method: 'POST', body: d, headers: { Accept: 'application/json' } }).catch(() => {});
+    d.append('_subject', 'Đăng ký mới: ' + d.get('ten') + ' - ' + d.get('khoa'));
+    d.append('_template', 'table');
+    d.append('_captcha', 'false');
+    let sent = false;
+    try {
+      const r = await fetch(FORM_ENDPOINT, { method: 'POST', body: d, headers: { Accept: 'application/json' } });
+      const j = await r.json();
+      sent = r.ok && String(j.success) === 'true';
+    } catch (err) { sent = false; }
+    btn.disabled = false; btn.textContent = 'Gửi đăng ký';
+    if (sent) {
+      form.reset();
+      ok.hidden = false;
+      ok.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    } else {
+      if (navigator.clipboard) navigator.clipboard.writeText(text).catch(() => {});
+      form.querySelector('.form-copy').value = text;
+      zalo.hidden = false;
+      zalo.scrollIntoView({ behavior: 'smooth', block: 'center' });
     }
-    if (navigator.clipboard) navigator.clipboard.writeText(text).catch(() => {});
-    form.querySelector('.form-copy').value = text;
-    form.querySelector('.form-msg').hidden = false;
-    form.querySelector('.form-msg').scrollIntoView({ behavior: 'smooth', block: 'center' });
   });
 }
 
