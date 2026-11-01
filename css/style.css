@@ -925,3 +925,27 @@ section { padding: 90px 0; }
 .english-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
 .english-cards .service-card .btn { margin: 0 6px 6px 0; }
 @media (max-width: 760px) { .english-cards { grid-template-columns: 1fr; } }
+
+/* ---------- Chữ thanh menu to hơn (2026-11-02) ---------- */
+@media (min-width: 861px) {
+  .header-inner > .main-nav { gap: 6px; }
+  .main-nav a { font-size: 1.22rem; }
+  .main-nav a.nav-star { font-size: 1.32rem; padding: 6px 18px; }
+  .main-nav .btn { font-size: 1.15rem; padding: .45em 1.15em; }
+}
+@media (min-width: 861px) and (max-width: 1299px) {
+  .main-nav a { font-size: clamp(.95rem, 1.5vw, 1.2rem); }
+  .main-nav a.nav-star { font-size: clamp(1rem, 1.6vw, 1.3rem); padding: 5px 12px; }
+  .main-nav .btn { font-size: clamp(.92rem, 1.42vw, 1.12rem); padding: .4em .9em; }
+}
+@media (min-width: 861px) and (max-width: 980px) {
+  .header-inner > .main-nav { gap: 4px; }
+  .main-nav a { font-size: .9rem; }
+  .main-nav a.nav-star { font-size: .98rem; padding: 4px 10px; }
+  .main-nav .btn { font-size: .88rem; padding: .35em .75em; }
+}
+@media (max-width: 860px) {
+  .main-nav a { font-size: 1.2rem; }
+  .main-nav a.nav-star { font-size: 1.3rem; }
+  .main-nav .btn { font-size: 1.15rem; }
+}
