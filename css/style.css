@@ -973,3 +973,10 @@ section { padding: 90px 0; }
   .main-nav a.nav-star { font-size: .9rem; padding: 3px 8px; }
   .main-nav .btn { font-size: .82rem; padding: .3em .6em; }
 }
+/* Menu có "Tài liệu & ý tưởng": chữ vẫn to nhưng vừa một hàng */
+@media (min-width: 861px) {
+  .header-inner > .main-nav { gap: 4px; }
+  .main-nav a:not(.btn):not(.nav-star) { font-size: clamp(.74rem, 1.36vw, 1.12rem); padding: 4px clamp(6px, .75vw, 12px); }
+  .main-nav a.nav-star { font-size: clamp(.8rem, 1.45vw, 1.2rem); padding: 4px clamp(8px, .9vw, 16px); }
+  .main-nav .btn { font-size: clamp(.74rem, 1.3vw, 1.06rem); padding: .38em clamp(8px, .9vw, 16px); }
+}
