@@ -951,10 +951,25 @@ section { padding: 90px 0; }
   .main-nav .btn { font-size: 1.15rem; }
 }
 
-/* ---------- Menu thêm Cửa hàng + Lời khuyên (2026-11-02): co chữ cho vừa một hàng ---------- */
+
+/* ---------- Mỗi mục menu là một nút bo tròn, nhạt hơn nút Đào tạo HLV (2026-11-02) ---------- */
+.main-nav a:not(.btn):not(.nav-star) {
+  color: #b07d00; background: #fffaf0; -webkit-background-clip: border-box; background-clip: border-box;
+  filter: none; text-shadow: none;
+  border: 1.5px solid #f3d98a; border-radius: 999px; padding: 5px 12px; line-height: 1.2;
+}
+.main-nav a:not(.btn):not(.nav-star):hover { background: #fff3c4; border-color: #f5c400; color: #8a6100; }
 @media (min-width: 861px) {
-  .header-inner > .main-nav { gap: 4px; }
-  .main-nav a { font-size: clamp(.7rem, 1.3vw, 1.15rem); }
-  .main-nav a.nav-star { font-size: clamp(.76rem, 1.38vw, 1.22rem); padding: 4px 10px; }
-  .main-nav .btn { font-size: clamp(.7rem, 1.24vw, 1.08rem); padding: .38em .8em; }
+  .header-inner > .main-nav { gap: 6px; }
+  .main-nav a:not(.btn):not(.nav-star) { padding: 4px clamp(7px, .8vw, 12px); }
+}
+@media (max-width: 860px) {
+  .main-nav a:not(.btn):not(.nav-star) { min-width: 220px; text-align: center; padding: 8px 18px; }
+}
+@media (min-width: 1300px) { .header-inner > .main-nav { gap: 4px; } }
+@media (min-width: 861px) and (max-width: 980px) {
+  .header-inner > .main-nav { gap: 3px; }
+  .main-nav a:not(.btn):not(.nav-star) { padding: 3px 6px; font-size: .84rem; }
+  .main-nav a.nav-star { font-size: .9rem; padding: 3px 8px; }
+  .main-nav .btn { font-size: .82rem; padding: .3em .6em; }
 }
