@@ -146,5 +146,17 @@ export const FILES = {
   "cards": 65,
   "name": "Sophia-Yoga-flashcards-yoga-nguoi-lon-65.pdf",
   "title": "Bộ thẻ 65 tư thế Yoga người lớn"
+ },
+ "yoga-nguoi-lon-70": {
+  "parts": [
+   "/tai-ve/yoga-nguoi-lon-70-34724fa6.bin0",
+   "/tai-ve/yoga-nguoi-lon-70-34724fa6.bin1"
+  ],
+  "iv": "TfNdeC+WoBtS1vjZ",
+  "wiv": "TBbLlifzi+seU56Z",
+  "wkey": "jOi+f6Aiakxm7aJKjrmFQZHV2hmPsgpjuJVsvVwM9oFlHpt2nhK4+blicIWyrawm",
+  "cards": 70,
+  "name": "Sophia-Yoga-flashcards-yoga-nguoi-lon-70.pdf",
+  "title": "Bộ thẻ 70 tư thế Yoga người lớn (bổ sung)"
  }
 };
