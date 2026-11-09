@@ -929,6 +929,12 @@ section { padding: 90px 0; }
 .english-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
 .english-cards .service-card .btn { margin: 0 6px 6px 0; }
 @media (max-width: 760px) { .english-cards { grid-template-columns: 1fr; } }
+.english-lesson { display: grid; grid-template-columns: 1.1fr 1fr; gap: 20px; align-items: center; background: #fff; border-radius: 20px; box-shadow: var(--shadow); padding: 14px; text-decoration: none; color: inherit; }
+.english-lesson img { width: 100%; height: auto; border-radius: 14px; display: block; }
+.english-lesson .el-text { display: flex; flex-direction: column; gap: 8px; align-items: flex-start; }
+.english-lesson .el-text b { font-family: "Quicksand", sans-serif; color: #6b4423; font-size: 1.15rem; line-height: 1.35; }
+.english-lesson:hover { transform: translateY(-2px); }
+@media (max-width: 760px) { .english-lesson { grid-template-columns: 1fr; } }
 
 /* ---------- Chữ thanh menu to hơn (2026-11-02) ---------- */
 @media (min-width: 861px) {
