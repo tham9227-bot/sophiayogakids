@@ -84,6 +84,13 @@
 .nt-pit .tg { font-weight: 700; color: #6b4423; margin: 0; font-size: .95rem; }
 .nt-pit .rs { font-size: .86rem; color: #6b4423; background: #fdf8f0; border-radius: 999px; padding: 2px 8px; display: inline-block; margin-top: 4px; }
 @media (max-width: 640px) { .nt-pit { grid-template-columns: repeat(2, 1fr); } }
+.nt-top { display: flex; gap: 14px; align-items: center; }
+.nt-gic { width: 104px; height: 104px; flex: 0 0 104px; background: #fdf8f0; border-radius: 18px; }
+.nt-org { width: 64px; height: 64px; display: block; margin: 2px auto; }
+.nt-fig { width: 100%; max-width: 560px; height: auto; display: block; margin: 0 auto; }
+.nt-figbox { margin: 12px 0 18px; }
+.nt-figbox figcaption { font-size: .95rem; color: var(--muted); text-align: center; margin-top: 6px; }
+@media (max-width: 640px) { .nt-gic { width: 76px; height: 76px; flex-basis: 76px; } .nt-top { gap: 10px; } }
 .nt-books { background: #fdf8f0; border-radius: 16px; padding: 10px 16px; margin: 16px 0; }
 .nt-books p { margin: 6px 0; }
 .nt-ref { font-size: .9rem; color: var(--muted); margin: 6px 0 0 18px; padding: 0; }
@@ -193,13 +200,41 @@
 </svg>
     <p class="nt-cap">Bấm vào tên từng tuyến để đọc kỹ hơn.</p>
 
+    <h3>Nhìn vào bên trong não</h3>
+    <p>Ba tuyến nằm trong đầu. Vùng dưới đồi ở sâu giữa não. Tuyến yên treo ngay dưới nó bằng một cuống nhỏ, nằm gọn trong một hõm xương sau sống mũi. Tuyến tùng nằm lùi về phía sau.</p>
+    <figure class="nt-figbox"><svg viewBox="0 0 560 330" class="nt-fig" role="img" aria-label="Hình não cắt dọc: vùng dưới đồi nằm sâu giữa não, tuyến yên treo bên dưới với thùy trước và thùy sau, tuyến tùng nằm phía sau">
+  <rect width="560" height="330" rx="20" fill="#fdf8f0"/>
+  <path d="M372 322 C380 290 400 270 430 240 C462 200 462 120 420 80 C380 40 300 26 240 40 C180 52 140 90 132 140 C128 160 126 172 116 186 L98 212 C96 218 104 222 112 222 C110 232 114 240 108 248 C112 256 112 262 108 270 C116 288 140 292 170 290 C200 290 210 300 214 322 Z" fill="#f3e3cb" stroke="#e2c99d" stroke-width="2"/>
+  <path d="M168 196 C150 150 170 92 230 70 C290 48 360 58 396 96 C428 130 428 176 404 200 C388 216 360 214 344 206 C330 222 300 230 276 222 C256 238 224 236 206 222 C188 222 174 212 168 196 Z" fill="#f2c9c2" stroke="#d99a8c" stroke-width="2.5"/>
+  <path d="M196 120 C214 100 240 96 252 110 M262 86 C290 74 318 80 330 96 M340 104 C362 106 380 122 384 142 M206 160 C230 146 252 150 262 166 M300 120 C320 128 330 146 324 164 M190 190 C206 182 222 186 232 198" stroke="#d99a8c" stroke-width="2.2" fill="none"/>
+  <path d="M232 200 C260 178 312 176 344 196" stroke="#c98a7e" stroke-width="3" fill="none"/>
+  <path d="M352 210 C360 232 362 254 352 276 C346 290 332 292 326 280 C320 266 330 246 330 226" fill="#e8b4a8" stroke="#c98a7e" stroke-width="2"/>
+  <path d="M184 222 C200 236 226 244 248 238" stroke="#d99a8c" stroke-width="2" fill="none"/>
+  <ellipse cx="272" cy="208" rx="16" ry="11" fill="#8e5bc4"/>
+  <path d="M270 218 L268 236" stroke="#8e5bc4" stroke-width="4"/>
+  <ellipse cx="262" cy="244" rx="10" ry="8" fill="#b388dd" stroke="#6b3fa0" stroke-width="1.5"/>
+  <ellipse cx="276" cy="245" rx="7" ry="7" fill="#7c4bb4" stroke="#6b3fa0" stroke-width="1.5"/>
+  <ellipse cx="338" cy="196" rx="8" ry="6" fill="#3f51b5"/>
+  <g font-family="Quicksand, sans-serif" font-weight="700" font-size="17" fill="#6b4423">
+    <line x1="268" y1="204" x2="196" y2="40" stroke="#8e5bc4" stroke-width="1.6" stroke-dasharray="4 3"/><circle cx="196" cy="40" r="4" fill="#8e5bc4"/>
+    <text x="190" y="36" text-anchor="end">Vùng dưới đồi</text>
+    <line x1="258" y1="248" x2="150" y2="300" stroke="#b388dd" stroke-width="1.6" stroke-dasharray="4 3"/><circle cx="150" cy="300" r="4" fill="#b388dd"/>
+    <text x="16" y="296">Tuyến yên</text><text x="16" y="316" font-size="13" fill="#8a6a4a">thùy trước</text>
+    <line x1="280" y1="250" x2="300" y2="306" stroke="#7c4bb4" stroke-width="1.6" stroke-dasharray="4 3"/><circle cx="300" cy="306" r="4" fill="#7c4bb4"/>
+    <text x="308" y="311" font-size="14">thùy sau</text>
+    <line x1="340" y1="192" x2="470" y2="70" stroke="#3f51b5" stroke-width="1.6" stroke-dasharray="4 3"/><circle cx="470" cy="70" r="4" fill="#3f51b5"/>
+    <text x="478" y="66">Tuyến</text><text x="478" y="86">tùng</text>
+    <text x="300" y="290" font-size="13" fill="#8a6a4a" text-anchor="start" opacity="0"> </text>
+  </g>
+  <text x="60" y="206" font-family="Quicksand, sans-serif" font-weight="700" font-size="13" fill="#a87a12">mặt</text>
+  <text x="440" y="300" font-family="Quicksand, sans-serif" font-weight="700" font-size="13" fill="#a87a12">gáy</text></svg><figcaption>Não cắt dọc, mặt quay sang trái. Tuyến yên có hai thùy: thùy trước tự tiết hormone, thùy sau cất giữ hormone do vùng dưới đồi gửi xuống.</figcaption></figure>
     <h3>Tuyến yên gửi “thư” đi đâu?</h3>
     <p>Nhìn kỹ một chút vào nhạc trưởng. Vùng dưới đồi ra lệnh, tuyến yên chuyển tiếp bằng các hormone riêng, mỗi hormone tới một nơi nhận.</p>
     <div class="nt-pit-top">
       <span>Vùng dưới đồi<small>theo dõi cơ thể, cảm xúc, nhịp ngày đêm</small></span><i>↓</i>
       <span>Tuyến yên<small>thùy trước và thùy sau</small></span><i>↓</i>
     </div>
-    <div class="nt-pit"><div style="--nt:#8e5bc4"><p class="lobe">Thùy trước</p><p class="hm">GH</p><p class="ic">🦴</p><p class="tg">Xương, cơ, các mô</p><span class="rs">lớn lên, sửa chữa</span></div><div style="--nt:#c2185b"><p class="lobe">Thùy trước</p><p class="hm">Prolactin</p><p class="ic">🍼</p><p class="tg">Tuyến vú</p><span class="rs">tạo sữa</span></div><div style="--nt:#d64541"><p class="lobe">Thùy trước</p><p class="hm">FSH, LH</p><p class="ic">🌸</p><p class="tg">Buồng trứng</p><span class="rs">estrogen, progesterone</span></div><div style="--nt:#1565c0"><p class="lobe">Thùy trước</p><p class="hm">FSH, LH</p><p class="ic">🔵</p><p class="tg">Tinh hoàn</p><span class="rs">testosterone</span></div><div style="--nt:#ef8a2f"><p class="lobe">Thùy trước</p><p class="hm">ACTH</p><p class="ic">⚡</p><p class="tg">Tuyến thượng thận</p><span class="rs">cortisol</span></div><div style="--nt:#2f9bd6"><p class="lobe">Thùy trước</p><p class="hm">TSH</p><p class="ic">🦋</p><p class="tg">Tuyến giáp</p><span class="rs">T3, T4</span></div><div style="--nt:#d4708f"><p class="lobe">Thùy sau</p><p class="hm">Oxytocin</p><p class="ic">🤱</p><p class="tg">Tử cung, tuyến vú</p><span class="rs">co bóp khi sinh, xuống sữa, gắn bó</span></div><div style="--nt:#1f8a8a"><p class="lobe">Thùy sau</p><p class="hm">ADH</p><p class="ic">💧</p><p class="tg">Thận</p><span class="rs">giữ nước</span></div></div>
+    <div class="nt-pit"><div style="--nt:#8e5bc4"><p class="lobe">Thùy trước</p><p class="hm">GH</p><svg viewBox="0 0 80 80" class="nt-org" role="img" aria-label="Xương và cơ"><path d="M18 22 a8 8 0 1 1 12 -6 L52 40 a8 8 0 1 1 6 12 a8 8 0 1 1 -12 6 L24 34 a8 8 0 1 1 -6 -12 Z" fill="#f6eedd" stroke="#b89a6a" stroke-width="2"/><path d="M50 20 C62 18 70 28 66 38 C62 46 54 44 50 36 Z" fill="#d9776b" opacity=".85"/><path d="M54 24 L62 34" stroke="#fff" stroke-width="1.2" opacity=".7"/></svg><p class="tg">Xương, cơ, các mô</p><span class="rs">lớn lên, sửa chữa</span></div><div style="--nt:#c2185b"><p class="lobe">Thùy trước</p><p class="hm">Prolactin</p><svg viewBox="0 0 80 80" class="nt-org" role="img" aria-label="Tuyến vú"><path d="M14 50 C14 26 34 14 48 18 C64 22 70 40 64 54 C58 66 40 70 28 66 C20 63 14 58 14 50 Z" fill="#f7d7cf" stroke="#d99a8c" stroke-width="2"/><circle cx="30" cy="34" r="5" fill="#eaa79a"/><circle cx="42" cy="30" r="5" fill="#eaa79a"/><circle cx="52" cy="38" r="5" fill="#eaa79a"/><circle cx="34" cy="48" r="5" fill="#eaa79a"/><circle cx="48" cy="52" r="5" fill="#eaa79a"/><path d="M30 34 L50 44 M42 30 L50 44 M52 38 L50 44 M34 48 L50 44 M48 52 L50 44" stroke="#c97f72" stroke-width="1.5"/><circle cx="54" cy="46" r="4" fill="#c97f72"/></svg><p class="tg">Tuyến vú</p><span class="rs">tạo sữa</span></div><div style="--nt:#d64541"><p class="lobe">Thùy trước</p><p class="hm">FSH, LH</p><svg viewBox="0 0 80 80" class="nt-org" role="img" aria-label="Buồng trứng, tử cung"><g transform="translate(40 40) scale(1.0)"><path d="M-12 -12 C-12 -20 12 -20 12 -12 C12 0 6 10 4 16 L4 26 L-4 26 L-4 16 C-6 10 -12 0 -12 -12 Z" fill="#f2a7a0" stroke="#c4645b" stroke-width="2"/><path d="M-12 -12 C-20 -18 -26 -16 -30 -10 M12 -12 C20 -18 26 -16 30 -10" stroke="#c4645b" stroke-width="2.5" fill="none"/><ellipse cx="-30" cy="-2" rx="7" ry="5" fill="#d64541" stroke="#9c2f2b" stroke-width="1.5"/><ellipse cx="30" cy="-2" rx="7" ry="5" fill="#d64541" stroke="#9c2f2b" stroke-width="1.5"/></g></svg><p class="tg">Buồng trứng</p><span class="rs">estrogen, progesterone</span></div><div style="--nt:#1565c0"><p class="lobe">Thùy trước</p><p class="hm">FSH, LH</p><svg viewBox="0 0 80 80" class="nt-org" role="img" aria-label="Tinh hoàn"><ellipse cx="30" cy="48" rx="12" ry="16" fill="#9ec4e8" stroke="#4f86b8" stroke-width="2"/><ellipse cx="52" cy="48" rx="12" ry="16" fill="#9ec4e8" stroke="#4f86b8" stroke-width="2"/><path d="M30 32 C30 20 36 14 40 12 M52 32 C52 20 46 14 40 12" stroke="#4f86b8" stroke-width="2.5" fill="none"/></svg><p class="tg">Tinh hoàn</p><span class="rs">testosterone</span></div><div style="--nt:#ef8a2f"><p class="lobe">Thùy trước</p><p class="hm">ACTH</p><svg viewBox="0 0 80 80" class="nt-org" role="img" aria-label="Thận và tuyến thượng thận"><g transform="translate(40 46) scale(1.0)"><path d="M-6 -24 C-24 -24 -26 -4 -22 8 C-18 22 -4 26 4 20 C10 15 4 6 6 0 C8 -6 14 -12 8 -20 C4 -24 -2 -24 -6 -24 Z" fill="#c9776b" stroke="#9c4f45" stroke-width="2"/><path d="M4 2 C14 4 18 14 20 26" stroke="#e0c27a" stroke-width="3" fill="none"/><path d="M2 -6 C10 -8 14 -10 22 -12 M2 6 C10 6 14 8 22 8" stroke="#d64541" stroke-width="2" fill="none"/><path d="M-24 -18 C-22 -34 -8 -38 2 -28 C-2 -24 -6 -22 -10 -22 C-16 -22 -20 -20 -24 -18 Z" fill="#ef8a2f" stroke="#c0661a" stroke-width="2"/></g></svg><p class="tg">Tuyến thượng thận</p><span class="rs">cortisol</span></div><div style="--nt:#2f9bd6"><p class="lobe">Thùy trước</p><p class="hm">TSH</p><svg viewBox="0 0 80 80" class="nt-org" role="img" aria-label="Tuyến giáp"><g transform="translate(40 44) scale(1.0)"><rect x="-6" y="-34" width="12" height="62" rx="5" fill="#f1dfc4" stroke="#c9a77a" stroke-width="1.5"/><line x1="-6" y1="-28" x2="6" y2="-28" stroke="#c9a77a" stroke-width="1"/><line x1="-6" y1="-22" x2="6" y2="-22" stroke="#c9a77a" stroke-width="1"/><line x1="-6" y1="-16" x2="6" y2="-16" stroke="#c9a77a" stroke-width="1"/><line x1="-6" y1="-10" x2="6" y2="-10" stroke="#c9a77a" stroke-width="1"/><line x1="-6" y1="-4" x2="6" y2="-4" stroke="#c9a77a" stroke-width="1"/><line x1="-6" y1="2" x2="6" y2="2" stroke="#c9a77a" stroke-width="1"/><line x1="-6" y1="8" x2="6" y2="8" stroke="#c9a77a" stroke-width="1"/><line x1="-6" y1="14" x2="6" y2="14" stroke="#c9a77a" stroke-width="1"/><line x1="-6" y1="20" x2="6" y2="20" stroke="#c9a77a" stroke-width="1"/><path d="M0 6 C-6 -2 -10 -18 -18 -20 C-28 -22 -32 -6 -30 8 C-28 20 -16 22 -8 16 C-4 13 -2 10 0 10 C2 10 4 13 8 16 C16 22 28 20 30 8 C32 -6 28 -22 18 -20 C10 -18 6 -2 0 6 Z" fill="#3f9fd8" fill-opacity=".85" stroke="#1f6fa3" stroke-width="2"/></g></svg><p class="tg">Tuyến giáp</p><span class="rs">T3, T4</span></div><div style="--nt:#d4708f"><p class="lobe">Thùy sau</p><p class="hm">Oxytocin</p><svg viewBox="0 0 80 80" class="nt-org" role="img" aria-label="Tử cung"><g transform="translate(40 40) scale(1.0)"><path d="M-12 -12 C-12 -20 12 -20 12 -12 C12 0 6 10 4 16 L4 26 L-4 26 L-4 16 C-6 10 -12 0 -12 -12 Z" fill="#f2a7a0" stroke="#c4645b" stroke-width="2"/><path d="M-12 -12 C-20 -18 -26 -16 -30 -10 M12 -12 C20 -18 26 -16 30 -10" stroke="#c4645b" stroke-width="2.5" fill="none"/></g></svg><p class="tg">Tử cung, tuyến vú</p><span class="rs">co bóp khi sinh, xuống sữa, gắn bó</span></div><div style="--nt:#1f8a8a"><p class="lobe">Thùy sau</p><p class="hm">ADH</p><svg viewBox="0 0 80 80" class="nt-org" role="img" aria-label="Thận"><g transform="translate(40 42) scale(1.0)"><path d="M-6 -24 C-24 -24 -26 -4 -22 8 C-18 22 -4 26 4 20 C10 15 4 6 6 0 C8 -6 14 -12 8 -20 C4 -24 -2 -24 -6 -24 Z" fill="#c9776b" stroke="#9c4f45" stroke-width="2"/><path d="M4 2 C14 4 18 14 20 26" stroke="#e0c27a" stroke-width="3" fill="none"/><path d="M2 -6 C10 -8 14 -10 22 -12 M2 6 C10 6 14 8 22 8" stroke="#d64541" stroke-width="2" fill="none"/></g></svg><p class="tg">Thận</p><span class="rs">giữ nước</span></div></div>
     <p class="nt-cap">Sơ đồ đơn giản hóa. Tuyến tùng, tuyến tụy, tuyến cận giáp, tuyến ức làm việc khá độc lập, không theo lệnh tuyến yên.</p>
     <p>Ngoài những tuyến chính trong hình, nhiều cơ quan khác cũng tiết hormone. Mỡ tiết leptin báo no. Dạ dày tiết ghrelin báo đói. Thận tiết hormone giúp tạo hồng cầu. Ruột tiết hàng chục loại. Cơ thể thật ra là một mạng lưới, không có tuyến nào làm việc một mình.</p>
 
@@ -225,9 +260,13 @@
     <p>Mỗi tuyến dưới đây có phần chức năng, dấu hiệu khi lệch, những gì nghiên cứu đã thấy về yoga, và vài điều cô hay để ý khi hướng dẫn. Phần dấu hiệu để hiểu, không phải để tự chẩn đoán.</p>
     
     <div class="nt-card" id="tuyen-1" style="--nt:#8e5bc4">
-      <h3>1. Vùng dưới đồi và tuyến yên</h3>
-      <p class="nt-pos">📍 giữa não, ngay sau sống mũi</p>
-      <ul class="nt-chips"><li>GH (tăng trưởng)</li><li>TSH</li><li>ACTH</li><li>FSH, LH</li><li>prolactin</li><li>oxytocin</li><li>ADH</li></ul>
+      <div class="nt-top"><svg viewBox="0 0 120 120" class="nt-gic" role="img" aria-label="Vùng dưới đồi và tuyến yên trong não"><path d="M14 70 C8 40 26 14 56 12 C86 10 108 30 108 58 C108 76 96 84 84 80 C76 90 56 92 46 84 C34 88 18 84 14 70 Z" fill="#f2c9c2" stroke="#d99a8c" stroke-width="2"/><path d="M30 40 C40 30 54 30 60 38 M66 26 C80 24 92 32 96 44 M28 62 C40 56 52 60 56 70" stroke="#d99a8c" stroke-width="1.8" fill="none"/><ellipse cx="62" cy="72" rx="9" ry="6" fill="#8e5bc4"/><path d="M61 78 L60 90" stroke="#8e5bc4" stroke-width="3"/><ellipse cx="56" cy="96" rx="6" ry="5" fill="#b388dd" stroke="#6b3fa0"/><ellipse cx="65" cy="96" rx="4.5" ry="4.5" fill="#7c4bb4" stroke="#6b3fa0"/></svg>
+        <div>
+          <h3>1. Vùng dưới đồi và tuyến yên</h3>
+          <p class="nt-pos">📍 giữa não, ngay sau sống mũi</p>
+          <ul class="nt-chips"><li>GH (tăng trưởng)</li><li>TSH</li><li>ACTH</li><li>FSH, LH</li><li>prolactin</li><li>oxytocin</li><li>ADH</li></ul>
+        </div>
+      </div>
       <p>Vùng dưới đồi nhỏ bằng đầu ngón tay cái. Nó theo dõi thân nhiệt, cơn đói, cơn khát, nhịp ngày đêm, và cả những gì mình đang cảm thấy. Rồi nó “ra lệnh” cho tuyến yên, một tuyến nhỏ cỡ hạt đậu treo ngay bên dưới. Tuyến yên lại nhắn tiếp xuống tuyến giáp, tuyến thượng thận, buồng trứng, tinh hoàn. Vì vậy người ta hay gọi cặp này là nhạc trưởng của cả dàn nhạc.</p>
       <div class="nt-two">
         <div class="nt-off"><b>Khi tuyến lệch nhịp</b><p>Bệnh của chính tuyến yên không phổ biến, thường cần bác sĩ nội tiết và chụp chiếu. Còn rất thường gặp là kiểu lệch “chức năng”: căng thẳng dài, ngủ ít, ăn quá ít, tập quá sức làm vùng dưới đồi thay đổi tín hiệu. Kinh nguyệt có thể trễ hoặc mất, người mệt, ngủ không sâu.</p></div>
@@ -236,9 +275,13 @@
       <div class="nt-note"><p><b>Cô hay để ý:</b> Không có tư thế nào “bấm” được tuyến yên. Cô chỉ để ý giấc ngủ và độ mệt của học viên. Ai tập nhiều, ăn ít, mất kinh vài tháng thì cần đi khám, và nên tập nhẹ đi chứ không tập thêm.</p></div>
     </div>
     <div class="nt-card" id="tuyen-2" style="--nt:#3f51b5">
-      <h3>2. Tuyến tùng</h3>
-      <p class="nt-pos">📍 sâu trong não, gần trung tâm</p>
-      <ul class="nt-chips"><li>melatonin</li></ul>
+      <div class="nt-top"><svg viewBox="0 0 120 120" class="nt-gic" role="img" aria-label="Tuyến tùng phía sau não, gắn với bóng tối và giấc ngủ"><path d="M14 70 C8 40 26 14 56 12 C86 10 108 30 108 58 C108 76 96 84 84 80 C76 90 56 92 46 84 C34 88 18 84 14 70 Z" fill="#f2c9c2" stroke="#d99a8c" stroke-width="2"/><path d="M30 40 C40 30 54 30 60 38 M66 26 C80 24 92 32 96 44 M28 62 C40 56 52 60 56 70" stroke="#d99a8c" stroke-width="1.8" fill="none"/><path d="M74 60 C80 54 88 56 90 62 C90 68 82 70 76 66 Z" fill="#3f51b5"/><path d="M100 18 a8 8 0 1 0 8 12 a6 6 0 1 1 -8 -12 Z" fill="#3f51b5" opacity=".7"/></svg>
+        <div>
+          <h3>2. Tuyến tùng</h3>
+          <p class="nt-pos">📍 sâu trong não, gần trung tâm</p>
+          <ul class="nt-chips"><li>melatonin</li></ul>
+        </div>
+      </div>
       <p>Tuyến tùng nhỏ như hạt thông. Khi trời tối, nó tiết melatonin, tín hiệu báo cho cả cơ thể rằng đã đến giờ nghỉ. Ánh sáng, nhất là ánh sáng xanh từ màn hình, làm melatonin giảm xuống.</p>
       <div class="nt-two">
         <div class="nt-off"><b>Khi tuyến lệch nhịp</b><p>Mất ngủ, khó vào giấc, ngủ lệch giờ, mệt khi làm ca đêm hoặc khi đi xa lệch múi giờ. Phần lớn không do tuyến tùng “hỏng”, mà do thói quen ánh sáng.</p></div>
@@ -247,9 +290,13 @@
       <div class="nt-note"><p><b>Cô hay để ý:</b> Buổi tập tối, Sophia không cho thở mạnh hay thế đảo ngược kích thích. Chỉ gập người, vặn xoắn nằm, chân dựa tường, và tắt đèn khi nằm cuối buổi.</p></div>
     </div>
     <div class="nt-card" id="tuyen-3" style="--nt:#2f9bd6">
-      <h3>3. Tuyến giáp</h3>
-      <p class="nt-pos">📍 trước cổ, dưới yết hầu, hình con bướm</p>
-      <ul class="nt-chips"><li>T4</li><li>T3</li><li>calcitonin</li></ul>
+      <div class="nt-top"><svg viewBox="0 0 120 120" class="nt-gic" role="img" aria-label="Tuyến giáp hình con bướm ôm trước khí quản"><g transform="translate(60 58) scale(1.35)"><rect x="-6" y="-34" width="12" height="62" rx="5" fill="#f1dfc4" stroke="#c9a77a" stroke-width="1.5"/><line x1="-6" y1="-28" x2="6" y2="-28" stroke="#c9a77a" stroke-width="1"/><line x1="-6" y1="-22" x2="6" y2="-22" stroke="#c9a77a" stroke-width="1"/><line x1="-6" y1="-16" x2="6" y2="-16" stroke="#c9a77a" stroke-width="1"/><line x1="-6" y1="-10" x2="6" y2="-10" stroke="#c9a77a" stroke-width="1"/><line x1="-6" y1="-4" x2="6" y2="-4" stroke="#c9a77a" stroke-width="1"/><line x1="-6" y1="2" x2="6" y2="2" stroke="#c9a77a" stroke-width="1"/><line x1="-6" y1="8" x2="6" y2="8" stroke="#c9a77a" stroke-width="1"/><line x1="-6" y1="14" x2="6" y2="14" stroke="#c9a77a" stroke-width="1"/><line x1="-6" y1="20" x2="6" y2="20" stroke="#c9a77a" stroke-width="1"/><path d="M0 6 C-6 -2 -10 -18 -18 -20 C-28 -22 -32 -6 -30 8 C-28 20 -16 22 -8 16 C-4 13 -2 10 0 10 C2 10 4 13 8 16 C16 22 28 20 30 8 C32 -6 28 -22 18 -20 C10 -18 6 -2 0 6 Z" fill="#3f9fd8" fill-opacity=".85" stroke="#1f6fa3" stroke-width="2"/></g></svg>
+        <div>
+          <h3>3. Tuyến giáp</h3>
+          <p class="nt-pos">📍 trước cổ, dưới yết hầu, hình con bướm</p>
+          <ul class="nt-chips"><li>T4</li><li>T3</li><li>calcitonin</li></ul>
+        </div>
+      </div>
       <p>Tuyến giáp đặt nhịp chuyển hóa cho gần như mọi tế bào. Nhịp tim, thân nhiệt, tốc độ tiêu hóa, độ khô ẩm của da, cả sự nhanh nhạy của đầu óc. Nó làm việc theo lệnh TSH từ tuyến yên.</p>
       <div class="nt-two">
         <div class="nt-off"><b>Khi tuyến lệch nhịp</b><p>Suy giáp: mệt, sợ lạnh, tăng cân, táo bón, da khô, tóc rụng, buồn chán. Cường giáp: hồi hộp, run tay, sụt cân, nóng bức, khó ngủ. Hai nguyên nhân hay gặp là Hashimoto (gây suy giáp) và Basedow (gây cường giáp), đều là bệnh tự miễn, gặp ở nữ nhiều hơn nam vài lần.</p></div>
@@ -258,9 +305,13 @@
       <div class="nt-note"><p><b>Cô hay để ý:</b> Người cường giáp đang hồi hộp, tim nhanh thì cô không cho tập nóng, tập nhanh hay thở Kapalabhati. Người có bướu giáp, đau cổ, cao huyết áp thì không làm thế vai, thế cày; thay bằng chân dựa tường. Thuốc tuyến giáp không tự giảm, chỉ chỉnh theo xét nghiệm của bác sĩ.</p></div>
     </div>
     <div class="nt-card" id="tuyen-4" style="--nt:#1f8a8a">
-      <h3>4. Tuyến cận giáp</h3>
-      <p class="nt-pos">📍 bốn hạt nhỏ phía sau tuyến giáp</p>
-      <ul class="nt-chips"><li>PTH (hormone cận giáp)</li></ul>
+      <div class="nt-top"><svg viewBox="0 0 120 120" class="nt-gic" role="img" aria-label="Bốn tuyến cận giáp nhỏ nằm sau tuyến giáp"><g transform="translate(60 58) scale(1.35)"><rect x="-6" y="-34" width="12" height="62" rx="5" fill="#f1dfc4" stroke="#c9a77a" stroke-width="1.5"/><line x1="-6" y1="-28" x2="6" y2="-28" stroke="#c9a77a" stroke-width="1"/><line x1="-6" y1="-22" x2="6" y2="-22" stroke="#c9a77a" stroke-width="1"/><line x1="-6" y1="-16" x2="6" y2="-16" stroke="#c9a77a" stroke-width="1"/><line x1="-6" y1="-10" x2="6" y2="-10" stroke="#c9a77a" stroke-width="1"/><line x1="-6" y1="-4" x2="6" y2="-4" stroke="#c9a77a" stroke-width="1"/><line x1="-6" y1="2" x2="6" y2="2" stroke="#c9a77a" stroke-width="1"/><line x1="-6" y1="8" x2="6" y2="8" stroke="#c9a77a" stroke-width="1"/><line x1="-6" y1="14" x2="6" y2="14" stroke="#c9a77a" stroke-width="1"/><line x1="-6" y1="20" x2="6" y2="20" stroke="#c9a77a" stroke-width="1"/><path d="M0 6 C-6 -2 -10 -18 -18 -20 C-28 -22 -32 -6 -30 8 C-28 20 -16 22 -8 16 C-4 13 -2 10 0 10 C2 10 4 13 8 16 C16 22 28 20 30 8 C32 -6 28 -22 18 -20 C10 -18 6 -2 0 6 Z" fill="#3f9fd8" fill-opacity=".85" stroke="#1f6fa3" stroke-width="2"/><circle cx="-20" cy="-10" r="4.5" fill="#1f8a8a" stroke="#fff" stroke-width="1.5"/><circle cx="-20" cy="10" r="4.5" fill="#1f8a8a" stroke="#fff" stroke-width="1.5"/><circle cx="20" cy="-10" r="4.5" fill="#1f8a8a" stroke="#fff" stroke-width="1.5"/><circle cx="20" cy="10" r="4.5" fill="#1f8a8a" stroke="#fff" stroke-width="1.5"/></g><text x="60" y="112" text-anchor="middle" font-family="Quicksand, sans-serif" font-weight="700" font-size="10" fill="#1f8a8a">nhìn từ phía sau</text></svg>
+        <div>
+          <h3>4. Tuyến cận giáp</h3>
+          <p class="nt-pos">📍 bốn hạt nhỏ phía sau tuyến giáp</p>
+          <ul class="nt-chips"><li>PTH (hormone cận giáp)</li></ul>
+        </div>
+      </div>
       <p>Bốn tuyến bé xíu, mỗi tuyến cỡ hạt gạo. Nhiệm vụ của chúng là giữ canxi trong máu luôn vừa đủ. Thiếu canxi thì PTH lấy bớt từ xương, giữ lại ở thận, và nhờ vitamin D hút thêm từ ruột.</p>
       <div class="nt-two">
         <div class="nt-off"><b>Khi tuyến lệch nhịp</b><p>Cường cận giáp làm xương mỏng đi, dễ sỏi thận. Sau mổ tuyến giáp, đôi khi cận giáp bị ảnh hưởng, gây tê quanh miệng, tê đầu ngón tay, chuột rút. Gặp những dấu hiệu này cần báo bác sĩ ngay.</p></div>
@@ -269,9 +320,13 @@
       <div class="nt-note"><p><b>Cô hay để ý:</b> Người loãng xương hoặc thiếu xương thì cô bỏ các thế gập người tròn lưng sâu, cuộn lưng, thế cày. Đã có báo cáo gãy lún đốt sống ở người loãng xương khi tập các thế này. Thay vào đó: lưng thẳng, gập từ hông, đứng vững.</p></div>
     </div>
     <div class="nt-card" id="tuyen-5" style="--nt:#3f9e5e">
-      <h3>5. Tuyến ức</h3>
-      <p class="nt-pos">📍 sau xương ức, phía trên tim</p>
-      <ul class="nt-chips"><li>thymosin</li><li>thymulin</li></ul>
+      <div class="nt-top"><svg viewBox="0 0 120 120" class="nt-gic" role="img" aria-label="Tuyến ức nằm sau xương ức, phía trên tim"><path d="M60 22 C44 16 36 30 38 46 C40 62 48 70 56 64 C58 58 60 52 60 46 C60 52 62 58 64 64 C72 70 80 62 82 46 C84 30 76 16 60 22 Z" fill="#3f9e5e" fill-opacity=".85" stroke="#2c7344" stroke-width="2"/><path d="M44 74 C40 60 58 56 64 66 C70 56 90 60 84 78 C80 92 66 100 62 104 C56 98 48 90 44 74 Z" fill="#e57373" opacity=".55"/><rect x="56" y="8" width="8" height="18" rx="3" fill="#f1dfc4" stroke="#c9a77a"/></svg>
+        <div>
+          <h3>5. Tuyến ức</h3>
+          <p class="nt-pos">📍 sau xương ức, phía trên tim</p>
+          <ul class="nt-chips"><li>thymosin</li><li>thymulin</li></ul>
+        </div>
+      </div>
       <p>Tuyến ức là “trường học” của tế bào miễn dịch T. Nó lớn nhất ở tuổi thơ, rồi nhỏ dần sau tuổi dậy thì và được thay bằng mỡ. Người lớn vẫn còn một ít mô tuyến ức hoạt động.</p>
       <div class="nt-two">
         <div class="nt-off"><b>Khi tuyến lệch nhịp</b><p>Bệnh của chính tuyến ức hiếm, như u tuyến ức, hay đi kèm bệnh nhược cơ. Phần lớn chúng ta không cần lo về tuyến này.</p></div>
@@ -280,9 +335,13 @@
       <div class="nt-note"><p><b>Cô hay để ý:</b> Các thế mở ngực ở vùng này Sophia vẫn dạy, vì chúng giúp thở sâu, ngồi thẳng, bớt gù. Chỉ là cô không gắn cho chúng lời hứa “tăng miễn dịch”.</p></div>
     </div>
     <div class="nt-card" id="tuyen-6" style="--nt:#ef8a2f">
-      <h3>6. Tuyến thượng thận</h3>
-      <p class="nt-pos">📍 hai “chiếc mũ” nhỏ trên đỉnh hai quả thận</p>
-      <ul class="nt-chips"><li>cortisol</li><li>adrenaline</li><li>noradrenaline</li><li>aldosterone</li></ul>
+      <div class="nt-top"><svg viewBox="0 0 120 120" class="nt-gic" role="img" aria-label="Tuyến thượng thận như chiếc mũ trên đỉnh quả thận"><g transform="translate(60 66) scale(1.5)"><path d="M-6 -24 C-24 -24 -26 -4 -22 8 C-18 22 -4 26 4 20 C10 15 4 6 6 0 C8 -6 14 -12 8 -20 C4 -24 -2 -24 -6 -24 Z" fill="#c9776b" stroke="#9c4f45" stroke-width="2"/><path d="M4 2 C14 4 18 14 20 26" stroke="#e0c27a" stroke-width="3" fill="none"/><path d="M2 -6 C10 -8 14 -10 22 -12 M2 6 C10 6 14 8 22 8" stroke="#d64541" stroke-width="2" fill="none"/><path d="M-24 -18 C-22 -34 -8 -38 2 -28 C-2 -24 -6 -22 -10 -22 C-16 -22 -20 -20 -24 -18 Z" fill="#ef8a2f" stroke="#c0661a" stroke-width="2"/></g></svg>
+        <div>
+          <h3>6. Tuyến thượng thận</h3>
+          <p class="nt-pos">📍 hai “chiếc mũ” nhỏ trên đỉnh hai quả thận</p>
+          <ul class="nt-chips"><li>cortisol</li><li>adrenaline</li><li>noradrenaline</li><li>aldosterone</li></ul>
+        </div>
+      </div>
       <p>Phần lõi tiết adrenaline khi gặp nguy hiểm: tim đập nhanh, thở gấp, cơ căng lên để chạy hoặc chống trả. Phần vỏ tiết cortisol, hormone giúp thức dậy buổi sáng, giữ đường huyết, giảm viêm. Cortisol cao vào buổi sáng, thấp dần về đêm. Phần vỏ còn tiết aldosterone giữ muối nước và huyết áp.</p>
       <div class="nt-two">
         <div class="nt-off"><b>Khi tuyến lệch nhịp</b><p>Căng thẳng kéo dài làm nhịp cortisol lệch đi: tối vẫn cao, khó ngủ, thèm đồ ngọt, mỡ bụng tăng, hay ốm vặt. Còn “suy tuyến thượng thận do mệt mỏi” (adrenal fatigue) hay được nói trên mạng thì chưa được y học công nhận là một bệnh. Bệnh thật như Addison hay Cushing hiếm hơn nhiều, cần bác sĩ chẩn đoán bằng xét nghiệm.</p></div>
@@ -291,9 +350,13 @@
       <div class="nt-note"><p><b>Cô hay để ý:</b> Ai đang dùng thuốc corticoid lâu ngày thì không tự ngừng thuốc, vì tuyến thượng thận cần thời gian để tự làm việc lại. Người đang kiệt sức thì cô cho tập phục hồi, không cho tập nóng hay tập đến run người.</p></div>
     </div>
     <div class="nt-card" id="tuyen-7" style="--nt:#d4a000">
-      <h3>7. Tuyến tụy</h3>
-      <p class="nt-pos">📍 sau dạ dày, nằm ngang bụng trên</p>
-      <ul class="nt-chips"><li>insulin</li><li>glucagon</li></ul>
+      <div class="nt-top"><svg viewBox="0 0 120 120" class="nt-gic" role="img" aria-label="Tuyến tụy nằm ngang sau dạ dày, các đảo tụy tiết insulin"><path d="M22 80 C14 64 18 46 30 44 C34 54 32 66 36 74 C34 80 28 84 22 80 Z" fill="#e8c38b" stroke="#b9925a" stroke-width="2"/><path d="M30 60 C44 52 64 50 80 46 C92 42 104 44 106 52 C106 58 98 60 90 60 C74 62 56 66 40 72 C34 74 28 68 30 60 Z" fill="#e0a800" stroke="#a87a12" stroke-width="2"/><circle cx="48" cy="62" r="3" fill="#fff" stroke="#a87a12"/><circle cx="64" cy="57" r="3" fill="#fff" stroke="#a87a12"/><circle cx="80" cy="53" r="3" fill="#fff" stroke="#a87a12"/><circle cx="96" cy="51" r="3" fill="#fff" stroke="#a87a12"/><text x="64" y="94" text-anchor="middle" font-family="Quicksand, sans-serif" font-weight="700" font-size="10" fill="#a87a12">đảo tụy (chấm trắng)</text></svg>
+        <div>
+          <h3>7. Tuyến tụy</h3>
+          <p class="nt-pos">📍 sau dạ dày, nằm ngang bụng trên</p>
+          <ul class="nt-chips"><li>insulin</li><li>glucagon</li></ul>
+        </div>
+      </div>
       <p>Tụy vừa tiết dịch tiêu hóa, vừa có những đảo tế bào nhỏ tiết hormone. Insulin đưa đường từ máu vào tế bào sau bữa ăn. Glucagon làm ngược lại khi đường huyết xuống thấp. Hai hormone này giữ đường huyết ổn định suốt ngày đêm.</p>
       <div class="nt-two">
         <div class="nt-off"><b>Khi tuyến lệch nhịp</b><p>Tiểu đường type 1 là khi tụy gần như không còn tiết insulin, bắt buộc tiêm insulin suốt đời. Type 2 phổ biến hơn nhiều: tế bào “lờn” insulin, liên quan đến cân nặng, ít vận động, ngủ ít, căng thẳng.</p></div>
@@ -302,9 +365,13 @@
       <div class="nt-note"><p><b>Cô hay để ý:</b> Yoga không thay được insulin hay thuốc. Người đang dùng thuốc hạ đường huyết nên tập sau ăn khoảng 1 đến 2 tiếng, mang theo kẹo, báo cho người hướng dẫn. Run tay, vã mồ hôi, chóng mặt khi tập thì dừng lại, ăn chút ngọt.</p></div>
     </div>
     <div class="nt-card" id="tuyen-8" style="--nt:#d64541">
-      <h3>8. Buồng trứng và tinh hoàn</h3>
-      <p class="nt-pos">📍 vùng chậu (nữ) và bìu (nam)</p>
-      <ul class="nt-chips"><li>estrogen</li><li>progesterone</li><li>testosterone</li></ul>
+      <div class="nt-top"><svg viewBox="0 0 120 120" class="nt-gic" role="img" aria-label="Buồng trứng bên hai sừng tử cung ở nữ, tinh hoàn ở nam"><g transform="translate(40 52) scale(0.95)"><path d="M-12 -12 C-12 -20 12 -20 12 -12 C12 0 6 10 4 16 L4 26 L-4 26 L-4 16 C-6 10 -12 0 -12 -12 Z" fill="#f2a7a0" stroke="#c4645b" stroke-width="2"/><path d="M-12 -12 C-20 -18 -26 -16 -30 -10 M12 -12 C20 -18 26 -16 30 -10" stroke="#c4645b" stroke-width="2.5" fill="none"/><ellipse cx="-30" cy="-2" rx="7" ry="5" fill="#d64541" stroke="#9c2f2b" stroke-width="1.5"/><ellipse cx="30" cy="-2" rx="7" ry="5" fill="#d64541" stroke="#9c2f2b" stroke-width="1.5"/></g><ellipse cx="88" cy="62" rx="9" ry="13" fill="#9ec4e8" stroke="#4f86b8" stroke-width="2"/><ellipse cx="106" cy="62" rx="9" ry="13" fill="#9ec4e8" stroke="#4f86b8" stroke-width="2"/><text x="40" y="100" text-anchor="middle" font-family="Quicksand, sans-serif" font-weight="700" font-size="10" fill="#c4645b">nữ</text><text x="97" y="100" text-anchor="middle" font-family="Quicksand, sans-serif" font-weight="700" font-size="10" fill="#4f86b8">nam</text></svg>
+        <div>
+          <h3>8. Buồng trứng và tinh hoàn</h3>
+          <p class="nt-pos">📍 vùng chậu (nữ) và bìu (nam)</p>
+          <ul class="nt-chips"><li>estrogen</li><li>progesterone</li><li>testosterone</li></ul>
+        </div>
+      </div>
       <p>Buồng trứng tiết estrogen và progesterone, tạo nên chu kỳ kinh nguyệt hằng tháng. Tinh hoàn tiết testosterone. Các hormone này không chỉ lo chuyện sinh sản mà còn giữ xương, cơ, da, tâm trạng, giấc ngủ. Chúng nghe lệnh FSH và LH từ tuyến yên.</p>
       <div class="nt-two">
         <div class="nt-off"><b>Khi tuyến lệch nhịp</b><p>Kinh không đều, đau bụng kinh, hội chứng buồng trứng đa nang, tiền mãn kinh và mãn kinh với bốc hỏa, mất ngủ, dễ buồn. Ở nam, testosterone giảm dần theo tuổi, giảm nhanh hơn khi béo bụng và ngủ kém. Căng thẳng, ăn quá ít, tập quá sức cũng có thể làm mất kinh.</p></div>
@@ -412,7 +479,7 @@
         <li>Paruthi S. và cộng sự (2016). Recommended amount of sleep for pediatric populations. Journal of Clinical Sleep Medicine, 12(6).</li>
       </ol>
     </details>
-    <p class="nt-src">Sơ đồ các tuyến do Sophia Yoga vẽ minh họa. Bài viết chia sẻ kiến thức và kinh nghiệm tập luyện, không thay cho lời khuyên của bác sĩ.</p>
+    <p class="nt-src">Sơ đồ và hình minh họa các tuyến do Sophia Yoga vẽ lại, nhãn tiếng Việt. Bài viết chia sẻ kiến thức và kinh nghiệm tập luyện, không thay cho lời khuyên của bác sĩ.</p>
   </main>
 
 
