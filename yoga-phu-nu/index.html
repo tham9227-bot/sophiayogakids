@@ -31,6 +31,13 @@
 .md-photo img { width: 100%; height: auto; border-radius: 18px; box-shadow: var(--shadow); display: block; }
 .md-tall { max-width: 420px; margin-left: auto; margin-right: auto; }
 .md-photo figcaption { font-size: .95rem; color: var(--muted); text-align: center; margin-top: 6px; }
+.pn-way { background: #f1f7ea; border-radius: 18px; border-left: 6px solid #4e7a3f; padding: 12px 18px; margin: 18px 0; }
+.pn-way p { margin: 6px 0; }
+.pn-way-t { font-family: "Quicksand", sans-serif; font-weight: 700; color: #4e7a3f; font-size: 1.15rem; }
+.pn-five { display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; margin: 10px 0; }
+.pn-five div { background: #fff; border-radius: 12px; padding: 8px 10px; }
+.pn-five b { font-family: "Quicksand", sans-serif; color: #6b4423; }
+.pn-five p { margin: 3px 0; font-size: .93rem !important; }
 .pn-cyc { display: grid; grid-template-columns: 340px 1fr; gap: 20px; align-items: center; background: #fff; border-radius: 22px; box-shadow: var(--shadow); padding: 16px 18px; margin: 16px 0; }
 .pn-wheel { width: 100%; max-width: 340px; height: auto; display: block; margin: 0 auto; }
 .pn-ctrl label { font-family: "Quicksand", sans-serif; font-weight: 700; color: #6b4423; display: block; margin-bottom: 6px; }
@@ -83,7 +90,7 @@
 .nt-ref { font-size: .9rem; margin: 8px 0 4px 18px; padding: 0; }
 .nt-ref li { margin: 4px 0; }
 .nt-src { font-size: .88rem !important; color: var(--muted); }
-@media (max-width: 760px) { .pn-cyc { grid-template-columns: 1fr; } .pn-three, .pn-two { grid-template-columns: 1fr; } }
+@media (max-width: 760px) { .pn-five { grid-template-columns: 1fr 1fr; } .pn-five div:last-child { grid-column: 1 / -1; } .pn-cyc { grid-template-columns: 1fr; } .pn-three, .pn-two { grid-template-columns: 1fr; } }
 @media (max-width: 640px) { .pn-phase, .pn-tri { padding: 12px 12px 8px; } .pn-tabs button { padding: 6px 12px; font-size: .95rem; } }
 </style>
   <link rel="icon" href="../images/favicon.png?v=3" type="image/png">
@@ -118,14 +125,29 @@
     <h1>Yoga cho phụ nữ</h1>
     <p class="md-lead">Tập theo chu kỳ, khi mang bầu và sau sinh. Một cơ thể, nhiều mùa.</p>
     <div class="md-story">
-      <p>Tin nhắn đến lúc mười giờ tối.</p>
-      <p>“Cô ơi, em vừa biết mình có bầu được bảy tuần. Em có phải nghỉ lớp không ạ? Hôm qua em còn tập trồng chuối.”</p>
-      <p>Đọc xong, cô thấy thương. Câu hỏi thì ngắn mà nỗi lo thì dài.</p>
-      <p>Cũng tuần đó, một học viên khác xin vắng vì “đến tháng, đau bụng quá cô ạ”. Một chị nữa, con mới bốn tháng, hỏi bao giờ thì tập lại được plank.</p>
-      <p>Ba người. Ba giai đoạn. Chung một điều: cơ thể người phụ nữ không đứng yên. Nó thay đổi theo tuần, theo tháng, theo từng đứa con.</p>
+      <p>Có ba câu hỏi cô nghe đi nghe lại, từ nhiều chị em khác nhau, qua nhiều năm đứng lớp.</p>
+      <p>“Cô ơi, em vừa biết mình có bầu. Em có phải nghỉ tập không ạ?”</p>
+      <p>“Đến tháng em đau bụng quá. Có nên tập không cô?”</p>
+      <p>“Con em mới mấy tháng. Bao giờ em tập lại được như trước?”</p>
+      <p>Câu hỏi thì ngắn. Nỗi lo thì dài.</p>
+      <p>Ba giai đoạn khác nhau, chung một điều: cơ thể người phụ nữ không đứng yên. Nó thay đổi theo tuần, theo tháng, theo từng đứa con.</p>
     </div>
     <p>Bài viết này chia sẻ cách tập yoga hợp với từng “mùa” đó: bốn giai đoạn của chu kỳ kinh nguyệt, ba tam cá nguyệt khi mang bầu, và những tháng sau sinh. Có những gì nên tập, những gì nên tránh, và cả lúc nào cần gặp bác sĩ trước khi trải thảm.</p>
     <figure class="md-photo md-tall"><img src="../images/sophia-tu-the-bo-cau.jpg" alt="Cô Sophia trong tư thế bồ câu vua, mặc đồ trắng, mỉm cười" width="800" height="900"><figcaption>Có tháng cơ thể muốn bay. Có tháng chỉ muốn nằm yên. Cả hai đều đúng.</figcaption></figure>
+
+    <div class="pn-way">
+      <p class="pn-way-t">🌿 Không chỉ là tư thế</p>
+      <p>Con đường Sophia đi là yoga cân bằng, phục hồi. Phục hồi trên cả năm thể: thân, tâm, trí, thể khí và thể tinh thần. Vì vậy trong bài này, tư thế chỉ là một phần nhỏ.</p>
+      <p>Đau bụng kinh, mệt khi mang bầu, kiệt sức sau sinh hiếm khi đến từ một chỗ. Giấc ngủ, bữa ăn, hơi thở, cách mình nghĩ về cơ thể mình, cả sự nâng đỡ của người thân, đều góp vào. Một mẹo hay một tư thế có thể làm dễ chịu hôm nay. Còn để cơ thể thật sự cân bằng, cần thay đổi cả lối sống, từng chút, đều đặn.</p>
+      <div class="pn-five">
+        <div><b>Thân</b><p>Tập hợp với giai đoạn. Ngủ đủ, ăn đủ chất, uống đủ nước.</p></div>
+        <div><b>Thể khí</b><p>Hơi thở bụng, thở ra dài. Thứ theo mẹ suốt thai kỳ, vào tận phòng sinh.</p></div>
+        <div><b>Tâm</b><p>Cảm xúc lên xuống theo hormone. Cho phép mình mềm, buồn, nghỉ.</p></div>
+        <div><b>Trí</b><p>Hiểu cơ thể mình. Bớt so sánh, bớt vội “lấy lại dáng”.</p></div>
+        <div><b>Thể tinh thần</b><p>Bình an, biết ơn cơ thể, kết nối với con, với chính mình.</p></div>
+      </div>
+      <p>Muốn hiểu kỹ hơn về năm thể, có bài <a href="../nam-the-con-nguoi/">Năm thể của con người</a>.</p>
+    </div>
 
     <ul class="md-toc">
       <li><a href="#chu-ky">Vòng chu kỳ</a></li>
@@ -207,7 +229,7 @@
     <p>Chu kỳ quá thất thường, mất kinh nhiều tháng, mọc mụn và lông nhiều bất thường cũng là lý do để đi khám. Hội chứng buồng trứng đa nang và rối loạn tuyến giáp đều ảnh hưởng tới chu kỳ. Bài <a href="../noi-tiet-yoga/">Các tuyến nội tiết và yoga</a> có nói kỹ hơn yoga hỗ trợ được gì và không thay được gì.</p>
 
     <h2 id="mang-bau">Khi mang bầu</h2>
-    <p>Quay lại tin nhắn lúc mười giờ tối. Cô trả lời: “Không phải nghỉ. Nhưng mình đổi cách tập. Và em hỏi bác sĩ khám thai trước nhé.”</p>
+    <p>Với câu hỏi “có phải nghỉ tập không”, cô thường trả lời: “Không nhất thiết. Nhưng mình đổi cách tập. Và em hỏi bác sĩ khám thai trước nhé.”</p>
     <p>Với một thai kỳ khỏe mạnh, vận động vừa phải được khuyến khích. Hiệp hội Sản Phụ khoa Hoa Kỳ (ACOG) gợi ý khoảng 150 phút mỗi tuần, chia ra nhiều ngày. Yoga tiền sản là một lựa chọn nhẹ nhàng trong số đó.</p>
     <p>Có một hormone tên là relaxin, tăng lên khi mang bầu để làm mềm dây chằng vùng chậu, chuẩn bị cho ngày sinh. Nó không chỉ làm mềm vùng chậu. Khớp nào cũng “lỏng” hơn. Vì vậy cảm giác “hôm nay dẻo quá” khi mang bầu là cái bẫy. Cô thường nhắc học viên dừng lại ở khoảng 70 đến 80 phần trăm biên độ, giữ khớp ổn định hơn là kéo cho sâu.</p>
     <div class="pn-tabs" role="tablist" aria-label="Ba tam cá nguyệt"><button type="button" role="tab" id="pnT0" aria-controls="pnP0" aria-selected="true">Ba tháng đầu</button><button type="button" role="tab" id="pnT1" aria-controls="pnP1" aria-selected="false">Ba tháng giữa</button><button type="button" role="tab" id="pnT2" aria-controls="pnP2" aria-selected="false">Ba tháng cuối</button></div>
@@ -307,6 +329,7 @@
     <p>Christiane Northrup, trong cuốn <i>Women's Bodies, Women's Wisdom</i>, viết nhiều về việc lắng nghe chu kỳ như lắng nghe một người bạn. Cô thấy điều đó đúng với cả lúc mang bầu và sau sinh.</p>
     <p>Có tháng mình mạnh. Có tháng mình mềm. Có năm mình nuôi một sinh linh bằng chính cơ thể mình.</p>
     <p>Yoga không bắt cơ thể phải giống nhau mỗi ngày. Chỉ mời mình trở về, thở, và đối xử với nó dịu dàng hơn một chút.</p>
+    <p>Và đó không phải việc của riêng bốn mươi lăm phút trên thảm. Là bữa ăn, giấc ngủ, hơi thở lúc bế con, ý nghĩ mình dành cho chính mình. Thân, tâm, trí, khí, tinh thần cùng được chăm, thì sức khỏe mới cân bằng và bền.</p>
 
     <div class="cd-value">
       <p class="cd-value-title">🌿 Muốn tập yoga nhẹ nhàng, đúng với giai đoạn của mình?</p>
@@ -330,7 +353,7 @@
         <li>Gaskin I.M. (2003). Ina May's Guide to Childbirth. Bantam. Northrup C. (1994). Women's Bodies, Women's Wisdom. Bantam.</li>
       </ol>
     </details>
-    <p class="nt-src">Hình minh họa do Sophia Yoga tự vẽ. Câu chuyện đầu bài ghép từ những điều cô hay gặp ở lớp, không nêu tên học viên. Bài viết chia sẻ kiến thức và kinh nghiệm tập luyện, không thay cho lời khuyên của bác sĩ sản phụ khoa.</p>
+    <p class="nt-src">Hình minh họa do Sophia Yoga tự vẽ. Những câu hỏi đầu bài là câu cô hay được nhiều học viên hỏi, không nêu tên ai. Bài viết chia sẻ kiến thức và kinh nghiệm tập luyện, không thay cho lời khuyên của bác sĩ sản phụ khoa.</p>
   </main>
   <script>
   (function () {
