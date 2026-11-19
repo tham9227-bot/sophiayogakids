@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yoga cho bé nhút nhát, thiếu tự tin | Sophia Yoga</title>
+  <meta name="description" content="Bé hay núp sau lưng mẹ, ngại chào, ngại nói trước lớp? Cô Sophia chia sẻ 8 tư thế sức mạnh, hơi thở trước khi nói, trò chơi nhóm và những lời khích lệ giúp con mạnh dạn dần, kèm video tập cùng.">
+  <link rel="canonical" href="https://sophiayogakids.com/yoga-be-tu-tin/">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://sophiayogakids.com/yoga-be-tu-tin/">
+  <meta property="og:title" content="Yoga cho bé nhút nhát, thiếu tự tin | Sophia Yoga">
+  <meta property="og:description" content="Bé hay núp sau lưng mẹ, ngại chào, ngại nói trước lớp? Cô Sophia chia sẻ 8 tư thế sức mạnh, hơi thở trước khi nói, trò chơi nhóm và những lời khích lệ giúp con mạnh dạn dần, kèm video tập cùng.">
+  <meta property="og:image" content="https://sophiayogakids.com/images/bai-yoga-be-tu-tin.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="600">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Quicksand:wght@500;600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css?v=20261102e">
+  <link rel="stylesheet" href="../css/chu-de.css?v=20261027a">
+  <link rel="icon" href="../images/favicon.png?v=3" type="image/png">
+  <style>
+  .tt-video { max-width: 540px; margin: 18px auto; }
+  .tt-video video { width: 100%; border-radius: 18px; box-shadow: var(--shadow); display: block; background: #fdf6e9; }
+  .tt-video figcaption { font-size: .95rem; color: var(--muted); text-align: center; margin-top: 6px; }
+  .tt-box { background: #fffbea; border: 2px solid #ffe58a; border-radius: 22px; padding: 18px 16px; margin: 20px 0; }
+  .tt-box h3 { margin: 0 0 6px; color: var(--brown); }
+  .tt-hint { font-size: .95rem; color: var(--muted); margin: 0 0 10px; }
+  .tt-stairs svg { width: 100%; height: auto; display: block; }
+  .tt-stairs .st { cursor: pointer; }
+  .tt-stairs .st rect { fill: #fff3c4; stroke: #e5c46b; stroke-width: 2; transition: fill .2s; }
+  .tt-stairs .st.on rect { fill: #ffd60a; }
+  .tt-stairs .st.done rect { fill: #e9f3d6; stroke: #a9c58a; }
+  .tt-stairs .st.on.done rect { fill: #ffd60a; }
+  .tt-stairs .st text { font: 700 15px Quicksand, sans-serif; fill: #6b4423; text-anchor: middle; pointer-events: none; }
+  #ttKid { transition: transform .6s cubic-bezier(.4,1.4,.6,1); }
+  .tt-btns { display: flex; flex-wrap: wrap; gap: 6px; margin: 10px 0; }
+  .tt-btns button { font: 700 .95rem Quicksand, sans-serif; border: 2px solid #e5c46b; background: #fff; color: var(--brown); border-radius: 30px; padding: 6px 12px; cursor: pointer; }
+  .tt-btns button.on { background: #ffd60a; border-color: #f5c400; }
+  .tt-btns button.done::after { content: " ✓"; color: #5f8a2e; }
+  .tt-step { background: #fff; border-radius: 16px; padding: 12px 14px; min-height: 120px; }
+  .tt-step h4 { margin: 0 0 6px; color: var(--brown); font-size: 1.1rem; }
+  .tt-step p { margin: 0 0 8px; }
+  .tt-check { font: 700 .95rem Nunito, sans-serif; background: #fff3c4; border: 2px solid #e5c46b; color: var(--brown); border-radius: 30px; padding: 6px 14px; cursor: pointer; }
+  .tt-check.done { background: #e9f3d6; border-color: #a9c58a; }
+  .tt-flips { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 12px; margin: 14px 0; }
+  .tt-flip { position: relative; min-height: 150px; border: 0; padding: 0; background: none; cursor: pointer; perspective: 900px; text-align: left; font: inherit; color: inherit; }
+  .tt-flip .in { position: relative; display: block; width: 100%; min-height: 150px; transition: transform .5s; transform-style: preserve-3d; }
+  .tt-flip.on .in { transform: rotateY(180deg); }
+  .tt-flip .fa, .tt-flip .fb { position: absolute; inset: 0; backface-visibility: hidden; -webkit-backface-visibility: hidden; border-radius: 18px; padding: 14px 16px; display: flex; flex-direction: column; justify-content: center; gap: 6px; box-shadow: 0 4px 14px rgba(47,52,36,.08); }
+  .tt-flip .fa { background: #fdf0ec; border: 2px solid #f1c9bd; }
+  .tt-flip .fb { background: #f0f7e6; border: 2px solid #bcd79c; transform: rotateY(180deg); }
+  .tt-flip small { font-size: .8rem; color: var(--muted); font-weight: 700; text-transform: uppercase; letter-spacing: .03em; }
+  .tt-flip b { color: var(--brown); font-size: 1.02rem; line-height: 1.4; }
+  .tt-pick { text-align: center; }
+  .tt-pick .card { background: #fff; border-radius: 18px; padding: 18px 14px; margin: 10px auto; max-width: 460px; min-height: 96px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; box-shadow: 0 4px 14px rgba(47,52,36,.08); }
+  .tt-pick .card span { font-size: 2.4rem; }
+  .tt-pick .card b { color: var(--brown); font-size: 1.1rem; }
+  .tt-pick .card.pop { animation: ttpop .45s ease; }
+  @keyframes ttpop { 0% { transform: scale(.85); opacity: .3; } 70% { transform: scale(1.04); } 100% { transform: scale(1); opacity: 1; } }
+  .tt-five { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 10px; margin: 14px 0; }
+  .tt-five div { background: #fffbea; border: 2px solid #ffe58a; border-radius: 16px; padding: 10px 12px; font-size: .95rem; }
+  .tt-five b { display: block; color: var(--brown); font-size: 1.05rem; margin-bottom: 2px; }
+  .tt-two { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 14px 0; }
+  .tt-two img { width: 100%; aspect-ratio: 4/3; object-fit: cover; border-radius: 14px; display: block; }
+  .tt-two figcaption { font-size: .9rem; color: var(--muted); margin-top: 4px; }
+  .tt-two figure { margin: 0; }
+  @media (max-width: 560px) { .tt-two { grid-template-columns: 1fr; } .tt-flip, .tt-flip .in { min-height: 118px; } }
+  @media (prefers-reduced-motion: reduce) { .tt-flip .in, #ttKid { transition: none; } .tt-pick .card.pop { animation: none; } }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="../index.html" class="logo">
+        <img src="../images/logo.png?v=3" alt="Sophia Yoga" width="60" height="60">
+        <span class="logo-text"><b>Sophia</b> Yoga</span>
+      </a>
+      <button class="menu-toggle" aria-label="Mở menu" aria-expanded="false">☰</button>
+      <nav class="main-nav">
+        <a href="../index.html#gioi-thieu">Về Sophia</a>
+        <a href="../index.html#hlv-tre-em" class="nav-star">Đào tạo HLV Yoga trẻ em</a>
+        <a href="../index.html#yoga-tre-em">Yoga trẻ em</a>
+        <a href="../index.html#yoga-nguoi-lon">Yoga người lớn</a>
+        <a href="../index.html#tieng-anh-hlv">Tiếng Anh cho HLV</a>
+        <a href="../index.html#tai-lieu">Tài liệu &amp; ý tưởng</a>
+        <a href="../index.html#lien-he" class="btn btn-small btn-pink">Đăng ký tư vấn</a>
+      </nav>
+      <div class="lang-switch" aria-label="Ngôn ngữ">
+        <a href="../index.html" lang="vi" class="active">VI</a>
+        <a href="../en/" lang="en" hreflang="en">EN</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container article cd-article yd-page gb-page">
+    <a href="../#tai-lieu" class="back-link">← Tài liệu &amp; ý tưởng Yoga trẻ em</a>
+    <p><span class="tag">Chánh niệm</span></p>
+    <h1>Yoga cho bé nhút nhát, ngại giao tiếp: giúp con mạnh dạn từng chút một</h1>
+    <figure class="gb-hero"><img src="../images/tu-the/78.jpg" alt="Bé đứng tư thế chiến binh trên thảm hồng, dưới vòm gỗ Ecopark" width="1200" height="900"><figcaption>Chiến binh hiền. Chân vững, tay dang rộng, mắt nhìn về phía trước.</figcaption></figure>
+    <div class="cd-facts">
+      <div><b>👧 Độ tuổi</b>3 đến 10 tuổi</div>
+      <div><b>⏱ Thời gian</b>10 phút mỗi ngày</div>
+      <div><b>🧘 Gồm</b>8 tư thế + 4 trò chơi nhóm + video</div>
+      <div><b>🎒 Chuẩn bị</b>Một tấm thảm, một người bạn, thật nhiều kiên nhẫn</div>
+    </div>
+    <p class="cd-intro">Mẹ dắt con đến lớp. Con nép sau lưng mẹ, tay níu vạt áo. Cô hỏi tên, con cúi gằm mặt. Cả buổi con đứng ở mép thảm, nhìn các bạn chơi.</p>
+    <p>Rồi trên đường về, con kể lại từng động tác. Nhớ hết.</p>
+    <p>Cô gặp cảnh này nhiều lắm. Và bố mẹ thường hỏi cô cùng một câu: “Cô ơi, làm sao cho cháu mạnh dạn lên?” Câu trả lời của cô không có mẹo nào nhanh. Chỉ có từng bậc nhỏ, một cái thảm, một hơi thở, và người lớn đủ kiên nhẫn đứng đợi.</p>
+
+    <h2>Nhút nhát không phải là lỗi</h2>
+    <p>Có những đứa trẻ sinh ra đã dè dặt hơn. Nhà tâm lý học Jerome Kagan (Đại học Harvard) theo dõi trẻ từ khi mới 4 tháng tuổi trong nhiều năm, kể lại trong cuốn <i>Galen’s Prophecy</i> (1994). Khoảng một phần năm số bé phản ứng rất mạnh với những gì mới lạ: cựa quậy nhiều, khóc nhiều. Lớn lên, nhiều bạn trong số đó thận trọng hơn trước người lạ. Nhưng không phải bạn nào cũng vậy. Một phần đã cởi mở dần theo năm tháng. Tính khí là điểm xuất phát, không phải bản án.</p>
+    <p>Cũng cần tách hai điều hay bị nhầm. Trong cuốn sách bán chạy <i>Quiet</i> (2012), Susan Cain viết: hướng nội là thích yên tĩnh, nạp lại năng lượng khi ở một mình. Nhút nhát là sợ bị người khác đánh giá. Một bạn hướng nội có thể rất tự tin, chỉ là bạn ấy thích chơi với một hai người hơn cả đám đông. Cô không muốn biến một em bé trầm tĩnh thành một em bé ồn ào. Cô chỉ muốn nỗi sợ đừng giữ con lại.</p>
+    <p>Còn những bạn rất nhạy cảm thì sao? Các con nghe được tiếng động nhỏ, thấy được nét mặt người lớn thay đổi, nhớ rất lâu một câu nói nặng lời. Ở lớp, cô thấy những bạn ấy thường quan sát rất kỹ trước khi làm. Khi đã làm, thì làm rất cẩn thận. Đó là một món quà, nếu người lớn biết chờ.</p>
+
+    <h2>Tự tin đến từ việc làm được, từng chút một</h2>
+    <p>Nhà tâm lý học Albert Bandura dành cả đời nghiên cứu điều làm nên niềm tin “mình làm được”. Trong cuốn <i>Self-Efficacy</i> (1997), ông chỉ ra nguồn mạnh nhất không phải lời khen, cũng không phải lời động viên. Mà là những lần chính mình đã làm được. Lần sau dựa vào lần trước.</p>
+    <p>Vì vậy, ở lớp cô không đẩy bạn nhút nhát lên đứng trước cả lớp. Cô xây cho con một cái thang. Mỗi bậc thấp thôi, đủ để con bước lên mà không ngã. Đứng vững ở bậc này rồi mới sang bậc kế.</p>
+
+    <div class="tt-box tt-stairs" id="thang">
+      <h3>🪜 Thang tự tin 5 bậc</h3>
+      <p class="tt-hint">Chạm vào từng bậc để xem. Khi con đã làm được, bấm “Con làm được rồi” để đánh dấu. Máy của bạn sẽ nhớ giúp.</p>
+      <svg viewBox="0 0 580 230" role="img" aria-label="Năm bậc thang, một em bé nhỏ đứng trên bậc đang chọn">
+        <line x1="10" y1="211" x2="570" y2="211" stroke="#e5c46b" stroke-width="3"/>
+        <g class="st" data-i="0"><rect x="20" y="170" width="104" height="40" rx="10"/><text x="72" y="196">Bậc 1</text></g><g class="st" data-i="1"><rect x="128" y="140" width="104" height="70" rx="10"/><text x="180" y="166">Bậc 2</text></g><g class="st" data-i="2"><rect x="236" y="110" width="104" height="100" rx="10"/><text x="288" y="136">Bậc 3</text></g><g class="st" data-i="3"><rect x="344" y="80" width="104" height="130" rx="10"/><text x="396" y="106">Bậc 4</text></g><g class="st" data-i="4"><rect x="452" y="50" width="104" height="160" rx="10"/><text x="504" y="76">Bậc 5</text></g>
+        <g id="ttKid"><circle cx="0" cy="-46" r="11" fill="#f6d98a" stroke="#6b4423" stroke-width="2.5"/><path d="M0 -35 V-12 M0 -28 L-12 -40 M0 -28 L12 -40 M0 -12 L-8 0 M0 -12 L8 0" stroke="#6b4423" stroke-width="3.5" stroke-linecap="round" fill="none"/><text x="16" y="-52" font-size="16">⭐</text></g>
+      </svg>
+      <div class="tt-btns"><button type="button" data-i="0">1. Làm cùng cả lớp</button><button type="button" data-i="1">2. Làm cùng một bạn</button><button type="button" data-i="2">3. Nói một chữ</button><button type="button" data-i="3">4. Dẫn một tư thế</button><button type="button" data-i="4">5. Nghĩ ra tư thế mới</button></div>
+      <div class="tt-step" aria-live="polite"><h4 id="ttT"></h4><p id="ttD"></p><p><b>Dấu hiệu con đã vững:</b> <span id="ttS"></span></p><button type="button" class="tt-check" id="ttC">✓ Con làm được rồi</button></div>
+    </div>
+    <p>Có bạn đi hết năm bậc trong một tháng. Có bạn đứng ở bậc một cả học kỳ. Cả hai đều đang đi. Đôi khi con lùi lại một bậc, sau một trận ốm, một lần chuyển nhà. Không sao. Bậc cũ vẫn còn đó.</p>
+
+    <h2>Hơi thở trước khi nói</h2>
+    <p>Bạn nhỏ sắp phải nói trước mọi người thì tim đập nhanh, hơi thở lên tận ngực, ngắn và gấp. Giọng bị kẹt lại. Người lớn mình cũng vậy, trước một buổi họp quan trọng.</p>
+    <p>Thở ra chậm và dài hơn hít vào giúp cơ thể dịu xuống. Ở lớp, cô dạy các con một bài rất ngắn, gọi là <b>“3 hơi của sư tử con”</b>:</p>
+    <div class="cd-value">
+      <p class="cd-value-title">🌬 Hơi thứ nhất: đặt tay lên bụng</p>
+      <p>Hít vào bằng mũi, bụng phồng lên dưới bàn tay như quả bóng. Thở ra bằng miệng, chậm, như thổi một ngọn nến cho lung lay.</p>
+      <p class="cd-value-title">🦶 Hơi thứ hai: ấn chân xuống đất</p>
+      <p>Vẫn thở như vậy, nhưng lần này nghĩ tới hai bàn chân. Chân đang chạm đất. Đất đang đỡ mình.</p>
+      <p class="cd-value-title">🦁 Hơi thứ ba: mỉm cười rồi nói</p>
+      <p>Thở ra xong, mỉm cười một chút. Rồi mới nói câu đầu tiên. Câu đầu tiên ngắn thôi.</p>
+    </div>
+    <p>Bài này con làm được ở bất kỳ đâu, không ai nhận ra. Trước khi vào lớp, trước khi chào cô, trước khi giơ tay. Cô dạy lúc con đang vui, lặp đi lặp lại, để lúc run con tự nhớ ra. Bạn nào thích thở có tiếng thì xem thêm <a href="../tho-ong-bhramari/">thở con ong</a> và <a href="../bai-hoi-tho-bong-bong.html">hơi thở bong bóng</a>.</p>
+
+    <h2 id="video">Video: 7 tư thế sức mạnh, tập cùng cô</h2>
+    <p>Hơn một phút. Bố mẹ mở cho con xem, rồi đứng lên làm cùng con. Vòng tròn ở góc ảnh phồng lên khi hít vào, thu lại khi thở ra.</p>
+    <figure class="tt-video"><video controls playsinline preload="metadata" poster="../videos/yoga-be-tu-tin-poster.jpg" width="1080" height="1080"><source src="../videos/yoga-be-tu-tin.mp4" type="video/mp4"></video><figcaption>Núi, chiến binh, ngôi sao, đứng tấn, sư tử, siêu nhân, ôm lấy mình. Ảnh từ lớp học thật, mặt các bé đã được che.</figcaption></figure>
+
+    <h2>Vì sao lại là tư thế “sức mạnh”?</h2>
+    <p>Năm 2010, ba nhà nghiên cứu Dana Carney, Amy Cuddy và Andy Yap đăng một nghiên cứu trên tạp chí <i>Psychological Science</i> về “tư thế quyền lực”: đứng dang rộng, ngực mở trong hai phút. Nghiên cứu ấy nổi tiếng khắp thế giới. Về sau, nhiều nhóm khác làm lại thì phần thay đổi hormone không lặp lại được. Điều còn lại, khá vững, là người ta <i>cảm thấy</i> mạnh mẽ hơn một chút.</p>
+    <p>Cô kể điều này để bố mẹ không kỳ vọng phép màu. Đứng tư thế ngôi sao không biến con thành người khác.</p>
+    <p>Nhưng cô thấy một điều ở lớp, năm này qua năm khác. Một bạn co vai, cúi đầu, tay ôm lấy người thì giọng nói cũng nhỏ theo. Khi con đứng thẳng, ngực mở, chân vững, mắt nhìn ra phía trước, con dễ nói hơn. Không phải vì phép màu. Vì cơ thể và cảm xúc đi cùng nhau.</p>
+
+    <h2>8 tư thế giúp con đứng vững, nói rõ</h2>
+    <p class="cd-guide">Sáu tư thế đầu con tự làm được. Hai tư thế cuối cần một người bạn, là bước đệm để con bắt chuyện. Ảnh từ lớp học thật, khuôn mặt các bé được che để bảo vệ các con.</p>
+    <ol class="cd-steps">
+      <li class="cd-step">
+        <div class="cd-step-img"><img src="../images/tu-the/60.jpg" alt="Bé đứng trên thảm, hai tay vươn thẳng lên trời" loading="lazy"><span class="cd-step-no">1</span></div>
+        <div class="cd-step-body">
+          <h3>Ngọn núi vươn cao</h3>
+          <p class="cd-say"><b>Khi nào:</b> Đầu buổi, khi con còn đứng nép, chưa muốn bước vào thảm.</p>
+          <p class="cd-how"><b>Cách làm:</b> Đứng hai chân bằng hông. Mười ngón chân xòe ra, ấn xuống đất. Hít vào, hai tay vươn lên trời. Thở ra, hai tay vẫn ở trên, vai hạ xuống. “Gió thổi mấy, núi vẫn đứng.” 3 hơi thở.</p>
+          <p class="yd-tip"><b>Điều cô để ý:</b> Bạn nhút nhát hay đứng co vai, cằm cúi, hai tay ôm lấy người. Chỉ cần đứng thẳng lên và ấn chân xuống đất là cơ thể đã khác. Cô không bảo con “tự tin lên”. Cô bảo con “ấn chân xuống”. Dễ hơn nhiều.</p>
+        </div>
+      </li>
+      <li class="cd-step">
+        <div class="cd-step-img"><img src="../images/tu-the/78.jpg" alt="Bé tư thế chiến binh 2 trên thảm hồng dưới vòm gỗ Ecopark" loading="lazy"><span class="cd-step-no">2</span></div>
+        <div class="cd-step-body">
+          <h3>Chiến binh hiền</h3>
+          <p class="cd-say"><b>Khi nào:</b> Khi con sắp phải làm một việc khiến con run: lên chào cả lớp, vào lớp mới.</p>
+          <p class="cd-how"><b>Cách làm:</b> Bước một chân dài ra trước, gối trước gập, chân sau duỗi thẳng. Hai tay dang ngang, song song với mặt đất. Mắt nhìn theo đầu ngón tay phía trước. Thở 3 hơi rồi đổi bên. Cô nói: “Chiến binh này không đánh ai. Chiến binh này giữ cho mình vững.”</p>
+          <p class="yd-tip"><b>Điều cô để ý:</b> Cô thích chữ “hiền” đi cùng chữ “chiến binh”. Các con hiểu ngay rằng mạnh không có nghĩa là to tiếng hay giành phần. Có bạn còn tự đặt tên: chiến binh thỏ, chiến binh mèo con.</p>
+        </div>
+      </li>
+      <li class="cd-step">
+        <div class="cd-step-img"><img src="../images/tu-the/01.jpg" alt="Bé dang tay chân tư thế ngôi sao trên thảm hồng" loading="lazy"><span class="cd-step-no">3</span></div>
+        <div class="cd-step-body">
+          <h3>Ngôi sao</h3>
+          <p class="cd-say"><b>Khi nào:</b> Khi con thu mình, muốn nhỏ lại, muốn không ai thấy.</p>
+          <p class="cd-how"><b>Cách làm:</b> Đứng dang hai chân thật rộng, hai tay dang chéo lên cao. Cả người thành một ngôi sao năm cánh. Hít vào, ngực mở ra. Thở ra, mỉm cười. Đếm 5 hơi. Có thể nhảy bật từ “quả bóng tròn” (ngồi xổm ôm gối) lên thành ngôi sao.</p>
+          <p class="yd-tip"><b>Điều cô để ý:</b> Ngôi sao chiếm nhiều chỗ. Đó chính là điều cô muốn: con được phép chiếm chỗ của mình trên thảm, trong lớp, trong nhà. Nhảy từ quả bóng lên ngôi sao thì bạn nào cũng cười.</p>
+        </div>
+      </li>
+      <li class="cd-step">
+        <div class="cd-step-img"><img src="../images/tu-the/56.jpg" alt="Hai bé đứng tấn, hạ hông, hai tay khuỳnh lên" loading="lazy"><span class="cd-step-no">4</span></div>
+        <div class="cd-step-body">
+          <h3>Đứng tấn</h3>
+          <p class="cd-say"><b>Khi nào:</b> Khi chân con run, con muốn chạy về phía mẹ.</p>
+          <p class="cd-how"><b>Cách làm:</b> Đứng dang chân rộng, mũi chân hơi xoay ra ngoài. Hạ hông xuống như ngồi trên ghế vô hình. Hai tay khuỳnh lên ngang vai, bàn tay mở. Thở ra bằng miệng, dài. 3 đến 5 hơi.</p>
+          <p class="yd-tip"><b>Điều cô để ý:</b> Đùi hơi mỏi một chút là tốt. Cái mỏi kéo sự chú ý của con xuống chân, xa khỏi nỗi lo trong đầu. Ra khỏi tư thế, cô hỏi: “Chân con thấy gì?” Có bạn bảo: “Chân con nóng, chân con khỏe.”</p>
+        </div>
+      </li>
+      <li class="cd-step">
+        <div class="cd-step-img"><img src="../images/tu-the/55.jpg" alt="Bé quỳ trên thảm làm hơi thở sư tử, lưỡi thè ra" loading="lazy"><span class="cd-step-no">5</span></div>
+        <div class="cd-step-body">
+          <h3>Sư tử gầm, rồi nói tên mình</h3>
+          <p class="cd-say"><b>Khi nào:</b> Khi con ngại cất tiếng, nói lí nhí, hoặc không nói.</p>
+          <p class="cd-how"><b>Cách làm:</b> Quỳ, hai tay chống lên gối, ngón tay xòe. Hít vào bằng mũi. Há miệng to, thè lưỡi, thở ra “Haaaa”. Làm 3 lần. Lần thứ tư, thay tiếng “Haaaa” bằng tên của con: “Con là... Minh!” Cả lớp gầm theo tên bạn.</p>
+          <p class="yd-tip"><b>Điều cô để ý:</b> Với bạn ngại nói, tiếng đầu tiên là khó nhất. Gầm như sư tử thì không ai đánh giá con nói hay hay dở. Con chỉ là một con sư tử. Nếu con chưa muốn nói tên, con gầm thôi. Vậy là đủ cho hôm nay.</p>
+        </div>
+      </li>
+      <li class="cd-step">
+        <div class="cd-step-img"><img src="../images/tu-the/72.jpg" alt="Bé nằm sấp trên thảm hồng, nhấc ngực và chân lên như siêu nhân bay" loading="lazy"><span class="cd-step-no">6</span></div>
+        <div class="cd-step-body">
+          <h3>Siêu nhân bay</h3>
+          <p class="cd-say"><b>Khi nào:</b> Sau giờ học căng thẳng, hoặc khi con nói “con không làm được đâu”.</p>
+          <p class="cd-how"><b>Cách làm:</b> Nằm sấp. Hai tay duỗi ra trước. Hít vào, nhấc ngực, tay và chân lên khỏi thảm. Mắt nhìn xuống thảm để cổ dài ra. Bay 3 hơi rồi hạ xuống nghỉ. Làm 3 lần. “Hôm nay siêu nhân bay đi đâu?”</p>
+          <p class="yd-tip"><b>Điều cô để ý:</b> Lưng mạnh, ngực mở. Mà quan trọng hơn là câu hỏi “bay đi đâu”. Con kể. Bay sang nhà bà, bay lên mặt trăng. Bạn ngại nói lại nói được nhiều nhất khi con đang chơi.</p>
+        </div>
+      </li>
+      <li class="cd-step">
+        <div class="cd-step-img"><img src="../images/tu-the/46.jpg" alt="Hai bé ngồi đối diện, chạm chân, tay nắm tay làm thuyền đôi" loading="lazy"><span class="cd-step-no">7</span></div>
+        <div class="cd-step-body">
+          <h3>Thuyền đôi</h3>
+          <p class="cd-say"><b>Khi nào:</b> Khi con ngại bắt chuyện với bạn mới.</p>
+          <p class="cd-how"><b>Cách làm:</b> Hai bạn ngồi đối diện, nắm tay nhau. Gập gối, áp lòng bàn chân vào chân bạn. Từ từ duỗi chân lên cùng nhau thành con thuyền. Đếm to cùng nhau đến 5 rồi hạ xuống. Chưa duỗi được thì giữ gối gập.</p>
+          <p class="yd-tip"><b>Điều cô để ý:</b> Hai bạn phải nói với nhau thì mới lên thuyền được: “Bạn sẵn sàng chưa?” “Một, hai, ba!” Cô ghép bạn nhút nhát với một bạn hiền, kiên nhẫn. Không ghép với bạn quá sôi nổi.</p>
+        </div>
+      </li>
+      <li class="cd-step">
+        <div class="cd-step-img"><img src="../images/tu-the/80.jpg" alt="Hai bé ngồi xếp bằng tựa lưng vào nhau trên thảm" loading="lazy"><span class="cd-step-no">8</span></div>
+        <div class="cd-step-body">
+          <h3>Tựa lưng đôi</h3>
+          <p class="cd-say"><b>Khi nào:</b> Cuối buổi, khi muốn con thấy mình không một mình.</p>
+          <p class="cd-how"><b>Cách làm:</b> Hai bạn ngồi xếp bằng, tựa lưng vào nhau. Nhắm mắt nếu thích. Hít vào, cảm thấy lưng bạn phồng lên. Thở ra cùng nhau. 5 hơi. Sau đó một bạn nói nhỏ: “Cảm ơn bạn đã cho tớ dựa.”</p>
+          <p class="yd-tip"><b>Điều cô để ý:</b> Không phải nhìn vào mắt nhau, nên bạn nhút nhát rất thoải mái. Lưng chạm lưng, hơi thở chạm hơi thở. Nhiều tình bạn ở lớp cô bắt đầu từ đây.</p>
+        </div>
+      </li>
+    </ol>
+
+    <h2>4 trò chơi nhóm cho bạn ngại nói</h2>
+    <div class="tt-two">
+      <figure><img src="../images/yoga-halloween/00.jpg" alt="Cả lớp ngồi trên thảm màu thành vòng, cô giáo phía trước" loading="lazy"><figcaption>Vòng tròn. Ai cũng thấy nhau, không ai đứng một mình phía trước.</figcaption></figure>
+      <figure><img src="../images/lop-tap-doi-ecopark.jpg" alt="Hai bé ngồi đối diện chạm chân, nắm tay nhau kéo giãn dưới vòm gỗ Ecopark" loading="lazy"><figcaption>Chạm chân, nắm tay. Hai bạn mới quen thì bắt đầu từ đây.</figcaption></figure>
+    </div>
+    <p>Trò chơi có một lợi thế lớn: con quên mất mình đang ngại. Cô chọn những trò mà bạn nhút nhát có thể tham gia ở mức con muốn, và luôn có đường lui.</p>
+    <ul>
+      <li><b>🪞 Tấm gương.</b> Hai bạn đứng đối diện. Một bạn làm động tác thật chậm, bạn kia làm theo như soi gương. Rồi đổi vai. Không cần nói một câu nào. Rất hợp cho bậc 2 của thang.</li>
+      <li><b>🔁 Tiếng vọng tên.</b> Cả lớp ngồi vòng tròn. Lần lượt mỗi bạn nói tên mình kèm một động tác, ví dụ “Lan” và giơ hai tay. Cả lớp nói lại tên bạn, làm lại động tác. Bạn nào chưa muốn nói thì chỉ làm động tác, cả lớp vẫn gọi tên bạn. Con được nghe tên mình vang lên, mà không phải nói to.</li>
+      <li><b>🚂 Đoàn tàu đổi đầu.</b> Cả lớp xếp hàng như đoàn tàu, bạn đầu tàu chọn tư thế, cả đoàn làm theo. Cô thổi còi, đầu tàu chạy xuống cuối, bạn tiếp theo lên dẫn. Bạn nào chưa muốn dẫn thì nói “qua”, hoặc chỉ giơ ngón cái. Cô luôn để chữ “qua” là một lựa chọn đàng hoàng.</li>
+      <li><b>🌼 Vòng tròn khen.</b> Cuối buổi, mỗi bạn khen bạn ngồi bên phải một điều cụ thể: “Tớ thích lúc cậu làm cây không đổ.” Bạn nhút nhát thường nói được câu khen trước khi nói được về mình. Và được nghe bạn khen mình thì con đỏ mặt, mà cười.</li>
+    </ul>
+
+    <h2>Lời của người lớn: đổi một câu, đổi cả buổi</h2>
+    <p>Có những câu bố mẹ, ông bà, cô giáo nói hằng ngày, rất thương con, mà vô tình làm con co lại. Đặc biệt là những câu nói <i>về</i> con trước mặt người khác. Một em bé nghe mẹ nói với cô “cháu nhà tôi nhát lắm” nhiều lần, rồi tin là thật.</p>
+    <p>Nhà tâm lý học Carol Dweck, tác giả cuốn <i>Mindset</i> (2006), cùng đồng nghiệp Claudia Mueller từng làm một thí nghiệm với các bạn lớp 5 (đăng năm 1998 trên <i>Journal of Personality and Social Psychology</i>). Bạn nào được khen “con thông minh quá” thì sau đó né những bài khó. Bạn nào được khen “con đã cố gắng” thì chọn bài khó hơn và bền bỉ hơn khi gặp thất bại. Khen điều con đã <i>làm</i>, không dán nhãn con <i>là</i> gì.</p>
+    <div class="tt-box">
+      <h3>💬 Thử đổi một câu nói</h3>
+      <p class="tt-hint">Chạm vào mỗi thẻ để lật. Mặt trước là câu mình hay buột miệng. Mặt sau là một cách nói khác.</p>
+      <div class="tt-flips"><button type="button" class="tt-flip" aria-pressed="false"><span class="in"><span class="fa"><small>Câu quen miệng</small><b>“Sao con nhát thế?”</b><small>Chạm để đổi ↻</small></span><span class="fb"><small>Thử nói</small><b>“Con cần thêm chút thời gian. Mẹ đợi con.”</b></span></span></button><button type="button" class="tt-flip" aria-pressed="false"><span class="in"><span class="fa"><small>Câu quen miệng</small><b>“Chào cô đi con! Chào to lên!”</b><small>Chạm để đổi ↻</small></span><span class="fb"><small>Thử nói</small><b>“Mẹ chào cô trước nhé. Con vẫy tay khi nào con sẵn sàng.”</b></span></span></button><button type="button" class="tt-flip" aria-pressed="false"><span class="in"><span class="fa"><small>Câu quen miệng</small><b>“Cháu nhà tôi nhút nhát lắm.”</b><small>Chạm để đổi ↻</small></span><span class="fb"><small>Thử nói</small><b>“Cháu quan sát kỹ trước rồi mới tham gia.”</b></span></span></button><button type="button" class="tt-flip" aria-pressed="false"><span class="in"><span class="fa"><small>Câu quen miệng</small><b>“Có gì đâu mà sợ!”</b><small>Chạm để đổi ↻</small></span><span class="fb"><small>Thử nói</small><b>“Con thấy hơi sợ, phải không? Mẹ ở ngay đây.”</b></span></span></button><button type="button" class="tt-flip" aria-pressed="false"><span class="in"><span class="fa"><small>Câu quen miệng</small><b>“Nhìn bạn kia kìa, bạn có sợ đâu.”</b><small>Chạm để đổi ↻</small></span><span class="fb"><small>Thử nói</small><b>“Hôm qua con đứng xem. Hôm nay con đã bước lên thảm.”</b></span></span></button><button type="button" class="tt-flip" aria-pressed="false"><span class="in"><span class="fa"><small>Câu quen miệng</small><b>“Giỏi quá! Con giỏi nhất lớp!”</b><small>Chạm để đổi ↻</small></span><span class="fb"><small>Thử nói</small><b>“Con giơ tay dù hơi run. Cô thấy rồi.”</b></span></span></button><button type="button" class="tt-flip" aria-pressed="false"><span class="in"><span class="fa"><small>Câu quen miệng</small><b>“Không làm thì thôi, về!”</b><small>Chạm để đổi ↻</small></span><span class="fb"><small>Thử nói</small><b>“Hôm nay con ngồi xem cũng được. Mai mình thử tiếp.”</b></span></span></button><button type="button" class="tt-flip" aria-pressed="false"><span class="in"><span class="fa"><small>Câu quen miệng</small><b>“Lên đây làm cho cả lớp xem nào!”</b><small>Chạm để đổi ↻</small></span><span class="fb"><small>Thử nói</small><b>“Con muốn dẫn cả lớp, hay muốn làm cùng cô?”</b></span></span></button></div>
+    </div>
+    <p>Không cần nói đúng từng chữ. Chỉ cần nhớ ba điều: công nhận cảm xúc của con, cho con thời gian, và khen một việc cụ thể con vừa làm. Có hôm mình vẫn lỡ lời. Mai sửa. Con lớn lên bên một người lớn biết sửa mình, đó cũng là một bài học.</p>
+
+    <h2>10 phút ở nhà, buổi sáng trước khi đi học</h2>
+    <figure class="gb-hero"><img src="../images/tu-the/74.jpg" alt="Bé ngồi xếp bằng trên thảm, hai tay dang rộng dưới vòm gỗ Ecopark" loading="lazy" width="1200" height="900"><figcaption>Dang tay thật rộng, rồi ôm lấy mình. Một ngày mới bắt đầu.</figcaption></figure>
+    <ol>
+      <li><b>2 phút:</b> Ngọn núi vươn cao, rồi chiến binh hiền hai bên.</li>
+      <li><b>2 phút:</b> Nhảy từ quả bóng lên ngôi sao, 5 lần. Cả nhà nhảy cùng.</li>
+      <li><b>1 phút:</b> Sư tử gầm 3 lần, lần cuối gầm tên mình.</li>
+      <li><b>2 phút:</b> Siêu nhân bay. Hỏi con: “Hôm nay siêu nhân bay đến lớp sẽ làm gì?”</li>
+      <li><b>1 phút:</b> 3 hơi của sư tử con.</li>
+      <li><b>2 phút:</b> Bốc một thử thách can đảm nho nhỏ cho hôm nay.</li>
+    </ol>
+    <div class="tt-box tt-pick">
+      <h3>🎲 Thử thách can đảm nho nhỏ</h3>
+      <p class="tt-hint">Bấm nút để bốc một thử thách. Không thích thì bốc lại. Con được chọn.</p>
+      <div class="card" id="ttCard" aria-live="polite"><span>🌟</span><b>Hôm nay con thử gì nhỉ?</b></div>
+      <button type="button" class="btn btn-blue" id="ttPick">🎲 Bốc thử thách</button>
+    </div>
+    <p>Tối về, hỏi con một câu thôi: “Hôm nay con đã thử điều gì?” Không hỏi “con có làm được không”. Thử đã là đáng khen.</p>
+
+    <h2>Tự tin không chỉ ở cơ thể</h2>
+    <p>Với Sophia, yoga là chăm cho con người trọn vẹn, chứ không chỉ cái thân biết uốn dẻo. Sự tự tin của một em bé cũng vậy, nó lớn lên ở nhiều tầng cùng lúc:</p>
+    <div class="tt-five">
+      <div><b>🦶 Thân</b>Đứng vững, ngực mở, chân chạm đất.</div>
+      <div><b>🌬 Hơi thở</b>Thở chậm được khi tim đang đập nhanh.</div>
+      <div><b>💛 Tâm</b>Nỗi sợ được người lớn nhìn thấy và chấp nhận.</div>
+      <div><b>🧠 Trí</b>Câu con tự nói với mình: “Mình thử xem.”</div>
+      <div><b>✨ Tinh thần</b>Con thấy mình thuộc về lớp, về nhà, được thương như mình đang là.</div>
+    </div>
+    <p>Giấc ngủ đủ, bữa sáng không vội, một buổi sáng không quát tháo. Những điều bình thường ấy giúp con mạnh dạn ở trường hơn bất kỳ tư thế nào. Tư thế chỉ là một phần.</p>
+
+    <h2>Điều cô thấy sau nhiều năm dạy</h2>
+    <p>Bạn nhút nhát không cần trở thành bạn nói nhiều nhất lớp. Có những bạn đến cuối khóa vẫn trầm, vẫn ít nói. Nhưng con đã dám bước lên thảm. Dám nắm tay một bạn mới. Dám nói một chữ. Với con, đó là cả một hành trình.</p>
+    <p>Và cô học được điều này từ các con: đừng vội. Một bông hoa không nở nhanh hơn vì mình kéo cánh hoa ra.</p>
+
+    <h2>Vài điều cô hay để ý</h2>
+    <div class="cd-safe yd-safe">
+      <ol>
+        <li><b>Không ép, không đẩy lên trước.</b> Bắt một bạn nhút nhát đứng trước cả lớp khi con chưa sẵn sàng có thể làm con sợ lâu hơn. Cô mời, và chấp nhận lời từ chối.</li>
+        <li><b>Không dán nhãn trước mặt con.</b> Cả câu “cháu nhát lắm” lẫn “cháu không nhát đâu, cháu chỉ lười chào”. Con nghe hết.</li>
+        <li><b>Đứng xem cũng là tham gia.</b> Bạn đứng ở mép thảm vẫn đang học. Cô đặt cho con một tấm thảm nhỏ ở góc, để lúc nào muốn thì con bước vào.</li>
+        <li><b>Không so sánh với anh chị em hay bạn khác.</b> Mỗi con có nhịp của mình. So với chính con tuần trước thôi.</li>
+        <li><b>Tư thế an toàn.</b> Đứng tấn và siêu nhân giữ vừa sức, 3 đến 5 hơi là đủ. Thuyền đôi thì hai bạn cân sức, có người lớn ở gần. Con thấy đau thì dừng.</li>
+        <li><b>Khi nào nên hỏi chuyên gia.</b> Nếu con hoàn toàn không nói ở trường hay chỗ đông người, trong khi ở nhà vẫn nói bình thường, kéo dài hơn một tháng. Hoặc con sợ hãi tới mức đau bụng, mất ngủ, khóc mỗi sáng, không chịu đi học nhiều tuần liền. Lúc ấy bố mẹ nên đưa con gặp bác sĩ nhi hoặc chuyên gia tâm lý trẻ em. Yoga đi cùng, không thay thế.</li>
+      </ol>
+    </div>
+
+    <div class="cd-value">
+      <p class="cd-value-title">🌟 Điều các con mang về</p>
+      <p><b>Virya</b> là sức mạnh, lòng can đảm. Trong Yoga Sutra, đó là một trong những điều nâng người tập đi tiếp. Can đảm của một em bé có khi chỉ là bước một chân lên thảm.</p>
+      <p><b>Santosha</b> là bằng lòng với mình như mình đang là. Con trầm cũng được. Con chậm cũng được. Con vẫn đủ đầy.</p>
+    </div>
+    <p class="cd-intro">Mình không cần làm con khác đi. Mình chỉ cần đứng gần, đủ lâu, cho tới khi con tự bước.</p>
+    <div class="cd-value">
+      <p class="cd-value-title">🌿 Thầy cô muốn giúp những bạn nhút nhát trong lớp mình?</p>
+      <p>Cách xếp cặp cho bạn ngại nói, cách thiết kế trò chơi có đường lui, cách để bạn đứng ở mép thảm vẫn thấy mình thuộc về lớp… cô hướng dẫn kỹ trong khóa <b>Đào tạo Huấn luyện viên Yoga trẻ em</b>. Bố mẹ muốn con được học ở lớp cô thì nhắn cô hỏi lịch nhé.</p>
+      <p>Đọc thêm: <a href="../yoga-be-cam-xuc/">Yoga cho bé hay cáu giận, khóc nhè, lo lắng</a>, <a href="../yoga-doi/">Yoga đôi cho bé</a> và <a href="../yoga-be-tap-trung/">Yoga cho bé khó tập trung</a>.</p>
+      <div class="lt-cta">
+        <a href="../dao-tao-hlv/" class="btn btn-blue">🌟 Xem khóa Đào tạo HLV Yoga trẻ em</a>
+        <a href="https://zalo.me/0349270304" class="btn btn-blue" target="_blank" rel="noopener">💬 Nhắn Zalo cô Sophia: 0349 270 304</a>
+      </div>
+    </div>
+    <nav class="cd-nav"><a href="../#tai-lieu">← Tài liệu &amp; ý tưởng</a><a href="../yoga-chu-de/" class="cd-all">51 truyện Yoga chủ đề</a></nav>
+  </main>
+  <script>
+  (function () {
+    var L = [
+  ["Làm cùng cả lớp","Con tập giữa mọi người, không ai nhìn riêng con. Đứng ở hàng sau, ngồi cạnh cô, hoặc chỉ ngồi xem cũng được.","Con ở lại trên thảm đến hết buổi."],
+  ["Làm cùng một bạn","Một bạn thôi. Thuyền đôi, tựa lưng đôi, tấm gương. Hai người thì đỡ sợ hơn cả lớp.","Con nắm tay một bạn và cùng làm một tư thế đôi."],
+  ["Nói một chữ","Con nói tên tư thế, đếm một số, hoặc gầm tên mình như sư tử. Một chữ thôi, to nhỏ tùy con.","Cả lớp nghe được giọng của con, dù chỉ một tiếng."],
+  ["Dẫn một tư thế","Con đứng lên trước, chọn một tư thế con thích nhất, và cả lớp làm theo con. Cô đứng ngay bên cạnh.","Con thấy cả lớp làm theo mình."],
+  ["Nghĩ ra tư thế mới","Con tự sáng tạo một tư thế, tự đặt tên, rồi dạy cho cả lớp. Bậc này có bạn cần vài tuần, có bạn cần vài tháng.","Tư thế của con có tên, và cả lớp nhớ."]
+    ];
+    var K = 'sy-tu-tin-thang', done = [];
+    try { done = JSON.parse(localStorage.getItem(K) || '[]') || []; } catch (e) { done = []; }
+    function save() { try { localStorage.setItem(K, JSON.stringify(done)); } catch (e) {} }
+    var sts = document.querySelectorAll('#thang .st'), bts = document.querySelectorAll('#thang .tt-btns button');
+    var kid = document.getElementById('ttKid'), chk = document.getElementById('ttC'), cur = 0;
+    function show(i) {
+      cur = i;
+      document.getElementById('ttT').textContent = 'Bậc ' + (i + 1) + ': ' + L[i][0];
+      document.getElementById('ttD').textContent = L[i][1];
+      document.getElementById('ttS').textContent = L[i][2];
+      var x = 72 + i * 108, y = 210 - (40 + i * 30);
+      kid.setAttribute('transform', 'translate(' + x + ',' + y + ')');
+      kid.style.transform = 'translate(' + x + 'px,' + y + 'px)';
+      paint();
+    }
+    function paint() {
+      for (var j = 0; j < 5; j++) {
+        var d = done.indexOf(j) > -1;
+        sts[j].classList.toggle('on', j === cur); sts[j].classList.toggle('done', d);
+        bts[j].classList.toggle('on', j === cur); bts[j].classList.toggle('done', d);
+      }
+      var dn = done.indexOf(cur) > -1;
+      chk.classList.toggle('done', dn);
+      chk.textContent = dn ? '✓ Đã làm được. Bấm lại để bỏ đánh dấu' : '✓ Con làm được rồi';
+    }
+    for (var j = 0; j < 5; j++) {
+      sts[j].addEventListener('click', (function (k) { return function () { show(k); }; })(j));
+      bts[j].addEventListener('click', (function (k) { return function () { show(k); }; })(j));
+    }
+    chk.addEventListener('click', function () {
+      var p = done.indexOf(cur);
+      if (p > -1) done.splice(p, 1); else { done.push(cur); if (cur < 4) setTimeout(function () { show(cur + 1); }, 700); }
+      save(); paint();
+    });
+    var first = 0; while (first < 4 && done.indexOf(first) > -1) first++;
+    show(first);
+
+    document.querySelectorAll('.tt-flip').forEach(function (b) {
+      b.addEventListener('click', function () { var on = b.classList.toggle('on'); b.setAttribute('aria-pressed', on ? 'true' : 'false'); });
+    });
+
+    var D = [["👋","Vẫy tay chào cô bán hàng (không cần nói gì)"],["🦁","Gầm tên mình như sư tử, cả nhà gầm theo"],["⭐","Dẫn cả nhà làm một tư thế con thích"],["📞","Nói “con chào bà ạ” khi gọi điện cho bà"],["🧸","Dạy gấu bông một tư thế mới, nói to tên tư thế"],["🌳","Đứng tư thế cái cây và đếm to đến 10"],["🎨","Tự nghĩ ra một tư thế, tự đặt tên cho nó"],["🤝","Rủ một bạn ở sân chơi làm thuyền đôi"],["🍎","Tự đưa tiền và nói “cảm ơn ạ” khi mua đồ"],["🐝","Thở con ong 3 lần trước khi vào lớp"],["🙋","Giơ tay một lần trong giờ học, nói gì cũng được"],["💛","Nói với một người: “Con cảm ơn” và nhìn vào mắt họ"]], last = -1, card = document.getElementById('ttCard');
+    document.getElementById('ttPick').addEventListener('click', function () {
+      var i; do { i = Math.floor(Math.random() * D.length); } while (i === last);
+      last = i;
+      card.innerHTML = '<span>' + D[i][0] + '</span><b>' + D[i][1] + '</b>';
+      card.classList.remove('pop'); void card.offsetWidth; card.classList.add('pop');
+    });
+  })();
+  </script>
+
+  <footer class="site-footer">
+    <div class="wave"></div>
+    <p class="copyright">© <span id="year">2026</span> Sophia Yoga. Mọi quyền được bảo lưu.</p>
+  </footer>
+  <script src="../js/main.js?v=20261026a"></script>
+  <div class="contact-float" aria-label="Liên hệ nhanh">
+    <a href="tel:0349270304" class="cf-btn cf-call" aria-label="Gọi điện cho Sophia 0349 270 304"><span class="cf-ic">📞</span><span class="cf-tx">Gọi ngay</span></a>
+    <a href="https://zalo.me/0349270304" class="cf-btn cf-zalo" target="_blank" rel="noopener" aria-label="Nhắn Zalo cho Sophia"><span class="cf-ic cf-zalo-ic">Zalo</span><span class="cf-tx">Nhắn Zalo</span></a>
+    <a href="https://m.me/zuzu.smile.9" class="cf-btn cf-mess" target="_blank" rel="noopener" aria-label="Nhắn Messenger cho Sophia"><span class="cf-ic">💬</span><span class="cf-tx">Messenger</span></a>
+  </div>
+</body>
+</html>
