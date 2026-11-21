@@ -1,0 +1,39 @@
+/* Dùng chung cho các bài Yoga cân bằng phục hồi: vai cổ gáy, mất ngủ lâu năm, tiền đình, thoát vị đĩa đệm */
+.cb-goc { display: grid; grid-template-columns: 220px 1fr; gap: 16px; align-items: center; background: #fffaf0; border-radius: 20px; box-shadow: var(--shadow); padding: 14px 16px; margin: 18px 0; }
+.cb-goc svg { width: 100%; height: auto; display: block; }
+.cb-goc ol { list-style: none; margin: 0; padding: 0; }
+.cb-goc li { padding: 6px 0 6px 44px; position: relative; }
+.cb-goc li span { position: absolute; left: 0; top: 6px; width: 34px; height: 34px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; background: #fff3c4; }
+.cb-goc li b { font-family: "Quicksand", sans-serif; color: #6b4423; }
+.cb-8 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin: 14px 0; counter-reset: b8; }
+.cb-8 > div { background: #fff; border-radius: 16px; box-shadow: var(--shadow); padding: 10px 12px 10px 12px; border-top: 5px solid #e6c77d; }
+.cb-8 > div.k { border-top-color: #4e9a5c; background: #f6fbf2; }
+.cb-8 h3 { margin: 0 0 3px; font-size: 1.02rem; color: #6b4423; }
+.cb-8 h3::before { counter-increment: b8; content: counter(b8) ". "; color: #a87a12; }
+.cb-8 .sk { font-size: .8rem; color: #a87a12; font-weight: 700; font-family: "Quicksand", sans-serif; margin: 0; }
+.cb-8 p { margin: 4px 0 0; font-size: .93rem !important; }
+.cb-seq { background: linear-gradient(180deg, #fffaf0 0%, #fdf3dc 100%); border-radius: 22px; box-shadow: var(--shadow); padding: 16px; margin: 16px 0; }
+.cb-seq h3 { margin: 0 0 4px; color: #6b4423; text-align: center; }
+.cb-seq .cb-now { text-align: center; margin: 8px 0 4px; min-height: 5.2em; }
+.cb-seq .cb-now b { display: block; font-family: "Quicksand", sans-serif; font-size: 1.25rem; color: #6b4423; }
+.cb-seq .cb-now i { display: block; font-style: normal; color: #6b4423; margin-top: 2px; }
+.cb-seq .cb-clock { font-family: "Quicksand", sans-serif; font-weight: 700; font-size: 2.3rem; color: #a87a12; text-align: center; line-height: 1.1; }
+.cb-seq .cb-bar { height: 8px; background: #f0e2c4; border-radius: 99px; overflow: hidden; margin: 8px 0; }
+.cb-seq .cb-bar div { height: 100%; width: 0; background: #ffd60a; transition: width .9s linear; }
+.cb-seq ol { margin: 10px 0 0; padding: 0 0 0 22px; }
+.cb-seq li { padding: 4px 6px; border-radius: 10px; font-size: .96rem; cursor: pointer; }
+.cb-seq li.on { background: #fff3c4; font-weight: 700; }
+.cb-seq li.done { color: var(--muted); text-decoration: line-through; text-decoration-color: #e6c77d; }
+.cb-seq li em { font-style: normal; color: #4e7a3f; font-size: .85rem; font-weight: 700; margin-left: 4px; }
+.cb-seq .hd-btns { justify-content: center; }
+.cb-avoid { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: .96rem; background: #fff; border-radius: 14px; overflow: hidden; box-shadow: var(--shadow); }
+.cb-avoid th { background: #fdf3dc; color: #6b4423; text-align: left; padding: 8px 10px; font-family: "Quicksand", sans-serif; }
+.cb-avoid td { padding: 8px 10px; border-top: 1px solid #f3e6c8; vertical-align: top; }
+.cb-light { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin: 10px 0; }
+.cb-light button { border: 0; border-radius: 14px; padding: 10px 8px; font-family: "Quicksand", sans-serif; font-weight: 700; font-size: .95rem; cursor: pointer; color: #3b2a14; opacity: .6; }
+.cb-light button.on { opacity: 1; outline: 3px solid #6b4423; outline-offset: 1px; }
+.cb-light .g { background: #d8efcf; } .cb-light .y { background: #fff0b3; } .cb-light .r { background: #f8d3c8; }
+.cb-note { font-size: .92rem !important; background: #f3f6fd; border-radius: 10px; padding: 6px 10px; }
+@media (max-width: 760px) { .cb-goc { grid-template-columns: 1fr; } .cb-goc svg { max-width: 220px; margin: 0 auto; } .cb-8 { grid-template-columns: 1fr 1fr; } .cb-light { grid-template-columns: 1fr; } }
+.cb-seq li b::after { content: " · "; color: #a87a12; }
+@media (max-width: 480px) { .cb-8 { grid-template-columns: 1fr; } }
