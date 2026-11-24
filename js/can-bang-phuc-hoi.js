@@ -21,13 +21,14 @@
   Array.prototype.forEach.call(document.querySelectorAll('.cb-breath'), function (box) {
     var IN = +box.getAttribute('data-in') || 4, OUT = +box.getAttribute('data-out') || 6, HOLD = +box.getAttribute('data-hold') || 0, MIN = +box.getAttribute('data-min') || 3;
     var done = box.getAttribute('data-done') || 'Xong rồi. Ngồi yên thêm một chút.';
+    var LBL = (box.getAttribute('data-labels') || 'Hít vào|Giữ nhẹ|Thở ra').split('|');
     box.className += ' hd-timer';
     box.innerHTML = '<div class="hd-stage"><div class="hd-ring"></div><div class="hd-ball"></div><div class="hd-word">Sẵn sàng<span>🌿</span></div></div>' +
       '<div class="hd-btns" style="justify-content:center"><button type="button">▶ Bắt đầu ' + MIN + ' phút</button></div>' +
-      '<p class="hd-small">Hít vào ' + IN + ' nhịp' + (HOLD ? ', giữ nhẹ ' + HOLD + ' nhịp' : '') + ', thở ra ' + OUT + ' nhịp. Hết giờ có tiếng chuông nhỏ.</p>';
+      '<p class="hd-small">' + LBL[0] + ' ' + IN + ' nhịp' + (HOLD ? ', ' + LBL[1].toLowerCase() + ' ' + HOLD + ' nhịp' : '') + ', ' + LBL[2].toLowerCase() + ' ' + OUT + ' nhịp. Hết giờ có tiếng chuông nhỏ.</p>';
     var ball = box.querySelector('.hd-ball'), word = box.querySelector('.hd-word'), go = box.querySelector('button'), left = box.querySelector('.hd-small');
     var hint = left.textContent, timer = null, phase = 0, count = 0, endAt = 0;
-    var LBL = ['Hít vào', 'Giữ nhẹ', 'Thở ra'], LEN = [IN, HOLD, OUT];
+    var LEN = [IN, HOLD, OUT];
     function setPhase(p) { phase = p; count = LEN[p]; ball.style.transition = 'transform ' + count + 's ease-in-out'; if (p === 0) ball.style.transform = 'scale(1)'; if (p === 2) ball.style.transform = 'scale(.45)'; show(); }
     function show() { word.innerHTML = LBL[phase] + '<span>' + count + '</span>'; }
     function next() { if (phase === 0) setPhase(HOLD ? 1 : 2); else if (phase === 1) setPhase(2); else setPhase(0); }
