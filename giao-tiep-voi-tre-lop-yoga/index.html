@@ -92,7 +92,47 @@
   .hv-q button.op.no { background: #fdf0ec; border-color: #f1c9bd; }
   .hv-q .fb { margin: 6px 0 0; font-size: .97rem; }
   .hv-say { text-align: center; font-size: 1.25rem; font-weight: 700; color: var(--brown); min-height: 70px; display: flex; align-items: center; justify-content: center; background: #fff; border-radius: 16px; padding: 14px; margin: 8px 0; line-height: 1.4; }
-  </style>
+    /* gx-ghep */
+  .gx-video { max-width: 520px; margin: 18px auto; }
+  .gx-video video { width: 100%; border-radius: 18px; box-shadow: var(--shadow); display: block; background: #fdf6e9; }
+  .gx-video figcaption { font-size: .95rem; color: var(--muted); text-align: center; margin-top: 6px; }
+  .gx-q { background: #fff; border-radius: 16px; padding: 12px 14px; margin: 10px 0; }
+  .gx-q p { margin: 0 0 6px; font-weight: 700; color: var(--brown); }
+  .gx-res { background: #f0f7e6; border: 2px solid #bcd79c; border-radius: 16px; padding: 12px 14px; margin-top: 12px; display: none; }
+  .gx-res.on { display: block; }
+  .gx-res h4 { margin: 0 0 6px; color: var(--brown); }
+  .gx-res p { margin: 0 0 6px; }
+  .gx-check { list-style: none; padding: 0; margin: 8px 0; }
+  .gx-check li { margin: 6px 0; }
+  .gx-check label { display: flex; gap: 10px; align-items: flex-start; background: #fff; border-radius: 14px; padding: 9px 12px; cursor: pointer; }
+  .gx-check input { width: 22px; height: 22px; flex: 0 0 22px; margin-top: 2px; accent-color: #d4a514; }
+  .gx-check input:checked + span { color: var(--muted); text-decoration: line-through; }
+  .gx-week { font-weight: 700; color: #a87a12; margin: 14px 0 2px; }
+  .gx-prog { height: 12px; background: #fff; border-radius: 10px; overflow: hidden; margin: 8px 0 4px; border: 1px solid #f0e2b4; }
+  .gx-prog i { display: block; height: 100%; width: 0; background: linear-gradient(90deg, #ffe58a, #f5c400); transition: width .3s; }
+  .gx-msg { background: #fff; border-radius: 16px; padding: 12px 14px; white-space: pre-line; font-size: .98rem; border: 1px dashed #e5c46b; }
+  .gx-copy { margin-top: 8px; font: 700 .95rem Quicksand, sans-serif; border: 2px solid #f5c400; background: #ffd60a; color: var(--brown); border-radius: 30px; padding: 7px 14px; cursor: pointer; }
+  .gx-timer { text-align: center; }
+  .gx-clock { font: 700 3rem Quicksand, sans-serif; color: var(--brown); line-height: 1.1; margin: 6px 0; font-variant-numeric: tabular-nums; }
+  .gx-seg-now { font: 700 1.15rem Quicksand, sans-serif; color: #a87a12; min-height: 1.5em; }
+  .gx-seg-tip { color: var(--text); margin: 4px auto 10px; max-width: 560px; min-height: 3em; }
+  .gx-segs { display: flex; flex-wrap: wrap; gap: 4px; margin: 10px 0; }
+  .gx-segs button { border: 0; padding: 10px 2px; font: 700 .78rem Quicksand, sans-serif; color: #5a3a1c; cursor: pointer; min-width: 0; line-height: 1.2; background: #fff1b8; opacity: .7; white-space: nowrap; padding: 10px 8px; border-radius: 10px; }
+  .gx-segs button:nth-child(even) { background: #ffd98a; }
+  .gx-segs button.on { opacity: 1; box-shadow: inset 0 -4px 0 #6b4423; }
+  .gx-segs button.done { opacity: .45; }
+  @media (max-width: 560px) { .gx-segs button { font-size: .8rem; padding: 8px 6px; } }
+  .gx-ctrl { display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; }
+  .gx-ctrl button { font: 700 1rem Quicksand, sans-serif; border: 2px solid #e5c46b; background: #fff; color: var(--brown); border-radius: 30px; padding: 8px 16px; cursor: pointer; }
+  .gx-ctrl button.main { background: #ffd60a; border-color: #f5c400; }
+  .gx-breath { display: flex; flex-direction: column; align-items: center; gap: 10px; }
+  .gx-ball { width: 120px; height: 120px; border-radius: 50%; background: radial-gradient(circle at 40% 35%, #fff6cc, #ffd60a); box-shadow: 0 6px 20px rgba(168,122,18,.25); transform: scale(.6); transition: transform 4s ease-in-out; }
+  .gx-ball.in { transform: scale(1); }
+  .gx-blabel { font: 700 1.1rem Quicksand, sans-serif; color: var(--brown); min-height: 1.4em; }
+  .gx-ages .nt-step ul { margin: 4px 0 0; padding-left: 20px; }
+  .gx-eye svg { width: 100%; max-width: 560px; height: auto; display: block; margin: 0 auto; }
+  .gx-eye .lb { font: 700 15px Quicksand, sans-serif; fill: #6b4423; text-anchor: middle; }
+</style>
 </head>
 <body>
   <header class="site-header">
@@ -138,6 +178,14 @@
     <p>Bác sĩ tâm thần Daniel Siegel và nhà trị liệu Tina Payne Bryson có một nguyên tắc ngắn gọn: kết nối rồi mới chuyển hướng (<i>The Whole-Brain Child</i>, 2011). Khi một em bé đang buồn, đang sợ hay đang giận, phần não biết nghe lời giải thích tạm thời “đóng cửa”. Mình phải làm con thấy an toàn trước, rồi lời hướng dẫn mới vào được.</p>
     <p>Ở lớp, kết nối là những việc rất nhỏ. Gọi tên con. Ngồi xuống ngang tầm mắt. Mỉm cười trước khi nói. Chạm tay chào ở cửa lớp. Những việc này chỉ mất vài giây, nhưng các con nhớ rất lâu.</p>
 
+    <p>Trước một tình huống khó, việc đầu tiên cô làm không phải là nói. Cô thở ba hơi, thở ra dài hơn hít vào. Trẻ nhỏ mượn sự bình tĩnh của người lớn bên cạnh. Thầy cô thử cùng cô:</p>
+    <div class="nt-box gx-breath" id="gxBreath">
+      <h3>🫁 Ba hơi thở trước khi nói</h3>
+      <div class="gx-ball" id="gxBall" aria-hidden="true"></div>
+      <div class="gx-blabel" id="gxBLabel" aria-live="polite">Bấm nút, thở theo quả bóng.</div>
+      <div class="gx-ctrl"><button type="button" class="main" id="gxBGo">▶ Thở cùng cô</button></div>
+    </div>
+
     <h2>Phút làm quen đầu tiên</h2>
     <p>Buổi đầu, nhiều bé nép sau lưng mẹ hoặc đứng ở cửa nhìn vào. Cô không giục. Một câu hỏi vui, một đồ vật lạ, một trò chơi nhỏ, thường mở cửa nhanh hơn mười lời mời. Bấm thử hộp bên dưới để bốc một câu mở đầu cô hay dùng.</p>
     <div class="nt-box">
@@ -168,6 +216,14 @@
     <h3>Cho con một lựa chọn nhỏ</h3>
     <p>“Hôm nay con muốn làm cây táo hay cây dừa?” “Con muốn nằm ngửa hay nằm nghiêng để thư giãn?” Hai lựa chọn, cả hai đều được. Các nhà tâm lý Edward Deci và Richard Ryan cho thấy cảm giác được tự chọn là một trong ba nhu cầu gốc giúp con người muốn làm từ bên trong (Deci và Ryan, 2000). Trẻ con cũng thế. Được chọn một chút, con hợp tác nhiều hơn hẳn.</p>
     <figure class="nt-fig"><img src="../images/yoga-tre-em-khong-phai-nguoi-lon-thu-nho/06.jpg" alt="Cô Sophia quỳ trên thảm, nắm hai bàn chân bé đang nằm ngửa, cả hai cùng cười, mặt bé được che" width="1050" height="1400" loading="lazy"><figcaption>Giao tiếp với các bé nhỏ nhiều khi là tiếng cười, là tay chạm tay.</figcaption></figure>
+
+    <h3>Nói theo độ tuổi</h3>
+    <p>Cùng một ý, nói với bé ba tuổi và với bạn chín tuổi phải rất khác. Chọn độ tuổi để xem cô thường điều chỉnh thế nào:</p>
+    <div class="nt-box gx-ages" id="gxAges" data-ages='[{"t":"2 đến 3 tuổi: ít lời, nhiều hình ảnh","d":["Câu rất ngắn, 3 đến 5 chữ: “Mình làm con mèo.”","Làm mẫu là chính, lời nói là phụ. Lặp lại thật nhiều.","Dùng tiếng kêu, bài hát, đồ vật thật: con thú bông, quả bóng.","Không đòi ngồi yên lâu. Cho con đi theo cô, ngồi lòng mẹ cũng được."]},{"t":"4 đến 5 tuổi: thế giới của tưởng tượng","d":["Mọi tư thế là một câu chuyện: “Chú rắn tỉnh dậy, vươn mình…”","Hỏi các con góp ý: “Tiếp theo con rắn gặp ai nhỉ?”","Quy tắc ngắn, nói theo hướng làm gì: “Chân đi nhẹ.”","Khen cụ thể, mô tả việc con làm."]},{"t":"6 đến 8 tuổi: thích thử thách và luật chơi","d":["Đưa thử thách nhỏ: “Ai giữ được cây 5 hơi thở?” Có cả bản dễ.","Giải thích ngắn vì sao: “Thở ra dài giúp tim mình chậm lại.”","Cho các con làm người dẫn: đếm hơi thở, kể tiếp câu chuyện.","Lắng nghe khi con kể chuyện ở trường. Một câu hỏi mở là đủ."]},{"t":"9 đến 12 tuổi: tôn trọng như một người lớn nhỏ","d":["Ít trẻ con hóa. Nói chuyện thật, giải thích về cơ thể, hơi thở, não bộ.","Cho các con tự chọn bài thở, tự xây một chuỗi tư thế nhỏ.","Tôn trọng sự ngại ngùng: không gọi tên làm mẫu trước lớp nếu con không muốn.","Nói về cảm xúc, áp lực học hành, giấc ngủ, màn hình, một cách nhẹ nhàng."]}]'>
+      <h3>🧒 Cách nói theo độ tuổi</h3>
+      <div class="nt-btns"><button type="button">2–3 tuổi</button><button type="button">4–5 tuổi</button><button type="button">6–8 tuổi</button><button type="button">9–12 tuổi</button></div>
+      <div class="nt-step" aria-live="polite"><h4 id="gxAgeT"></h4><div id="gxAgeD"></div></div>
+    </div>
 
     <h2>Khen đúng cách</h2>
     <p>Năm 1998, Claudia Mueller và Carol Dweck làm một loạt thí nghiệm với trẻ khoảng mười, mười một tuổi. Những bạn được khen “con thông minh quá” về sau lại ngại chọn bài khó, và khi gặp thất bại thì nản nhanh hơn. Những bạn được khen vì đã cố gắng thì sẵn sàng thử thách hơn, kiên trì hơn (<i>Journal of Personality and Social Psychology</i>). Lời khen không chỉ làm con vui. Nó dạy con nghĩ về bản thân mình.</p>
@@ -216,9 +272,20 @@
     <p>Cô tránh so sánh (“bạn kia giỏi hơn”), dọa (“không ngoan cô không cho chơi”), gán nhãn (“con hư”, “con lười”), mỉa mai, và quát. Một nghiên cứu theo dõi gần một nghìn gia đình của Wang và Kenny (<i>Child Development</i>, 2014) cho thấy bố mẹ càng la mắng nặng lời thì các con ở tuổi thiếu niên càng có nhiều vấn đề hành vi và buồn bã hơn, chứ không ít đi.</p>
     <p>Trong tám bậc của yoga, giới đầu tiên là không làm hại. Không làm hại không chỉ bằng tay. Lời nói cũng có thể làm đau. Với cô, đứng lớp yoga trẻ em là một cách tự tập giới mỗi ngày: nói thật, nói hiền, và nói ít đi một chút.</p>
 
+    <p>Bấm vào từng thẻ để thấy cô đổi những câu dễ buột miệng như thế nào:</p>
+    <div class="nt-flips">
+      <button type="button" class="nt-flip" aria-pressed="false"><span class="in"><span class="fa"><small>Câu dễ buột miệng</small><b>“Nín đi, có gì đâu mà khóc.”</b></span><span class="fb"><small>Cô nói</small><b>“Con đang buồn. Cô ngồi đây với con. Mình thở cùng nhau nhé.”</b></span></span></button>
+      <button type="button" class="nt-flip" aria-pressed="false"><span class="in"><span class="fa"><small>Câu dễ buột miệng</small><b>“Không làm thì ra ngoài.”</b></span><span class="fb"><small>Cô nói</small><b>“Con muốn làm cùng các bạn, hay ngồi xem và gõ chuông cho cô?”</b></span></span></button>
+      <button type="button" class="nt-flip" aria-pressed="false"><span class="in"><span class="fa"><small>Câu dễ buột miệng</small><b>“Ngồi thẳng lưng lên!”</b></span><span class="fb"><small>Cô nói</small><b>“Có sợi chỉ vàng kéo đỉnh đầu con lên trời nào.”</b></span></span></button>
+      <button type="button" class="nt-flip" aria-pressed="false"><span class="in"><span class="fa"><small>Câu dễ buột miệng</small><b>“Con hư quá!”</b></span><span class="fb"><small>Cô nói</small><b>“Tay con vừa đập vào bạn. Tay mình để tập và để thương nhau. Mình nói xin lỗi bạn nhé.”</b></span></span></button>
+      <button type="button" class="nt-flip" aria-pressed="false"><span class="in"><span class="fa"><small>Câu dễ buột miệng</small><b>“Nhanh lên, hết giờ rồi!”</b></span><span class="fb"><small>Cô nói</small><b>“Còn ba hơi thở nữa là mình chào nhau. Một… hai… ba…”</b></span></span></button>
+    </div>
+
     <h2>Nói chuyện với bố mẹ và cô giáo</h2>
     <p>Giao tiếp trong nghề dạy trẻ không chỉ có các con. Sau buổi học, cô kể với bố mẹ một điều cụ thể con đã làm được: “Hôm nay con tự gõ chuông và ngồi nghe đến khi tiếng chuông tắt.” Bố mẹ nhớ những câu như thế lâu hơn câu “con ngoan lắm”.</p>
     <p>Khi thấy một bé có điều gì đó khác, như rất khó ngồi yên, hay ngã, không nói, hay thở mệt, cô kể lại điều mình quan sát được, nhẹ nhàng, và không đoán bệnh. Người hướng dẫn yoga không phải bác sĩ. Cô có thể gợi ý bố mẹ hỏi thêm bác sĩ nhi hoặc chuyên gia, và vẫn giữ cho con một chỗ vui trên thảm.</p>
+
+    <figure class="gx-video"><video controls playsinline preload="metadata" poster="../videos/giao-tiep-voi-tre-lop-yoga-poster.jpg" width="1080" height="1080"><source src="../videos/giao-tiep-voi-tre-lop-yoga.mp4" type="video/mp4"></video><figcaption>Video tóm tắt: nói thế nào để con muốn nghe.</figcaption></figure>
 
     <h2>Điều các con dạy cô</h2>
     <p>Có những buổi cô chuẩn bị rất kỹ, câu chuyện rất hay, và các con chỉ nhớ đúng một điều: lúc cô ngồi xuống bên cạnh, hỏi “Con thấy sao?”</p>
@@ -324,6 +391,118 @@
       });
     }
   })();
+  </script>
+  <script>
+(function () {
+  function $(id) { return document.getElementById(id); }
+  function store(k, v) { try { if (v === undefined) return localStorage.getItem(k); localStorage.setItem(k, v); } catch (e) { return null; } }
+
+  // Bài 1: kế hoạch 30 ngày
+  var plan = $('gxPlan');
+  if (plan) {
+    var KEY = 'gx-plan-30';
+    var saved = {};
+    try { saved = JSON.parse(store(KEY) || '{}') || {}; } catch (e) { saved = {}; }
+    var boxes = plan.querySelectorAll('input[type=checkbox]');
+    function upd() {
+      var n = 0; boxes.forEach(function (c) { if (c.checked) n++; });
+      $('gxPlanBar').style.width = Math.round(n * 100 / boxes.length) + '%';
+      $('gxPlanTxt').textContent = 'Đã xong ' + n + ' / ' + boxes.length + ' việc' + (n === boxes.length ? '. Lớp đầu tiên đang chờ bạn rồi! 🌟' : '');
+    }
+    boxes.forEach(function (c, i) {
+      c.checked = !!saved[i];
+      c.addEventListener('change', function () { saved[i] = c.checked; store(KEY, JSON.stringify(saved)); upd(); });
+    });
+    upd();
+  }
+
+  // Âm chuông nhẹ
+  var ac = null;
+  function bell() {
+    try {
+      ac = ac || new (window.AudioContext || window.webkitAudioContext)();
+      var t = ac.currentTime;
+      [528, 792].forEach(function (f, i) {
+        var o = ac.createOscillator(), g = ac.createGain();
+        o.type = 'sine'; o.frequency.value = f;
+        g.gain.setValueAtTime(0.0001, t); g.gain.exponentialRampToValueAtTime(i ? 0.08 : 0.2, t + 0.02); g.gain.exponentialRampToValueAtTime(0.0001, t + 3);
+        o.connect(g); g.connect(ac.destination); o.start(t); o.stop(t + 3.1);
+      });
+    } catch (e) {}
+  }
+
+  // Bài 2: đồng hồ tiết học 30 phút
+  var tm = $('gxTimer');
+  if (tm) {
+    var S = JSON.parse(tm.getAttribute('data-segs'));
+    var total = S.reduce(function (a, s) { return a + s.m * 60; }, 0);
+    var segBox = $('gxSegs'), left = total, run = null, cur = -1;
+    S.forEach(function (s, i) {
+      var b = document.createElement('button'); b.type = 'button'; b.style.flex = s.m + ' 1 auto';
+      b.textContent = s.n + ' · ' + s.m + "'"; b.title = s.n + ' · ' + s.m + ' phút';
+      b.addEventListener('click', function () { jump(i); });
+      segBox.appendChild(b);
+    });
+    function startOf(i) { var a = 0; for (var k = 0; k < i; k++) a += S[k].m * 60; return a; }
+    function idx(el) { var a = 0; for (var k = 0; k < S.length; k++) { a += S[k].m * 60; if (el < a) return k; } return S.length - 1; }
+    function fmt(x) { x = Math.max(0, Math.ceil(x)); return String(Math.floor(x / 60)).padStart(2, '0') + ':' + String(x % 60).padStart(2, '0'); }
+    function draw() {
+      var el = total - left, i = idx(el);
+      if (i !== cur) { if (cur !== -1 && run) bell(); cur = i; }
+      var segLeft = startOf(i) + S[i].m * 60 - el;
+      $('gxClock').textContent = fmt(left);
+      $('gxSegNow').textContent = (i + 1) + '. ' + S[i].n + ' · còn ' + fmt(segLeft);
+      $('gxSegTip').textContent = S[i].t;
+      segBox.querySelectorAll('button').forEach(function (b, k) { b.classList.toggle('on', k === i); b.classList.toggle('done', k < i); });
+    }
+    function jump(i) { left = total - startOf(i); cur = i; draw(); }
+    $('gxStart').addEventListener('click', function () {
+      if (run) { clearInterval(run); run = null; this.textContent = '▶ Tiếp tục'; return; }
+      if (left <= 0) left = total;
+      bell(); this.textContent = '⏸ Tạm dừng';
+      var last = Date.now(), btn = this;
+      run = setInterval(function () {
+        var now = Date.now(); left -= (now - last) / 1000; last = now;
+        if (left <= 0) { left = 0; clearInterval(run); run = null; bell(); btn.textContent = '▶ Bắt đầu lại'; }
+        draw();
+      }, 250);
+    });
+    $('gxReset').addEventListener('click', function () { if (run) { clearInterval(run); run = null; } left = total; cur = -1; $('gxStart').textContent = '▶ Bắt đầu'; draw(); });
+    $('gxBell').addEventListener('click', bell);
+    draw();
+  }
+
+  // Bài 3: ba hơi thở trước khi nói
+  var br = $('gxBreath');
+  if (br) {
+    var ball = $('gxBall'), lab = $('gxBLabel'), going = false;
+    $('gxBGo').addEventListener('click', function () {
+      if (going) return; going = true; var btn = this; btn.disabled = true;
+      var steps = [], k;
+      for (k = 1; k <= 3; k++) { steps.push(['in', 'Hít vào… (' + k + '/3)']); steps.push(['out', 'Thở ra thật chậm… (' + k + '/3)']); }
+      var j = 0;
+      (function next() {
+        if (j >= steps.length) { ball.classList.remove('in'); lab.textContent = 'Giờ cô mới ngồi xuống, nhìn con, và nói.'; btn.disabled = false; going = false; return; }
+        var s = steps[j++]; ball.classList.toggle('in', s[0] === 'in'); lab.textContent = s[1];
+        setTimeout(next, s[0] === 'in' ? 4000 : 5000);
+      })();
+    });
+  }
+
+  // Bài 3: theo độ tuổi
+  var ag = $('gxAges');
+  if (ag) {
+    var A = JSON.parse(ag.getAttribute('data-ages'));
+    var bs = ag.querySelectorAll('.nt-btns button');
+    function age(i) {
+      bs.forEach(function (b, k) { b.classList.toggle('on', k === i); });
+      $('gxAgeT').textContent = A[i].t;
+      $('gxAgeD').innerHTML = '<ul>' + A[i].d.map(function (x) { return '<li>' + x + '</li>'; }).join('') + '</ul>';
+    }
+    bs.forEach(function (b, k) { b.addEventListener('click', function () { age(k); }); });
+    age(0);
+  }
+})();
   </script>
 
   <footer class="site-footer">
