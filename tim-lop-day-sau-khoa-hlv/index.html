@@ -92,7 +92,47 @@
   .hv-q button.op.no { background: #fdf0ec; border-color: #f1c9bd; }
   .hv-q .fb { margin: 6px 0 0; font-size: .97rem; }
   .hv-say { text-align: center; font-size: 1.25rem; font-weight: 700; color: var(--brown); min-height: 70px; display: flex; align-items: center; justify-content: center; background: #fff; border-radius: 16px; padding: 14px; margin: 8px 0; line-height: 1.4; }
-  </style>
+    /* gx-ghep */
+  .gx-video { max-width: 520px; margin: 18px auto; }
+  .gx-video video { width: 100%; border-radius: 18px; box-shadow: var(--shadow); display: block; background: #fdf6e9; }
+  .gx-video figcaption { font-size: .95rem; color: var(--muted); text-align: center; margin-top: 6px; }
+  .gx-q { background: #fff; border-radius: 16px; padding: 12px 14px; margin: 10px 0; }
+  .gx-q p { margin: 0 0 6px; font-weight: 700; color: var(--brown); }
+  .gx-res { background: #f0f7e6; border: 2px solid #bcd79c; border-radius: 16px; padding: 12px 14px; margin-top: 12px; display: none; }
+  .gx-res.on { display: block; }
+  .gx-res h4 { margin: 0 0 6px; color: var(--brown); }
+  .gx-res p { margin: 0 0 6px; }
+  .gx-check { list-style: none; padding: 0; margin: 8px 0; }
+  .gx-check li { margin: 6px 0; }
+  .gx-check label { display: flex; gap: 10px; align-items: flex-start; background: #fff; border-radius: 14px; padding: 9px 12px; cursor: pointer; }
+  .gx-check input { width: 22px; height: 22px; flex: 0 0 22px; margin-top: 2px; accent-color: #d4a514; }
+  .gx-check input:checked + span { color: var(--muted); text-decoration: line-through; }
+  .gx-week { font-weight: 700; color: #a87a12; margin: 14px 0 2px; }
+  .gx-prog { height: 12px; background: #fff; border-radius: 10px; overflow: hidden; margin: 8px 0 4px; border: 1px solid #f0e2b4; }
+  .gx-prog i { display: block; height: 100%; width: 0; background: linear-gradient(90deg, #ffe58a, #f5c400); transition: width .3s; }
+  .gx-msg { background: #fff; border-radius: 16px; padding: 12px 14px; white-space: pre-line; font-size: .98rem; border: 1px dashed #e5c46b; }
+  .gx-copy { margin-top: 8px; font: 700 .95rem Quicksand, sans-serif; border: 2px solid #f5c400; background: #ffd60a; color: var(--brown); border-radius: 30px; padding: 7px 14px; cursor: pointer; }
+  .gx-timer { text-align: center; }
+  .gx-clock { font: 700 3rem Quicksand, sans-serif; color: var(--brown); line-height: 1.1; margin: 6px 0; font-variant-numeric: tabular-nums; }
+  .gx-seg-now { font: 700 1.15rem Quicksand, sans-serif; color: #a87a12; min-height: 1.5em; }
+  .gx-seg-tip { color: var(--text); margin: 4px auto 10px; max-width: 560px; min-height: 3em; }
+  .gx-segs { display: flex; flex-wrap: wrap; gap: 4px; margin: 10px 0; }
+  .gx-segs button { border: 0; padding: 10px 2px; font: 700 .78rem Quicksand, sans-serif; color: #5a3a1c; cursor: pointer; min-width: 0; line-height: 1.2; background: #fff1b8; opacity: .7; white-space: nowrap; padding: 10px 8px; border-radius: 10px; }
+  .gx-segs button:nth-child(even) { background: #ffd98a; }
+  .gx-segs button.on { opacity: 1; box-shadow: inset 0 -4px 0 #6b4423; }
+  .gx-segs button.done { opacity: .45; }
+  @media (max-width: 560px) { .gx-segs button { font-size: .8rem; padding: 8px 6px; } }
+  .gx-ctrl { display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; }
+  .gx-ctrl button { font: 700 1rem Quicksand, sans-serif; border: 2px solid #e5c46b; background: #fff; color: var(--brown); border-radius: 30px; padding: 8px 16px; cursor: pointer; }
+  .gx-ctrl button.main { background: #ffd60a; border-color: #f5c400; }
+  .gx-breath { display: flex; flex-direction: column; align-items: center; gap: 10px; }
+  .gx-ball { width: 120px; height: 120px; border-radius: 50%; background: radial-gradient(circle at 40% 35%, #fff6cc, #ffd60a); box-shadow: 0 6px 20px rgba(168,122,18,.25); transform: scale(.6); transition: transform 4s ease-in-out; }
+  .gx-ball.in { transform: scale(1); }
+  .gx-blabel { font: 700 1.1rem Quicksand, sans-serif; color: var(--brown); min-height: 1.4em; }
+  .gx-ages .nt-step ul { margin: 4px 0 0; padding-left: 20px; }
+  .gx-eye svg { width: 100%; max-width: 560px; height: auto; display: block; margin: 0 auto; }
+  .gx-eye .lb { font: 700 15px Quicksand, sans-serif; fill: #6b4423; text-anchor: middle; }
+</style>
 </head>
 <body>
   <header class="site-header">
@@ -243,6 +283,39 @@
     <p>Cô không hứa với bố mẹ rằng yoga sẽ “chữa tăng động”, “giúp con cao thêm” hay “hết biếng ăn”. Cô kể điều mình thật sự thấy: các con được vận động vui, biết thở chậm lại, biết nằm yên vài phút, biết chờ đến lượt. Nếu một bé có vấn đề về sức khỏe hay phát triển, yoga là một phần đi cùng, còn bác sĩ và chuyên gia vẫn là người bố mẹ cần hỏi. Lời hứa nhỏ mà giữ được, bố mẹ sẽ nhớ lâu hơn lời hứa lớn.</p>
     <p>Và một điều nữa. Người dạy cũng cần được nuôi dưỡng. Một HLV có vài phút thở chậm mỗi sáng, cột sống được vươn dài, giấc ngủ đủ, sẽ mang vào lớp một sự bình an mà không giáo án nào viết ra được. Các con cảm nhận điều đó trước khi nghe mình nói câu nào.</p>
 
+    <h2>Kế hoạch 30 ngày đầu tiên</h2>
+    <p>Đọc nhiều mà chưa bắt đầu thì lớp vẫn chưa có. Đây là những việc cô gợi ý cho tháng đầu sau khóa học. Làm xong việc nào, bạn đánh dấu việc đó. Trang sẽ nhớ trên máy của bạn.</p>
+    <div class="nt-box" id="gxPlan">
+      <h3>🗓 30 ngày, từ chứng nhận tới lớp đầu tiên</h3>
+      <div class="gx-prog"><i id="gxPlanBar"></i></div><p class="nt-hint" id="gxPlanTxt" aria-live="polite"></p>
+      <p class="gx-week">Tuần 1 · Chăm mình và soạn bài</p>
+      <ul class="gx-check">
+        <li><label><input type="checkbox"><span>Tập 15 phút mỗi sáng: thở chậm, vươn cột sống, vài tư thế cân bằng.</span></label></li>
+        <li><label><input type="checkbox"><span>Soạn 3 giáo án 30 phút cho 3 độ tuổi.</span></label></li>
+        <li><label><input type="checkbox"><span>Học thuộc 2 câu chuyện yoga và 3 trò chơi mình thích nhất.</span></label></li>
+      </ul>
+      <p class="gx-week">Tuần 2 · Dạy thử với người thân</p>
+      <ul class="gx-check">
+        <li><label><input type="checkbox"><span>Dạy thử cho con, cháu hoặc con bạn bè (2 đến 4 bé).</span></label></li>
+        <li><label><input type="checkbox"><span>Quay lại một đoạn 1 đến 2 phút, xem lại giọng nói và vị trí đứng.</span></label></li>
+        <li><label><input type="checkbox"><span>Viết trang giới thiệu bản thân và bảng học phí.</span></label></li>
+      </ul>
+      <p class="gx-week">Tuần 3 · Gõ cửa</p>
+      <ul class="gx-check">
+        <li><label><input type="checkbox"><span>Gửi tin nhắn tới 5 trường, trung tâm hoặc phòng tập gần nhà.</span></label></li>
+        <li><label><input type="checkbox"><span>Đăng lời mời lớp thử vào 2 nhóm cư dân hoặc nhóm phụ huynh.</span></label></li>
+        <li><label><input type="checkbox"><span>Hẹn được ít nhất 1 buổi dạy thử.</span></label></li>
+      </ul>
+      <p class="gx-week">Tuần 4 · Lớp đầu tiên</p>
+      <ul class="gx-check">
+        <li><label><input type="checkbox"><span>Dạy buổi thử. Đến sớm 15 phút, chuẩn bị chỗ, thở trước khi vào lớp.</span></label></li>
+        <li><label><input type="checkbox"><span>Xin phụ huynh hoặc nhà trường một câu nhận xét.</span></label></li>
+        <li><label><input type="checkbox"><span>Ghi 3 dòng nhật ký sau buổi dạy và chốt lịch lớp đều đặn.</span></label></li>
+      </ul>
+    </div>
+
+    <figure class="gx-video"><video controls playsinline preload="metadata" poster="../videos/tim-lop-day-sau-khoa-hlv-poster.jpg" width="1080" height="1080"><source src="../videos/tim-lop-day-sau-khoa-hlv.mp4" type="video/mp4"></video><figcaption>Video tóm tắt: những con đường có lớp đầu tiên và 4 tuần đầu tiên.</figcaption></figure>
+
     <h2>Giữ lớp sau buổi đầu tiên</h2>
     <p>Mỗi tháng, gửi bố mẹ vài dòng: các con đã tập những gì, một bài thở bố mẹ có thể làm cùng con trước giờ ngủ. Thỉnh thoảng một tấm ảnh đẹp, mặt các bé đã che. Những dòng nhỏ ấy cho bố mẹ thấy con mình đang được để ý.</p>
     <p>Lớp đông lên chậm là chuyện bình thường. Một lớp năm bé vui vẻ, đi học đều, thường là nơi những lớp sau bắt đầu, vì bố mẹ hay rủ nhau.</p>
@@ -346,6 +419,118 @@
       });
     }
   })();
+  </script>
+  <script>
+(function () {
+  function $(id) { return document.getElementById(id); }
+  function store(k, v) { try { if (v === undefined) return localStorage.getItem(k); localStorage.setItem(k, v); } catch (e) { return null; } }
+
+  // Bài 1: kế hoạch 30 ngày
+  var plan = $('gxPlan');
+  if (plan) {
+    var KEY = 'gx-plan-30';
+    var saved = {};
+    try { saved = JSON.parse(store(KEY) || '{}') || {}; } catch (e) { saved = {}; }
+    var boxes = plan.querySelectorAll('input[type=checkbox]');
+    function upd() {
+      var n = 0; boxes.forEach(function (c) { if (c.checked) n++; });
+      $('gxPlanBar').style.width = Math.round(n * 100 / boxes.length) + '%';
+      $('gxPlanTxt').textContent = 'Đã xong ' + n + ' / ' + boxes.length + ' việc' + (n === boxes.length ? '. Lớp đầu tiên đang chờ bạn rồi! 🌟' : '');
+    }
+    boxes.forEach(function (c, i) {
+      c.checked = !!saved[i];
+      c.addEventListener('change', function () { saved[i] = c.checked; store(KEY, JSON.stringify(saved)); upd(); });
+    });
+    upd();
+  }
+
+  // Âm chuông nhẹ
+  var ac = null;
+  function bell() {
+    try {
+      ac = ac || new (window.AudioContext || window.webkitAudioContext)();
+      var t = ac.currentTime;
+      [528, 792].forEach(function (f, i) {
+        var o = ac.createOscillator(), g = ac.createGain();
+        o.type = 'sine'; o.frequency.value = f;
+        g.gain.setValueAtTime(0.0001, t); g.gain.exponentialRampToValueAtTime(i ? 0.08 : 0.2, t + 0.02); g.gain.exponentialRampToValueAtTime(0.0001, t + 3);
+        o.connect(g); g.connect(ac.destination); o.start(t); o.stop(t + 3.1);
+      });
+    } catch (e) {}
+  }
+
+  // Bài 2: đồng hồ tiết học 30 phút
+  var tm = $('gxTimer');
+  if (tm) {
+    var S = JSON.parse(tm.getAttribute('data-segs'));
+    var total = S.reduce(function (a, s) { return a + s.m * 60; }, 0);
+    var segBox = $('gxSegs'), left = total, run = null, cur = -1;
+    S.forEach(function (s, i) {
+      var b = document.createElement('button'); b.type = 'button'; b.style.flex = s.m + ' 1 auto';
+      b.textContent = s.n + ' · ' + s.m + "'"; b.title = s.n + ' · ' + s.m + ' phút';
+      b.addEventListener('click', function () { jump(i); });
+      segBox.appendChild(b);
+    });
+    function startOf(i) { var a = 0; for (var k = 0; k < i; k++) a += S[k].m * 60; return a; }
+    function idx(el) { var a = 0; for (var k = 0; k < S.length; k++) { a += S[k].m * 60; if (el < a) return k; } return S.length - 1; }
+    function fmt(x) { x = Math.max(0, Math.ceil(x)); return String(Math.floor(x / 60)).padStart(2, '0') + ':' + String(x % 60).padStart(2, '0'); }
+    function draw() {
+      var el = total - left, i = idx(el);
+      if (i !== cur) { if (cur !== -1 && run) bell(); cur = i; }
+      var segLeft = startOf(i) + S[i].m * 60 - el;
+      $('gxClock').textContent = fmt(left);
+      $('gxSegNow').textContent = (i + 1) + '. ' + S[i].n + ' · còn ' + fmt(segLeft);
+      $('gxSegTip').textContent = S[i].t;
+      segBox.querySelectorAll('button').forEach(function (b, k) { b.classList.toggle('on', k === i); b.classList.toggle('done', k < i); });
+    }
+    function jump(i) { left = total - startOf(i); cur = i; draw(); }
+    $('gxStart').addEventListener('click', function () {
+      if (run) { clearInterval(run); run = null; this.textContent = '▶ Tiếp tục'; return; }
+      if (left <= 0) left = total;
+      bell(); this.textContent = '⏸ Tạm dừng';
+      var last = Date.now(), btn = this;
+      run = setInterval(function () {
+        var now = Date.now(); left -= (now - last) / 1000; last = now;
+        if (left <= 0) { left = 0; clearInterval(run); run = null; bell(); btn.textContent = '▶ Bắt đầu lại'; }
+        draw();
+      }, 250);
+    });
+    $('gxReset').addEventListener('click', function () { if (run) { clearInterval(run); run = null; } left = total; cur = -1; $('gxStart').textContent = '▶ Bắt đầu'; draw(); });
+    $('gxBell').addEventListener('click', bell);
+    draw();
+  }
+
+  // Bài 3: ba hơi thở trước khi nói
+  var br = $('gxBreath');
+  if (br) {
+    var ball = $('gxBall'), lab = $('gxBLabel'), going = false;
+    $('gxBGo').addEventListener('click', function () {
+      if (going) return; going = true; var btn = this; btn.disabled = true;
+      var steps = [], k;
+      for (k = 1; k <= 3; k++) { steps.push(['in', 'Hít vào… (' + k + '/3)']); steps.push(['out', 'Thở ra thật chậm… (' + k + '/3)']); }
+      var j = 0;
+      (function next() {
+        if (j >= steps.length) { ball.classList.remove('in'); lab.textContent = 'Giờ cô mới ngồi xuống, nhìn con, và nói.'; btn.disabled = false; going = false; return; }
+        var s = steps[j++]; ball.classList.toggle('in', s[0] === 'in'); lab.textContent = s[1];
+        setTimeout(next, s[0] === 'in' ? 4000 : 5000);
+      })();
+    });
+  }
+
+  // Bài 3: theo độ tuổi
+  var ag = $('gxAges');
+  if (ag) {
+    var A = JSON.parse(ag.getAttribute('data-ages'));
+    var bs = ag.querySelectorAll('.nt-btns button');
+    function age(i) {
+      bs.forEach(function (b, k) { b.classList.toggle('on', k === i); });
+      $('gxAgeT').textContent = A[i].t;
+      $('gxAgeD').innerHTML = '<ul>' + A[i].d.map(function (x) { return '<li>' + x + '</li>'; }).join('') + '</ul>';
+    }
+    bs.forEach(function (b, k) { b.addEventListener('click', function () { age(k); }); });
+    age(0);
+  }
+})();
   </script>
 
   <footer class="site-footer">
