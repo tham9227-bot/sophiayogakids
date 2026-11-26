@@ -1,0 +1,50 @@
+/* Bài Điều khí trong yoga cân bằng phục hồi */
+.dk-fig path, .dk-fig circle, .dk-fig rect, .dk-fig ellipse { fill: #f3e2c4; stroke: #c9a46a; stroke-width: 2; }
+.dk-fig .lm { fill: none; stroke: #f3e2c4; stroke-width: 16; stroke-linecap: round; stroke-linejoin: round; }
+.dk-fig .lg { stroke-width: 22; }
+.dk-two { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 16px 0; }
+.dk-lbl { border-radius: 16px; padding: 12px 14px; }
+.dk-lbl p { margin: 6px 0 0; font-size: .97rem !important; }
+.dk-lbl.sci { background: #e8f2fa; border-left: 6px solid #5b93bf; }
+.dk-lbl.tra { background: #fbf0e0; border-left: 6px solid #c98a12; }
+.dk-tag-tra { background: #fbf0e0; border-left: 6px solid #c98a12; border-radius: 12px; padding: 8px 12px; font-weight: 600; color: #6b4423; }
+.dk-fig-box { margin: 16px 0; background: #fff; border-radius: 18px; box-shadow: var(--shadow); padding: 12px; }
+.dk-fig-box svg { width: 100%; height: auto; display: block; }
+.dk-fig-box figcaption { font-size: .9rem; color: #7a5a3a; margin-top: 6px; }
+.hd-five.dk-3 { grid-template-columns: repeat(3, 1fr); }
+.dk-routes-list { display: grid; gap: 14px; margin: 14px 0; }
+.dk-route { display: grid; grid-template-columns: 150px 1fr; gap: 14px; background: #fff; border-radius: 18px; box-shadow: var(--shadow); padding: 12px 14px; border-left: 7px solid var(--c); align-items: start; }
+.dk-route h3 { margin: 0; color: var(--c); font-size: 1.15rem; }
+.dk-route .sk { margin: 2px 0 6px; font-style: italic; color: #7a5a3a; font-size: .92rem !important; }
+.dk-route p { margin: 5px 0; font-size: .97rem !important; }
+.dk-mini { width: 150px; height: auto; display: block; }
+.dk-warn { background: #fde8e4; color: #8a2b16; border-radius: 10px; padding: 6px 10px; }
+.dk-go, .dk-chips button { font-family: "Quicksand", sans-serif; font-weight: 700; font-size: .95rem; border-radius: 999px; padding: 7px 14px; border: 2px solid #e6c77d; background: #fff; color: #6b4423; cursor: pointer; margin-top: 6px; }
+.dk-go:hover, .dk-chips button:hover, .dk-chips button.on { background: #ffd60a; border-color: #ffd60a; }
+.dk-chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.dk-chips button { margin-top: 0; }
+.dk-state { background: #fff; border-radius: 18px; box-shadow: var(--shadow); padding: 14px; margin: 12px 0; }
+.dk-state .hd-out button { margin-left: 4px; }
+.dk-player { display: grid; grid-template-columns: minmax(220px, 300px) 1fr; gap: 18px; background: linear-gradient(160deg, #fffaf0, #fff3d1); border-radius: 22px; box-shadow: var(--shadow); padding: 16px; margin: 14px 0; align-items: center; scroll-margin-top: 80px; }
+.dk-stage { position: relative; }
+.dk-big { width: 100%; height: auto; display: block; }
+.dk-routes path { fill: none; stroke: #e6d3b0; stroke-width: 4; stroke-dasharray: 2 8; stroke-linecap: round; opacity: 0; transition: opacity .6s; }
+.dk-routes path.on { opacity: 1; }
+.dk-chest { transform-box: fill-box; transform-origin: center; transform: scale(.6); opacity: .5; }
+.dk-cue { text-align: center; font-family: "Quicksand", sans-serif; color: #6b4423; margin-top: 4px; min-height: 3.2em; }
+.dk-cue b { display: block; font-size: 1.2rem; }
+.dk-cue span { font-size: 1.6rem; font-weight: 700; color: #a87a12; }
+.dk-ctrl-t { margin: 10px 0 6px; font-weight: 700; color: #6b4423; }
+.dk-ctrl-t:first-child { margin-top: 0; }
+.dk-faq details { background: #fff; border-radius: 14px; box-shadow: var(--shadow); padding: 10px 14px; margin: 8px 0; }
+.dk-faq summary { cursor: pointer; font-weight: 700; color: #6b4423; }
+.dk-faq p { margin: 8px 0 2px; }
+.dk-table td:nth-child(3) { color: #6b4423; font-weight: 600; }
+@media (max-width: 760px) {
+  .dk-two, .hd-five.dk-3 { grid-template-columns: 1fr; }
+  .dk-route { grid-template-columns: 90px 1fr; gap: 10px; padding: 10px; }
+  .dk-mini { width: 90px; }
+  .dk-player { grid-template-columns: 1fr; padding: 12px; }
+  .dk-stage { max-width: 230px; margin: 0 auto; }
+  .dk-table { font-size: .9rem; }
+}
