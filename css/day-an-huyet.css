@@ -1,0 +1,58 @@
+/* Bài day ấn huyệt đầu, mặt, tai, cổ, vai */
+.hp-map { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 16px; align-items: start; background: #fffaf0; border-radius: 22px; box-shadow: var(--shadow); padding: 14px 16px; margin: 16px 0; }
+.hp-svg { width: 100%; height: auto; display: block; }
+.hp-svg .hp { cursor: pointer; outline: none; }
+.hp-svg .hp .hit { fill: transparent; }
+.hp-svg .hp .d { fill: #ffd60a; stroke: #6b4423; stroke-width: 1.6; transition: r .2s; }
+.hp-svg .hp text { font-size: 9px; fill: #6b4423; text-anchor: middle; pointer-events: none; }
+.hp-svg .hp.on .d { fill: #4e9a5c; stroke: #fff; stroke-width: 2.5; animation: hpPulse 1.6s ease-in-out infinite; }
+.hp-svg .hp.on text { fill: #fff; }
+.hp-svg .hp:focus-visible .d { stroke: #3f51b5; stroke-width: 3; }
+@keyframes hpPulse { 0%, 100% { stroke-width: 2.5; } 50% { stroke-width: 6; stroke: #cfe6bd; } }
+.hp-svg .no-zone ellipse { fill: #f4a99a; opacity: .55; stroke: #b2402a; stroke-dasharray: 3 3; }
+.hp-svg .no-line { stroke: #d0563d; stroke-width: 4; stroke-dasharray: 6 5; opacity: .75; }
+.hp-side .hd-btns { margin-top: 0; }
+.hp-side .hd-btns button { font-size: .86rem; padding: 5px 11px; }
+.hp-panel { background: #fff; border-radius: 16px; padding: 10px 14px; margin-top: 8px; border-left: 5px solid #ffd60a; min-height: 8em; }
+.hp-panel h3 { margin: 0 0 4px; font-size: 1.08rem; color: #6b4423; }
+.hp-panel p { margin: 5px 0; font-size: .95rem !important; }
+.hp-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 14px 0; }
+.hp-card { background: #fff; border-radius: 18px; box-shadow: var(--shadow); padding: 12px 14px; border-top: 5px solid #ffd60a; scroll-margin-top: 90px; cursor: pointer; }
+.hp-card.on { border-top-color: #4e9a5c; background: #f6fbf2; }
+.hp-card h3, .hp-panel h3 { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.hp-card h3 { margin: 0 0 4px; font-size: 1.08rem; color: #6b4423; }
+.hp-no { display: inline-flex; width: 28px; height: 28px; border-radius: 50%; background: #ffd60a; color: #6b4423; align-items: center; justify-content: center; font-size: .9rem; flex: none; }
+.hp-card small, .hp-panel small { font-size: .78rem; color: #a87a12; font-weight: 700; }
+.hp-card p { margin: 5px 0; font-size: .95rem !important; }
+.hp-luc { display: flex; align-items: center; gap: 8px; font-size: .9rem !important; font-weight: 700; color: #6b4423; font-family: "Quicksand", sans-serif; }
+.hp-luc i { flex: 1; max-width: 160px; height: 8px; background: #f0e2c4; border-radius: 99px; overflow: hidden; position: relative; }
+.hp-luc i::after { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: calc(var(--l) * 10%); background: linear-gradient(90deg, #cfe6bd, #ffd60a 60%, #e59a5a); border-radius: 99px; }
+.hp-warn { color: #8a2b16; }
+.hp-force { background: #fff; border-radius: 18px; box-shadow: var(--shadow); padding: 14px 16px; margin: 14px 0; }
+.hp-force input[type=range] { width: 100%; accent-color: #a87a12; height: 28px; }
+.hp-scale { display: flex; justify-content: space-between; font-size: .78rem; color: var(--muted); font-weight: 700; }
+.hp-force .hd-out { transition: background .3s; }
+.hp-ways { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin: 12px 0; }
+.hp-ways div { background: #fff; border-radius: 16px; box-shadow: var(--shadow); padding: 10px 12px; text-align: center; }
+.hp-ways svg { width: 70px; height: 70px; display: block; margin: 0 auto 4px; }
+.hp-ways h3 { margin: 0; font-size: 1rem; color: #6b4423; }
+.hp-ways p { margin: 4px 0 0; font-size: .9rem !important; text-align: left; }
+.hp-oils { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 12px 0; }
+.hp-oils > div { background: #fff; border-radius: 18px; box-shadow: var(--shadow); padding: 10px 14px; border-top: 6px solid var(--c); }
+.hp-oils h3 { margin: 0 0 2px; font-size: 1.04rem; color: #6b4423; }
+.hp-oils .sk { font-size: .8rem; color: #a87a12; font-weight: 700; margin: 0; font-family: "Quicksand", sans-serif; }
+.hp-oils p { margin: 5px 0; font-size: .93rem !important; }
+.hp-mix { background: linear-gradient(180deg, #fffaf0 0%, #fdf3dc 100%); border-radius: 20px; box-shadow: var(--shadow); padding: 14px 16px; margin: 14px 0; }
+.hp-mix h3 { margin: 0 0 6px; color: #6b4423; text-align: center; }
+.hp-mix .lb { font-family: "Quicksand", sans-serif; font-weight: 700; color: #6b4423; font-size: .92rem; margin: 8px 0 2px; }
+.hp-hand { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 12px 0; }
+.hp-hand > div { background: #fff; border-radius: 16px; box-shadow: var(--shadow); padding: 10px 14px; }
+.hp-hand h3 { margin: 0 0 4px; font-size: 1.02rem; color: #6b4423; }
+.hp-hand p { margin: 4px 0; font-size: .94rem !important; }
+.hp-thon { max-width: 340px; margin: 6px auto; }
+@media (max-width: 760px) {
+  .hp-map, .hp-cards, .hp-hand { grid-template-columns: 1fr; }
+  .hp-map .hp-svg { max-width: 360px; margin: 0 auto; }
+  .hp-ways { grid-template-columns: 1fr 1fr; }
+  .hp-oils { grid-template-columns: 1fr; }
+}
